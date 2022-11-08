@@ -1,5 +1,6 @@
 package Charakters;
 import Items.*;
+import Charakters.Inventory;
 /*
     Author:                  Valentin Lingelbach
     Version added:           WIP_0.1
@@ -13,12 +14,8 @@ public class PlayerCharakter {
     private int m_nLevel;
     private String m_sCharakterType;
     private int m_nHealth;
+    private int m_nSizeInventory;
 
-    /*Object arrays to store the inventory*/ 
-  
-    public Food [] m_o_aFoodInventory;
-    public Weapon [] m_o_aRessourceInventory;
-    public Ressources [] m_o_aWeaponInventory;
   
   
     public PlayerCharakter(String sName, int nMaxHealth, String nType) {
@@ -26,6 +23,8 @@ public class PlayerCharakter {
         m_nMaxHealth = nMaxHealth;
         m_nLevel = 1;
         m_sCharakterType = nType;
+
+         
         
 
         System.out.println("Your Name: " + m_sPlayerName);
