@@ -16,9 +16,9 @@ public class PlayerCharakter {
 
     /*Object arrays to store the inventory*/ 
   
-   /* private Food [] m_o_aFoodInventory;
-    private Weapon [] m_o_aRessourceInventory;
-    private Ressources [] m_o_aWeaponInventory;*/
+    public Food [] m_o_aFoodInventory;
+    public Weapon [] m_o_aRessourceInventory;
+    public Ressources [] m_o_aWeaponInventory;
   
   
     public PlayerCharakter(String sName, int nMaxHealth, String nType) {
@@ -26,6 +26,7 @@ public class PlayerCharakter {
         m_nMaxHealth = nMaxHealth;
         m_nLevel = 1;
         m_sCharakterType = nType;
+        
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharakterType);
