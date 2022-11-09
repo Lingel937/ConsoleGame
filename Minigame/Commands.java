@@ -1,7 +1,7 @@
 class Commands{
 
   public static void hunt(){
-    Basic.s_mPlayerCharakter.changeHealth(30);
+    Game.s_mPlayerCharakter.changeHealth(30);
     System.out.println("Hunt finished");
     
   }

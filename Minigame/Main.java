@@ -12,8 +12,9 @@ Date:     21.10.2022
 class Main {
   public static void main(String[] args) {
 
-    new Basic().createCharakter();
+    Game.createCharakter();
     Game.go();
+    Game.end();
     /*
     * Weapon Stick = new Weapon("Stick", 3, 100, 1, 50, 5);
     * Stick.print();

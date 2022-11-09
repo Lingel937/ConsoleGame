@@ -1,6 +1,6 @@
 package Charakters;
 import Items.*;
-import Charakters.Inventory;
+import Charakters.*;
 /*
     Author:                  Valentin Lingelbach
     Version added:           WIP_0.1
@@ -23,7 +23,7 @@ public class PlayerCharakter {
         m_nMaxHealth = nMaxHealth;
         m_nLevel = 1;
         m_sCharakterType = nType;
-
+        m_nHealth = m_nMaxHealth;
          
         
 
@@ -34,8 +34,13 @@ public class PlayerCharakter {
 
     public void changeHealth(int nHealthdifference) {
         m_nHealth = m_nHealth-nHealthdifference;
-        System.out.println("You just lost"+m_nHealth+"HP");
+        System.out.println("You just lost "+nHealthdifference+" HP");
+        System.out.println("you have "+m_nHealth+" remaining");
 
 
+    }
+
+    public int getHealth(){
+        return m_nHealth;
     }
 }
