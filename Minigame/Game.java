@@ -73,8 +73,13 @@ public class Game {
 
 
         while(bIsGameRunning) {
+            boolean bGameCheck = Game.s_mPlayerCharakter.getHealth() > 0;
+
+            if (!bGameCheck) {
+                bIsGameRunning = false;
+            }
+
             String input = scan.nextLine();
-            boolean bGameCheck = Game.s_mPlayerCharakter.getHealth() >= 0;
             switch(input){
                 case "Hunt":
                     Commands.hunt();
@@ -86,9 +91,7 @@ public class Game {
             }
 
 
-            if (!bGameCheck) {
-                bIsGameRunning = false;
-            }
+
         }
 
 
