@@ -1,8 +1,8 @@
-/*public class Inventory {
-    public Food[] m_o_aFoodInventory;
-    public Weapon[] m_o_aRessourcesInventory;
-    public Ressources[] m_o_aWeaponInventory;
+import java.util.ArrayList;
+*public class Inventory  {
+    private ArrayList<Item> itemList;
+    public Inventory(){
+        private ArrayList<Item>=new ArrayList<Item>();
+
+    }
 }
-
-
-*/

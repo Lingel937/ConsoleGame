@@ -17,14 +17,14 @@ public class Weapon extends Item {
 
     public Weapon(String sName, int nLevel, int nDamage, int nRange, int nDamageFactor, int nRangeFactor) {
         m_sItemType = "Weapon";
-        m_SItemName = sName;
+        m_sItemName = sName;
         m_nItemLevel = nLevel;
         m_nDamageFactor = nDamageFactor;
         m_nDamage = nDamage;
     }
 
     public void print() {
-        System.out.println("Name: " + m_SItemName);
+        System.out.println("Name: " + m_sItemName);
         System.out.println("Type: " + m_sItemType);
         System.out.println("Level: " + m_nItemLevel);
         System.out.println("Damage: " + m_nDamage);

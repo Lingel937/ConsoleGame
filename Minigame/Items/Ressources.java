@@ -1,3 +1,4 @@
-public class Ressources {
-  
+public class Ressources extends Item {
+    private ;
+
 }
