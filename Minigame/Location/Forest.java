@@ -12,7 +12,7 @@
 
 
 
-package Locatoin;
+package Location;
 
 public class Forest extends Location{
 

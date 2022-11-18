@@ -12,7 +12,7 @@
 */
 
 
-package Locatoin;
+package Location;
 
 public class Location {
     protected static int s_nlevel;

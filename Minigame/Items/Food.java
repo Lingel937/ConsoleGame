@@ -20,6 +20,7 @@ public class Food extends Item  {
     public Food(String sName, int nLevel, int nNutritionalValue ){
         m_sItemType = "Food";  
         m_SItemName = sName;
+        
 
 
       

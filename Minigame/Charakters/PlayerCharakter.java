@@ -14,7 +14,6 @@ public class PlayerCharakter {
     private int m_nLevel;
     private String m_sCharakterType;
     private int m_nHealth;
-    private int m_nSizeInventory;
 
   
   

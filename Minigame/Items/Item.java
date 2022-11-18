@@ -17,7 +17,7 @@ public class Item {
     protected String m_sItemType;
     protected int m_nItemLevel;
     protected int m_nItemID;
-    protected String m_s
+    //protected String m_s
 
     public void LevelUp() {
         m_nItemLevel++;
