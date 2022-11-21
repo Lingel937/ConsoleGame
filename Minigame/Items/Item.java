@@ -13,7 +13,7 @@
 package Items;
 
 public class Item {
-    protected String m_SItemName;
+    protected String m_sItemName;
     protected String m_sItemType;
     protected int m_nItemLevel;
     protected int m_nItemID;

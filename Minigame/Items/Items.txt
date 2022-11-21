@@ -1,0 +1,2 @@
+#This file stores the values of the items of this game
+#Structure of the stored item properties 1.ID 2.category 3.type 4.name 5.rarity 
