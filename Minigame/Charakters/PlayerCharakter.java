@@ -1,5 +1,7 @@
 package Charakters;
-import Items.*;
+import java.util.ArrayList;
+
+import Inventory;
 import Charakters.*;
 /*
     Author:                  Valentin Lingelbach
@@ -14,6 +16,7 @@ public class PlayerCharakter {
     private int m_nLevel;
     private String m_sCharakterType;
     private int m_nHealth;
+    private ArrayList<Item>m_itemOA_Inventory;
 
   
   
@@ -23,6 +26,7 @@ public class PlayerCharakter {
         m_nLevel = 1;
         m_sCharakterType = nType;
         m_nHealth = m_nMaxHealth;
+        m_itemOA_Inventory = Inventory.
          
         
 
