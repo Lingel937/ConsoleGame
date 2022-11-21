@@ -1,23 +1,16 @@
-import Items.*;
+import Items.Item;
 import java.util.ArrayList;
 *public class Inventory  {
-    private ArrayList<Food> m_fOA_foodList;
-    private ArrayList<Ressources>m_rOA_ressourcesList;
-    private ArrayList<Weapon> m_wOA_weaponList;
+    private ArrayList<Item> m_itemOA_Inventory;
 
     public Inventory(){
-        m_rOA_ressourcesList = new ArrayList<Ressources>();
-        m_fOA_foodList = new ArrayList<Food>();
-        m_wOA_weaponList = new ArrayList<Weapon>();
+        m_itemOA_Inventory = new ArrayList<Item>();
     }
-
     public int numberOfObjects(){
-        int numOfItems = m_fOA_foodList.size()+m_rOA_ressourcesList.size()+m_wOA_weaponList.size();
+        int numOfItems = m_iA_Inventory.size();
         return numOfItems;
     }
     public void removeAllItems(){
-        m_fOA_foodList.clear();
-        m_rOA_ressourcesList.clear();
-        m_wOA_weaponList.clear();
+       m_a
     }
 }
