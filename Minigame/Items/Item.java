@@ -10,6 +10,7 @@
 */
 package Items;
 public class Item {
+    //membervariables for an item
     protected String m_sItemName;
     protected String m_sItemType;
     protected int m_nItemLevel;
@@ -26,7 +27,7 @@ public class Item {
     //membervariables for the food
     private int m_nNutritionalValue;
 
-
+    //constructor to get all
     public Item(int nID ,String sName, String sType, String sCategory, int nLevel, String sRarity, double dDamage, double dRange, double dDamageFactor, double dRangeFactor, int nNutritionalValue){
         
         //initialize variables

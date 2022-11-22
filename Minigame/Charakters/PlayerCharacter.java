@@ -10,13 +10,13 @@ import Items.Item;
  /*Character class to store important values related to the character*/
 
 public class PlayerCharacter {
-    private String m_sPlayerName;       //name of the Character.
+    private String m_sPlayerName;       //name of the Character. @Lingel
     private int m_nMaxHealth;           //maximum of hp your character can reach. @Lingel
     private int m_nLevel;               //level of the character @Lingel
     private String m_sCharacterType;    //type of the Character(e.g. Elve, Dwarf ect..) @Lingel
     private int m_nHealth;              //Current health of the character @Lingel
-    private ArrayList<Item> m_itemObjectArray_Inventory;
-    private int m_nInventorySize;
+    private ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
+    private int m_nInventorySize; //variable to store the size of the inventory @maulie5
 
   
   
@@ -28,7 +28,7 @@ public class PlayerCharacter {
         m_nInventorySize = 21;
         m_sCharacterType = nType;
         m_nHealth = m_nMaxHealth;
-        m_itemObjectArray_Inventory = Inventory.m_itemObjectArray_Inventory;
+        m_itemObjectArray_Inventory = Inventory.m_itemObjectArray_Inventory; //set membervariable to store the inventoy an imported value @maulie5
          
         
 
