@@ -16,11 +16,5 @@ class Main {
     Game.createCharakter();
     Game.go();
     Game.end();
-    /*
-    * Weapon Stick = new Weapon("Stick", 3, 100, 1, 50, 5);
-    * Stick.print();
-    * Stick.LevelUp();
-    * Stick.print();
-    */
   }
 }
