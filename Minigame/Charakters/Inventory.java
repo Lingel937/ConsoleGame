@@ -3,7 +3,7 @@ import Items.*;
 import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
-    public ArrayList<Item> m_itemObjectArray_Inventory;
+    public static ArrayList<Item> m_itemObjectArray_Inventory;
 
     public Inventory(){
         //initialize the object array

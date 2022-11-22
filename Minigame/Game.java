@@ -13,7 +13,10 @@ public class Game {
     private static int     s_nCharakterType;
     public static PlayerCharakter       s_mPlayerCharakter;
 
+    public static void createInventory(){
 
+
+    }
     public static void  createCharakter() {
 
 
@@ -68,18 +71,19 @@ public class Game {
 
     public static void go(){
 
-        Scanner scan = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         boolean bIsGameRunning = true;
 
 
         while(bIsGameRunning) {
             boolean bGameCheck = Game.s_mPlayerCharakter.getHealth() > 0;
 
+
             if (!bGameCheck) {
                 bIsGameRunning = false;
             }
 
-            String input = scan.nextLine();
+            String input = s.nextLine();
             switch(input){
                 case "Hunt":
                     Commands.hunt();
@@ -90,7 +94,12 @@ public class Game {
 
             }
 
+            bGameCheck = Game.s_mPlayerCharakter.getHealth() > 0;
 
+
+            if (!bGameCheck) {
+                bIsGameRunning = false;
+            }
 
         }
 
