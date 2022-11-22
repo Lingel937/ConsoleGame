@@ -9,3 +9,6 @@ actually its a rpg-style console game inspired by the discord RPG-Bot
 this game will be developed as part of Programming lessons on the fbs-fulda (11th grade)
 
 -Lingel
+
+I did not know that
+-Lo118
