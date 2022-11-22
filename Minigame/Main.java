@@ -12,6 +12,7 @@ Date:     21.10.2022
 class Main {
   public static void main(String[] args) {
 
+    Game.createInventory();
     Game.createCharakter();
     Game.go();
     Game.end();
