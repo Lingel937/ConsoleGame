@@ -48,7 +48,4 @@ public class Item {
     public void LevelUp() {
         m_nItemLevel++;
     }
-
-
-
 }

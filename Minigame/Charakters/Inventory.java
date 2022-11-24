@@ -1,4 +1,4 @@
-package Charakters;
+package Characters;
 import Items.*;
 import java.util.ArrayList;
 public class Inventory  {

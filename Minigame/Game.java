@@ -6,15 +6,16 @@
 */
 import java.util.Scanner;
 
-import Charakters.PlayerCharacter;
+import Characters.*;
+
 
 public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
 
-    public static void createInventory(){
-
+    public static void createListOfAllitems(){
+		
 
     }
     public static void  createCharakter() {

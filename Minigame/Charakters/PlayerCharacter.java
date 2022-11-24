@@ -1,7 +1,7 @@
-package Charakters;
+package Characters;
 import java.util.ArrayList;
 
-import Items.Item;
+import Chara;
 /*
     Author:                  Valentin Lingelbach (@Lingel)
     Version added:           WIP_0.1
