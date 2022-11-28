@@ -40,7 +40,26 @@ public class PlayerCharakter {
 
     }
 
+
+
+
+
+    //getter Methods: @Lingel937
+
     public int getHealth(){
         return m_nHealth;
     }
+    public String getName(){
+        return m_sPlayerName;
+    }
+    public String getCharakterType(){
+        return m_sCharakterType;
+    }
+    public int getLevel(){
+        return m_nLevel;
+    }
+    public int getMaxHealth(){
+        return m_nMaxHealth;
+    }
+
 }
