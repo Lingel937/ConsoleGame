@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1 //added commenting">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/Friendly_Npcs/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/Friendly_Npcs/Friends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/enemies/enemies/AngryFarmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/enemies/AngryFarmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Charakters/enemies/enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/ItemRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/ItemRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.2&#10;now we have more working funktions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +73,7 @@
       <workItem from="1669725776087" duration="224000" />
       <workItem from="1669726204577" duration="461000" />
       <workItem from="1669726668280" duration="207000" />
-      <workItem from="1669726904937" duration="935000" />
+      <workItem from="1669726904937" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="lol changes">
       <created>1669123402748</created>
@@ -109,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669725458600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="WIP_0.1.1 //added commenting">
+      <created>1669727977924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669727977924</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lol changes" />
-    <MESSAGE value="WIP_0.1.1 //added commenting" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1 //added commenting" />
+    <MESSAGE value="WIP_0.1.1.2&#10;now we have more working funktions" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.2&#10;now we have more working funktions" />
   </component>
 </project>
