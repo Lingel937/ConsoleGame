@@ -5,7 +5,7 @@
 
 */
 
-package Charakters;
+package Characters;
 
 public class NPC {
     

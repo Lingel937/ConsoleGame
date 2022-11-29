@@ -86,13 +86,24 @@ public class Game {
 
             String input = s.nextLine();
             switch(input){
-                case "Hunt":
+                case "hunt":
                     Commands.hunt();
                     break;
-                case "1":
-                    //command
+                case "help":
+                    Commands.help();
                     break;
-
+                case "inventory":
+                   // Commands.inventory();
+                    break;
+                case "health":
+                    Commands.health();
+                    break;
+                case "heal":
+                    Commands.heal();
+                    break;
+                case "profile":
+                    Commands.profile();
+                    break;
             }
 
             bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
