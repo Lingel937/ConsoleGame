@@ -8,7 +8,7 @@
 
 
 
-package Charakters.enemies.enemies;
+package Characters.enemies.enemies;
 
 public class AngryFarmer  {
 

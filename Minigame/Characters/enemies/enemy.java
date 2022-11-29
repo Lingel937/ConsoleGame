@@ -5,9 +5,9 @@
 
 */
 
-package Charakters.enemies;
+package Characters.enemies;
 
-import Charakters.NPC;
+import Characters.NPC;
 
 public class enemy extends NPC {
     protected int m_nMaxHealth;

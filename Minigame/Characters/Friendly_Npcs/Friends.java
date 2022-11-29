@@ -7,9 +7,9 @@
         Different Traders appear differently in different Locations.
 
 */
-package Charakters.Friendly_Npcs;
+package Characters.Friendly_Npcs;
 
-import Charakters.NPC;
+import Characters.NPC;
 
 public class Friends extends NPC {
     protected String[] Items;
