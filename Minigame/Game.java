@@ -6,14 +6,18 @@
 */
 import java.util.Scanner;
 
-import Charakters.PlayerCharakter;
+import Characters.*;
+
 
 public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
-    public static PlayerCharakter       s_mPlayerCharakter;
+    public static PlayerCharacter s_mPlayerCharacter;
 
+    public static void createListOfAllitems(){
+		
 
+    }
     public static void  createCharakter() {
 
 
@@ -35,27 +39,27 @@ public class Game {
             switch (s_nCharakterType){
 
                 case 1:
-                    s_mPlayerCharakter = new PlayerCharakter(s_sCharakterName, 80, "Elve");
+                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
                     bIsCharakterTypeValid = true;
                     break;
 
                 case 2:
-                    s_mPlayerCharakter  = new PlayerCharakter(s_sCharakterName, 100, "Human");
+                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
                     bIsCharakterTypeValid = true;
                     break;
 
                 case 3:
-                    s_mPlayerCharakter = new PlayerCharakter(s_sCharakterName, 90, "Wizard");
+                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
                     bIsCharakterTypeValid = true;
                     break;
 
                 case 4:
-                    s_mPlayerCharakter = new PlayerCharakter(s_sCharakterName, 150, "Dwarf");
+                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
                     bIsCharakterTypeValid = true;
                     break;
 
                 case 42:
-                    s_mPlayerCharakter = new PlayerCharakter(s_sCharakterName, 9999999, "Superuser");
+                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
                     bIsCharakterTypeValid = true;
                     break;
 
@@ -68,18 +72,19 @@ public class Game {
 
     public static void go(){
 
-        Scanner scan = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         boolean bIsGameRunning = true;
 
 
         while(bIsGameRunning) {
-            boolean bGameCheck = Game.s_mPlayerCharakter.getHealth() > 0;
+            boolean bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
+
 
             if (!bGameCheck) {
                 bIsGameRunning = false;
             }
 
-            String input = scan.nextLine();
+            String input = s.nextLine();
             switch(input){
                 case "Hunt":
                     Commands.hunt();
@@ -90,7 +95,12 @@ public class Game {
 
             }
 
+            bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
 
+
+            if (!bGameCheck) {
+                bIsGameRunning = false;
+            }
 
         }
 

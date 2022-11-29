@@ -1,0 +1,5 @@
+#This file stores the values of the items of this game
+#Structure of the stored item properties 
+1.ID 2.name 3.type 4.category 5.level 6.rarity 7.damage 8.range 9.damage factor 10.range factor 
+0001;Holz;Fichte;Ressources;1;1;20;3;1;1
+

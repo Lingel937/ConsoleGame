@@ -1,7 +1,11 @@
 class Commands{
 
   public static void hunt(){
-    Game.s_mPlayerCharakter.changeHealth(30);
+    //you will hunt a random monster and get loot, loose health and get coins. @Lingel
+    int nHealtChange;
+
+
+    Game.s_mPlayerCharacter.changeHealth(30);
     System.out.println("Hunt finished");
     
   }

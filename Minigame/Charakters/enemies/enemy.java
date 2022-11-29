@@ -10,6 +10,7 @@ package Charakters.enemies;
 import Charakters.NPC;
 
 public class enemy extends NPC {
-    protected int p_nMaxHealth;
+    protected int m_nMaxHealth;
+    protected int m_nDamage;
 
 }
