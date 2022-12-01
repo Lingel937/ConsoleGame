@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.2&#10;now we have more working funktions" />
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1 //added commenting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +77,8 @@
       <workItem from="1669725776087" duration="224000" />
       <workItem from="1669726204577" duration="461000" />
       <workItem from="1669726668280" duration="207000" />
-      <workItem from="1669726904937" duration="1435000" />
+      <workItem from="1669726904937" duration="3272000" />
+      <workItem from="1669797924008" duration="1599000" />
     </task>
     <task id="LOCAL-00001" summary="lol changes">
       <created>1669123402748</created>
@@ -103,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669727977924</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP_0.1.1 //added commenting">
+      <created>1669728353933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669728353933</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lol changes" />
     <MESSAGE value="WIP_0.1.1.2&#10;now we have more working funktions" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.2&#10;now we have more working funktions" />
+    <MESSAGE value="WIP_0.1.1 //added commenting" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1 //added commenting" />
   </component>
 </project>
