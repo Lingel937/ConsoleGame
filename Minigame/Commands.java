@@ -37,14 +37,19 @@ class Commands{
     System.out.println("You healed yourself. You now have "+Game.s_mPlayerCharacter.getHealth()+" HP");
 
   }
-    public static void profile(){
-        //prints out your profile @Lingel937
-        System.out.println("Your Name: "+Game.s_mPlayerCharacter.getName());
-        System.out.println("Your Class: "+Game.s_mPlayerCharacter.getCharacterType());
-        System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel());
-    }
+  public static void profile(){
+      //prints out your profile @Lingel937
+      System.out.println("Your Name: "+Game.s_mPlayerCharacter.getName());
+      System.out.println("Your Class: "+Game.s_mPlayerCharacter.getCharacterType());
+      System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel());
+  }
 
-    public static void travel(){
+  public static void levelUp(){
+        //increases your level by 1 @Lingel937
+        Game.s_mPlayerCharacter.changeLevel(1);
+        System.out.println("You leveled up! You are now level "+Game.s_mPlayerCharacter.getLevel());
+    }
+  public static void travel(){
         //travels to a location @Lingel937
         Scanner s = new Scanner(System.in);
         System.out.println("Where do you want to travel to?");
@@ -119,155 +124,129 @@ class Commands{
             System.out.println("The End of Space ");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=25) {
-            System.out.println("");
+            System.out.println("The Beginning of Space");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=26) {
-            System.out.println("");
+            System.out.println("The End of the Universe");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=27) {
-            System.out.println("");
+            System.out.println("The Beginning of the Universe");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=28) {
-            System.out.println("");
+            System.out.println("The End of Everything");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=29) {
-            System.out.println("");
+            System.out.println("The Beginning of Everything");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=30) {
-            System.out.println("");
+            System.out.println("The End of Nothing");
         }
         if(Game.s_mPlayerCharacter.getLevel()>=31) {
-            System.out.println("");
+            System.out.println("The Beginning of Nothing");
         }
 
-
-
-        /*
-        System.out.println("6. City");
-        System.out.println("7. Castle");
-        System.out.println("8. Dungeon");
-        System.out.println("9. Volcano");
-        System.out.println("10. Ocean");
-        System.out.println("11. Space");
-        System.out.println("12. Hell");
-        System.out.println("13. Heaven");
-        System.out.println("14. Underworld");
-        System.out.println("15. Nether");
-        System.out.println("16. End");
-        System.out.println("17. The Void");
-        System.out.println("18. The Abyss");
-        System.out.println("19. The Final Stand");
-        System.out.println("20. The End of the World");
-        System.out.println("21. The Beginning of the World");
-        System.out.println("22. The End of Time");
-        System.out.println("23. The Beginning of Time");
-        System.out.println("24. The End of Space");
-        System.out.println("25. The Beginning of Space");
-        System.out.println("26. The End of the Universe");
-        System.out.println("27. The Beginning of the Universe");
-        System.out.println("28. The End of Everything");
-        System.out.println("29. The Beginning of Everything");
-        System.out.println("30. The End of Nothing");
-        System.out.println("31. The Beginning of Nothing");
-        */
         int nTravelTo = s.nextInt();
-        switch(nTravelTo){
-            case 1:
-                System.out.println("You traveled to the Forest");
-                break;
-            case 2:
-                System.out.println("You traveled to the Mountains");
-                break;
-            case 3:
-                System.out.println("You traveled to the Desert");
-                break;
-            case 4:
-                System.out.println("You traveled to the Swamp");
-                break;
-            case 5:
-                System.out.println("You traveled to the Plains");
-                break;
-            case 6:
-                System.out.println("You traveled to the City");
-                break;
-            case 7:
-                System.out.println("You traveled to the Castle");
-                break;
-            case 8:
-                System.out.println("You traveled to the Dungeon");
-                break;
-            case 9:
-                System.out.println("You traveled to the Volcano");
-                break;
-            case 10:
-                System.out.println("You traveled to the Ocean");
-                break;
-            case 11:
-                System.out.println("You traveled to Space");
-                break;
-            case 12:
-                System.out.println("You traveled to Hell");
-                break;
-            case 13:
-                System.out.println("You traveled to Heaven");
-                break;
-            case 14:
-                System.out.println("You traveled to the Underworld");
-                break;
-            case 15:
-                System.out.println("You traveled to the Nether");
-                break;
-            case 16:
-                System.out.println("You traveled to the End");
-                break;
-            case 17:
-                System.out.println("You traveled to the Void");
-                break;
-            case 18:
-                System.out.println("You traveled to the Abyss");
-                break;
-            case 19:
-                System.out.println("You traveled to The Final Stand");
-                break;
-            case 20:
-                System.out.println("You traveled to The End of the World");
-                break;
-            case 21:
-                System.out.println("You traveled to The Beginning of the World");
-                break;
-            case 22:
-                System.out.println("You traveled to The End of Time");
-                break;
-            case 23:
-                System.out.println("You traveled to The Beginning of Time");
-                break;
-            case 24:
-                System.out.println("You traveled to The End of Space");
-                break;
-            case 25:
-                System.out.println("You traveled to The Beginning of Space");
-                break;
-            case 26:
-                System.out.println("You traveled to The End of the Universe");
-                break;
-            case 27:
-                System.out.println("You traveled to The Beginning of the Universe");
-                break;
-            case 28:
-                System.out.println("You traveled to The End of Everything");
-                break;
-            case 29:
-                System.out.println("You traveled to The Beginning of Everything");
-                break;
-            case 30:
-                System.out.println("You traveled to The End of Nothing");
-                break;
-            case 31:
-                System.out.println("You traveled to The Beginning of Nothing");
-                break;
-            default:
-                System.out.println("You didn't travel anywhere");
-                break;
+        if(nTravelTo > Game.s_mPlayerCharacter.getLevel()) {
+            System.out.println("You can't travel to that location yet");
+        }else {
+            switch (nTravelTo) {
+                case 1:
+                    System.out.println("You traveled to the Forest");
+                    break;
+                case 2:
+                    System.out.println("You traveled to the Mountains");
+                    break;
+                case 3:
+                    System.out.println("You traveled to the Desert");
+                    break;
+                case 4:
+                    System.out.println("You traveled to the Swamp");
+                    break;
+                case 5:
+                    System.out.println("You traveled to the Plains");
+                    break;
+                case 6:
+                    System.out.println("You traveled to the City");
+                    break;
+                case 7:
+                    System.out.println("You traveled to the Castle");
+                    break;
+                case 8:
+                    System.out.println("You traveled to the Dungeon");
+                    break;
+                case 9:
+                    System.out.println("You traveled to the Volcano");
+                    break;
+                case 10:
+                    System.out.println("You traveled to the Ocean");
+                    break;
+                case 11:
+                    System.out.println("You traveled to Space");
+                    break;
+                case 12:
+                    System.out.println("You traveled to Hell");
+                    break;
+                case 13:
+                    System.out.println("You traveled to Heaven");
+                    break;
+                case 14:
+                    System.out.println("You traveled to the Underworld");
+                    break;
+                case 15:
+                    System.out.println("You traveled to the Nether");
+                    break;
+                case 16:
+                    System.out.println("You traveled to the End");
+                    break;
+                case 17:
+                    System.out.println("You traveled to the Void");
+                    break;
+                case 18:
+                    System.out.println("You traveled to the Abyss");
+                    break;
+                case 19:
+                    System.out.println("You traveled to The Final Stand");
+                    break;
+                case 20:
+                    System.out.println("You traveled to The End of the World");
+                    break;
+                case 21:
+                    System.out.println("You traveled to The Beginning of the World");
+                    break;
+                case 22:
+                    System.out.println("You traveled to The End of Time");
+                    break;
+                case 23:
+                    System.out.println("You traveled to The Beginning of Time");
+                    break;
+                case 24:
+                    System.out.println("You traveled to The End of Space");
+                    break;
+                case 25:
+                    System.out.println("You traveled to The Beginning of Space");
+                    break;
+                case 26:
+                    System.out.println("You traveled to The End of the Universe");
+                    break;
+                case 27:
+                    System.out.println("You traveled to The Beginning of the Universe");
+                    break;
+                case 28:
+                    System.out.println("You traveled to The End of Everything");
+                    break;
+                case 29:
+                    System.out.println("You traveled to The Beginning of Everything");
+                    break;
+                case 30:
+                    System.out.println("You traveled to The End of Nothing");
+                    break;
+                case 31:
+                    System.out.println("You traveled to The Beginning of Nothing");
+                    break;
+                default:
+                    System.out.println("You didn't travel anywhere");
+                    break;
+            }
         }
     }
 }

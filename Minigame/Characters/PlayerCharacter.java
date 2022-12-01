@@ -46,6 +46,13 @@ public class PlayerCharacter {
 
 
     }
+    public void changeLevel(int nLevelDifference) {
+        //changes the level of the Player Character by the given nLevelDifference @Lingel937
+
+        m_nLevel = m_nLevel+nLevelDifference;
+        System.out.println("You just reached level "+m_nLevel);
+
+    }
 
 
     //function to check if the inventory is full and displays a message

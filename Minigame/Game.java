@@ -107,6 +107,9 @@ public class Game {
                 case "travel":
                     Commands.travel();
                     break;
+                case "levelup":
+                    Commands.levelUp();
+                    break;
             }
 
             bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
