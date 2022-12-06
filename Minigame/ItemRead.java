@@ -1,20 +1,15 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 class ItemRead{
-	/*
 	public String itemRead(){
 
 		String[] itemString;
-		try{
-			File itemRead = new File("Items.txt");
-			Scanner itemReadString = new Scanner(itemRead);
-			while(itemReadString.){
-				
+			File itemRead = new File("ConsoleGame/Minigame/Items/Items.txt");
+			BufferdReader buffer = new BufferdReader(new FileReader(itemRead));
+			for(int i = 0;i < 4; ++i ){
+				buffer.readLine();	
 			}
-		}
-		catch{
-		
-		}
-	} */
+			String line = buffer.readLine();
+			System.out.println(line);
+	} 
 }
