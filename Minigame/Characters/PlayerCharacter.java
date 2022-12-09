@@ -1,25 +1,35 @@
 package Characters;
 import java.util.ArrayList;
+import java.math.*;
 
 ;
 /*
     Author:                  Valentin Lingelbach (@Lingel)
-    Version added:           WIP_0.1
+    Version added:           WIP_0.1.0
     Last Update in Version:  WIP_0.1
 */
  /*Character class to store important values related to the character*/
 
 public class PlayerCharacter {
-    private String m_sPlayerName;       //name of the Character. @Lingel
-    private int m_nMaxHealth;           //maximum of hp your character can reach. @Lingel
-    private int m_nLevel;               //level of the character @Lingel
+    private String m_sPlayerName;       //name of the Character. @Lingel937
+    private int m_nMaxHealth;           //maximum of hp your character can reach. @Lingel937
+    private int m_nLevel;               //level of the character @Lingel937
     private String m_sCharacterType;    //type of the Character(e.g. Elve, Dwarf ect..) @Lingel
-    private int m_nHealth;              //Current health of the character @Lingel
+    private int m_nHealth;              //Current health of the character @Lingel937
    // private ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
     private int m_nInventorySize; //variable to store the size of the inventory @maulie5
+    private int  m_nExperiencePoints;
+    private int m_nMoney
+  
+    public void checkLevelUp(){
+        if(m_nExperiencePoints >= m_nLevel*10){
+            m_nLevel++;
+            m_nExperiencePoints = 0;
+            
 
-  
-  
+        }
+
+    }
     public PlayerCharacter(String sName, int nMaxHealth, String nType) {
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
@@ -71,6 +81,7 @@ public class PlayerCharacter {
         return m_nHealth;
     }
     public String getName() {
+
         return m_sPlayerName;
     }
 

@@ -12,8 +12,7 @@ Date:     21.10.2022
 class Main {
   public static void main(String[] args) {
 
-    Game.createListOfAllitems();
-    Game.createCharakter();
+    Game.start();
     Game.go();
     Game.end();
   }

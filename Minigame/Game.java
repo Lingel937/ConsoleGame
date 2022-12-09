@@ -131,14 +131,14 @@ public class Game {
             if (!bGameCheck) {
                 bIsGameRunning = false;
             }
-
+            Game.s_mPlayerCharacter.checkLevelUp();
         }
 
 
 
     }
 
-    public static void end(){
+public static void end(){
         System.out.println("game has ended lol");
 
 
