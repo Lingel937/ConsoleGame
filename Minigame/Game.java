@@ -13,11 +13,15 @@ public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
-
+	
+	
+	//function to create an object arry of all items 
+	//to store all values of an item
     public static void createListOfAllitems(){
 		
 
     }
+	//function to create the character object 
     public static void  createCharakter() {
 
 
@@ -69,7 +73,16 @@ public class Game {
             }
         }
     }
-
+	
+	//function which is called once on a gamestart to execute 
+	//all necessary functions
+	public static void start(){
+		createListOfAllitems();
+		createCharakter();
+	}
+	
+	//function which is running the hole time 
+	//and waits for player input                           
     public static void go(){
 
         Scanner s = new Scanner(System.in);
