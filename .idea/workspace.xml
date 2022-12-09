@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HGYM1f62Ham8qLpiy5PLfuDiJu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Valentin/Documents/Schule/E phase/Praktische Informatik/Minigame&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Valentin\Documents\Schule\E phase\Praktische Informatik\Minigame\Minigame" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ConsoleGames" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="" />
+      <created>1667912839468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667912839468</updated>
+      <workItem from="1667912841577" duration="3745000" />
+      <workItem from="1668070090506" duration="1394000" />
+      <workItem from="1668169185381" duration="4048000" />
+      <workItem from="1668188090851" duration="2078000" />
+      <workItem from="1668526046512" duration="371000" />
+      <workItem from="1669019333980" duration="5973000" />
+      <workItem from="1669035239564" duration="599000" />
+      <workItem from="1669120459766" duration="4862000" />
+      <workItem from="1669362204147" duration="184000" />
+      <workItem from="1669725281173" duration="466000" />
+      <workItem from="1669725776087" duration="224000" />
+      <workItem from="1669726204577" duration="461000" />
+      <workItem from="1669726668280" duration="207000" />
+      <workItem from="1669726904937" duration="3272000" />
+      <workItem from="1669797924008" duration="4816000" />
+      <workItem from="1670085991536" duration="786000" />
+      <workItem from="1670185215478" duration="1760000" />
+    </task>
+    <task id="LOCAL-00001" summary="lol changes">
+      <created>1669123402748</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669123402748</updated>
+    </task>
+    <task id="LOCAL-00002" summary="WIP_0.1.1 //added commenting">
+      <created>1669124207696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669124207696</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WIP_0.1.1 //added commenting">
+      <created>1669725458600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669725458600</updated>
+    </task>
+    <task id="LOCAL-00004" summary="WIP_0.1.1 //added commenting">
+      <created>1669727977924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669727977924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP_0.1.1 //added commenting">
+      <created>1669728353933</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669728353933</updated>
+    </task>
+    <task id="LOCAL-00006" summary="WIP_0.1.1.3 Deleted .out Folder">
+      <created>1669886520711</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669886520712</updated>
+    </task>
+    <task id="LOCAL-00007" summary="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished">
+      <created>1669888107742</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669888107742</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lol changes" />
+    <MESSAGE value="WIP_0.1.1.2&#10;now we have more working funktions" />
+    <MESSAGE value="WIP_0.1.1 //added commenting" />
+    <MESSAGE value="WIP_0.1.1.3 Deleted .out Folder" />
+    <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
