@@ -30,4 +30,6 @@ Here is a list of all features, we want to implement and which we implemented
 
 ***
 
-##Further explanaiton
+## Further explanation
+
+These are the features, we wanted to implement. 

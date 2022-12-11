@@ -5,9 +5,11 @@
     Last Update in Version:  WIP_0.1
 */
 import java.util.Scanner;
-
+import java.util.ArrayList;
 import Characters.*;
-
+import Items.*;
+import Lib.*;
+import ItemRead;
 
 public class Game {
     private static String  s_sCharakterName;
@@ -18,7 +20,12 @@ public class Game {
 	//function to create an object arry of all items 
 	//to store all values of an item
     public static void createListOfAllitems(){
-		
+        ArrayList<Item> itemArr_listOfAllItems = new ArrayList<>();
+		String[] strArr_propertiesOfItem;
+        for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
+            strArr_propertiesOfItem = ItemRead.getItemProperties(k)
+            itemArr_listOfAllItems(new Item(k, s_sCharakterName, s_sCharakterName, s_sCharakterName, k, s_sCharakterName, k, k, k, k, k));
+        }
 
     }
 	//function to create the character object 
