@@ -1,5 +1,6 @@
 import java.nio.charset.CharacterCodingException;
 import java.util.Scanner;
+
 class Commands{
 
   public static void hunt(){
