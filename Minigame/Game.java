@@ -5,20 +5,40 @@
     Last Update in Version:  WIP_0.1
 */
 import java.util.Scanner;
-
+import java.util.ArrayList;
 import Characters.*;
-
+import Items.*;
+import Lib.*;
+import ItemRead;
 
 public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
+    public ArrayList<Item> itemArr_listOfAllItems;
 	
 	
 	//function to create an object arry of all items 
 	//to store all values of an item
     public static void createListOfAllitems(){
-		
+        itemArr_listOfAllItems = new ArrayList<>();
+		String[] strArr_propertiesOfItem;
+        for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
+            strArr_propertiesOfItem = ItemRead.getItemProperties(k)
+            itemArr_listOfAllItems.add(new Item(
+                Lib.convertStrToInt(strArr_propertiesOfItem[0]),
+                strArr_propertiesOfItem[1],
+                strArr_propertiesOfItem[2],
+                strArr_propertiesOfItem[3],
+                Lib.convertStrToInt(strArr_propertiesOfItem[4]),
+                Lib.convertStrToInt(strArr_propertiesOfItem[5]),
+                Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
+                Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
+                Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
+                Lib.convertStrToDoub(strArr_propertiesOfItem[9]), 
+                Lib.convertStrToInt(strArr_propertiesOfItem[10])
+                ));
+        }
 
     }
 	//function to create the character object 
