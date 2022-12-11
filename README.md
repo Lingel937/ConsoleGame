@@ -30,4 +30,6 @@ Here is a list of all features, we want to implement and which we implemented
 
 ***
 
-##Further explanaiton
+## Further explanaiton
+All the features, which are listed above are just some goals, which we want to achieve. 
+

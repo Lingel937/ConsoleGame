@@ -8,14 +8,13 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
 import Items.*;
-import Lib.*;
-import ItemRead;
+import lib.*;
 
 public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
-    public ArrayList<Item> itemArr_listOfAllItems;
+    public static ArrayList<Item> itemArr_listOfAllItems;
 	
 	
 	//function to create an object arry of all items 
@@ -24,20 +23,22 @@ public class Game {
         itemArr_listOfAllItems = new ArrayList<>();
 		String[] strArr_propertiesOfItem;
         for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
-            strArr_propertiesOfItem = ItemRead.getItemProperties(k)
-            itemArr_listOfAllItems.add(new Item(
+            strArr_propertiesOfItem = ItemRead.getItemProperties(k);
+            Item item_item = new Item(
                 Lib.convertStrToInt(strArr_propertiesOfItem[0]),
                 strArr_propertiesOfItem[1],
                 strArr_propertiesOfItem[2],
                 strArr_propertiesOfItem[3],
                 Lib.convertStrToInt(strArr_propertiesOfItem[4]),
-                Lib.convertStrToInt(strArr_propertiesOfItem[5]),
+                strArr_propertiesOfItem[5],
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
                 Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[9]), 
-                Lib.convertStrToInt(strArr_propertiesOfItem[10])
-                ));
+                Lib.convertStrToInt(strArr_propertiesOfItem[10]),
+                Lib.convertStrToInt(strArr_propertiesOfItem[11])
+                );
+            
         }
 
     }

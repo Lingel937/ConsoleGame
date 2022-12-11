@@ -17,6 +17,7 @@ public class Item {
     protected int m_nItemID;
     private String m_sCategory;    
     private String m_sRarity;
+    private int m_nNumberOfItems;
 
     //membervariables for weapons:
     private double m_dDamageFactor;
@@ -28,7 +29,7 @@ public class Item {
     private int m_nNutritionalValue;
 
     //constructor to get all
-    public Item(int nID ,String sName, String sType, String sCategory, int nLevel, String sRarity, double dDamage, double dRange, double dDamageFactor, double dRangeFactor, int nNutritionalValue){
+    public Item(int nID ,String sName, String sType, String sCategory, int nLevel, String sRarity, double dDamage, double dRange, double dDamageFactor, double dRangeFactor, int nNutritionalValue,int nNumberOfItems){
         
         //initialize variables
         m_nItemID = nID;
@@ -42,6 +43,7 @@ public class Item {
         m_dRange = dRange;
         m_nNutritionalValue = nNutritionalValue;
         m_sRarity = sRarity;
+        m_nNumberOfItems =nNumberOfItems;
 
     }
 
