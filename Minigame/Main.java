@@ -14,6 +14,5 @@ class Main {
 
     Game.start();
     Game.go();
-    Game.end();
   }
 }
