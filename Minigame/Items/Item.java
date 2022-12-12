@@ -11,26 +11,38 @@
 package Items;
 public class Item {
     //membervariables for an item
-    protected String m_sItemName;
-    protected String m_sItemType;
-    protected int m_nItemLevel;
-    protected int m_nItemID;
-    private String m_sCategory;    
-    private String m_sRarity;
-    private int m_nNumberOfItems;
+    public String m_sItemName;
+    public String m_sItemType;
+    public int m_nItemLevel;
+    public int m_nItemID;
+    public String m_sCategory;    
+    public String m_sRarity;
+    public int m_nNumberOfItems;
 
     //membervariables for weapons:
-    private double m_dDamageFactor;
-    private double m_dDamage;
-    private double m_dRange;
-    private double m_dRangeFactor;
+    public double m_dDamageFactor;
+    public double m_dDamage;
+    public double m_dRange;
+    public double m_dRangeFactor;
     
     //membervariables for the food
-    private int m_nNutritionalValue;
+    public int m_nNutritionalValue;
 
     //constructor to get all
-    public Item(int nID ,String sName, String sType, String sCategory, int nLevel, String sRarity, double dDamage, double dRange, double dDamageFactor, double dRangeFactor, int nNutritionalValue,int nNumberOfItems){
-        
+    public Item(
+        int nID ,
+        String sName, 
+        String sType, 
+        String sCategory, 
+        int nLevel, 
+        String sRarity, 
+        double dDamage, 
+        double dRange, 
+        double dDamageFactor, 
+        double dRangeFactor, 
+        int nNutritionalValue,
+        int nNumberOfItems
+        ){
         //initialize variables
         m_nItemID = nID;
         m_sItemType = sType;
@@ -49,5 +61,37 @@ public class Item {
 
     public void LevelUp() {
         m_nItemLevel++;
+    }
+    
+    public int getItemID(){
+        return m_nItemID;
+    }
+
+    public String getItemType() {
+        return m_sItemType;
+    }
+
+    public String getName(){
+        return m_sItemName;
+    }
+    
+    public int getLvl(){
+        return m_nItemLevel;
+    }
+
+    public String getCategory(){
+        return m_sCategory;
+    }
+
+    public double getDamage(){
+        return m_dDamage;
+    }
+
+    public double getDamageFactor(){
+        return m_dDamageFactor;
+    }
+
+    public double getRange(){
+        return 
     }
 }

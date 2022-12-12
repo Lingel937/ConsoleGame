@@ -6,7 +6,7 @@ public class ItemRead {
 
 	public static int getNumberOfLinesOfItemFile(){
 		try{
-		File itemReadFile = new File("./Items/Itemz.txt");
+		File itemReadFile = new File("/home/maulie5/Workspace/School/Informatic/ConsoleGame/Minigame/Items/Itemz.txt");
 		Scanner itemRead = new Scanner(itemReadFile);
 		ArrayList<String> singleLine = new ArrayList<String>();
 		
@@ -29,7 +29,7 @@ public class ItemRead {
 	public static String[] getItemProperties(int int_line){
 		try{
 			String[] itemProperties;
-			File itemReadFile = new File("/ConsoleGame/Minigame/Items/ItemRead.java");
+			File itemReadFile = new File("/home/maulie5/Workspace/School/Informatic/ConsoleGame/Minigame/Items/Itemz.txt");
 			Scanner itemRead = new Scanner(itemReadFile);
 			ArrayList<String> singleLine = new ArrayList<String>();
 			
