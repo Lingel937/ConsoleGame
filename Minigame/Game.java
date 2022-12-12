@@ -143,6 +143,9 @@ public class Game {
                 case "levelup":
                     Commands.levelUp();
                     break;
+                case "exit":
+                    Game.end();
+                    break;
             }
 
             bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
@@ -158,13 +161,11 @@ public class Game {
 
     }
 
-public static void end(){
-        System.out.println("game has ended lol");
-        itemArr_listOfAllItems.clear();
-        s.close();
-
-
-
+    public static void end(){
+            System.out.println("game has ended lol");
+            itemArr_listOfAllItems.clear();
+            s.close();
+            System.exit(0);
     }
 
 }

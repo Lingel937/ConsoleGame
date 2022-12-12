@@ -62,36 +62,4 @@ public class Item {
     public void LevelUp() {
         m_nItemLevel++;
     }
-    
-    public int getItemID(){
-        return m_nItemID;
-    }
-
-    public String getItemType() {
-        return m_sItemType;
-    }
-
-    public String getName(){
-        return m_sItemName;
-    }
-    
-    public int getLvl(){
-        return m_nItemLevel;
-    }
-
-    public String getCategory(){
-        return m_sCategory;
-    }
-
-    public double getDamage(){
-        return m_dDamage;
-    }
-
-    public double getDamageFactor(){
-        return m_dDamageFactor;
-    }
-
-    public double getRange(){
-        return 
-    }
 }
