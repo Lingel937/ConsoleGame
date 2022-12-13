@@ -1,7 +1,8 @@
 import java.nio.charset.CharacterCodingException;
 import java.util.Scanner;
-
+import java.util.Random;
 class Commands{
+
 
   public static void hunt(){
     //you will hunt a random monster and get loot, loose health and get coins. @Lingel

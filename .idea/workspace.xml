@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished">
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Minigame/Testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,27 +37,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Valentin/Documents/Schule/E phase/Praktische Informatik/Minigame&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Valentin/Documents/Schule/E phase/Praktische Informatik/Minigame",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\Documents\Schule\E phase\Praktische Informatik\Minigame\Minigame" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Testing">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -56,6 +70,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Testing" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Testing" />
+      <module name="ConsoleGames" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Testing" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,6 +109,8 @@
       <workItem from="1669797924008" duration="4816000" />
       <workItem from="1670085991536" duration="786000" />
       <workItem from="1670185215478" duration="1760000" />
+      <workItem from="1670617698154" duration="2234000" />
+      <workItem from="1670934829734" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="lol changes">
       <created>1669123402748</created>
@@ -132,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669888107742</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented">
+      <created>1670618028317</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670618028317</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +203,8 @@
     <MESSAGE value="WIP_0.1.1 //added commenting" />
     <MESSAGE value="WIP_0.1.1.3 Deleted .out Folder" />
     <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished" />
+    <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
