@@ -19,7 +19,7 @@ Our goal was to create a little console game as an Java excercise.
 
 Here is a list of all features, we want to implement and which we implemented 
 
-### Checklist
+## Checklist
 |Feature |Implemented?|Person|
 |---|---|---|
 |customizable name|Yes|LingLong|
@@ -27,4 +27,9 @@ Here is a list of all features, we want to implement and which we implemented
 |working inventory|No|maulie5|
 |travelling system|No||
 ||No||
+
+***
+
+## Further explanaiton
+All the features, which are listed above are just some goals, which we want to achieve. 
 
