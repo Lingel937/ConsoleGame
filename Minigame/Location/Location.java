@@ -13,10 +13,18 @@
 
 
 package Location;
+import Characters.enemies.Enemy;
 
+import java.util.ArrayList;
 public class Location {
+    Enemy bauer = new Enemy();
     protected static int s_nlevel;
     protected static String s_sname;
     protected static int s_nsize;
     protected static String s_sdescription;
+    ArrayList<Enemy> commonEnemies = new ArrayList<>();
+    ArrayList<Enemy> rareEnemies = new ArrayList<>();
+    ArrayList<Enemy> epicEnemies = new ArrayList<>();
+    commonEnemies.add(bauer);
+    }
 }

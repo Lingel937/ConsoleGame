@@ -13,10 +13,11 @@
 
 
 package Location;
-
+import java.util.ArrayList;
+import Characters.enemies.*;
 public class Forest extends Location{
-
-
+    ArrayList<Enemy> commonEnemies = new ArrayList<>();
+    ArrayList<Enemy> rareEnemies = new ArrayList<>();
 
 
 
