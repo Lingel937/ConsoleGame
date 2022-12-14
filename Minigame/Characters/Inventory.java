@@ -3,7 +3,7 @@ import Items.*;
 import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
-    public static ArrayList<Item> m_itemObjectArray_Inventory;
+    public  ArrayList<Item> m_itemObjectArray_Inventory;
 
     public Inventory(){
         //initialize the object array
@@ -22,8 +22,8 @@ public class Inventory  {
 
     //function to sort your inventory
     public void sortInventory(){
-        for(int i = 0; i <= m_itemObjectArray_Inventory.size()-1;i++){
-            for(int k = i; k<= m_itemObjectArray_Inventory.size()-1;k++){
+        for(int i = 0; i < m_itemObjectArray_Inventory.size();i++){
+            for(int k = i; k < m_itemObjectArray_Inventory.size();k++){
                 if(
                     m_itemObjectArray_Inventory.get(i).getName() == m_itemObjectArray_Inventory.get(k).getName() &&
                     m_itemObjectArray_Inventory.get(i).getID() == m_itemObjectArray_Inventory.get(k).getID() &&
@@ -40,15 +40,32 @@ public class Inventory  {
                     m_itemObjectArray_Inventory.remove(k);
                 }
             }
+            if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
+                m_itemObjectArray_Inventory.clear();
+            }
         }
     }
 
     //function to show your inventory
-    public void showInventory(){
-        System.out.println("\nThis is your inventory:\nName | Type | Category | Level | Item Count | ");
-        for(int o = 0; o <= m_itemObjectArray_Inventory.size(); o++){
-
-
+    public void showInventoryContent(){
+        String filler = " | ";
+        
+        if(m_itemObjectArray_Inventory.size()==0){
+            System.out.println("Your inventory is empty!!!");
+        }
+        else{
+            System.out.println("\nThis is your inventory:\nName | Type | Category | Rarity | Level | Item Count | Damage\n-----------------------------------------------------------------");    
+            for(int o = 0; o < m_itemObjectArray_Inventory.size(); o++){
+                System.out.println(
+                    m_itemObjectArray_Inventory.get(o).getName()+filler+
+                    m_itemObjectArray_Inventory.get(o).getType()+filler+
+                    m_itemObjectArray_Inventory.get(o).getCategory()+filler+
+                    m_itemObjectArray_Inventory.get(o).getRarity()+filler+
+                    m_itemObjectArray_Inventory.get(o).getLvl()+filler+
+                    m_itemObjectArray_Inventory.get(o).getNumberOfItems()+filler+
+                    m_itemObjectArray_Inventory.get(o).getDamage()+filler
+                );
+            }
         }
     }
 }

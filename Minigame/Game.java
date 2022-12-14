@@ -4,6 +4,7 @@
     Version added:           WIP_0.1
     Last Update in Version:  WIP_0.1
 */
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
@@ -18,6 +19,9 @@ public class Game {
     public static Scanner s;
 	public static PlayerCharacter s_player;
 	
+
+
+
 	//function to create an object arry of all items 
 	//to store all values of an item
     public static void createListOfAllitems(){
@@ -41,6 +45,7 @@ public class Game {
                 );
             itemArr_listOfAllItems.add(item_item);
         }
+        
     }
 	//function to create the character object 
     public static void  createCharakter() {
@@ -91,6 +96,7 @@ public class Game {
                     System.out.println("Choose valid charactertype!!!");
                     break;
             }
+            Game.s_mPlayerCharacter.m_itemObjectArray_Inventory.add(itemArr_listOfAllItems.get(0));
         }
    }
 	
@@ -126,7 +132,7 @@ public class Game {
                     Commands.help();
                     break;
                 case "inventory":
-                   // Commands.inventory();
+                    Commands.showInventory();
                     break;
                 case "health":
                     Commands.health();
