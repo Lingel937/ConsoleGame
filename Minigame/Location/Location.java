@@ -18,7 +18,6 @@ import Characters.enemies.Enemy;
 import java.util.ArrayList;
 
 public class Location {
-    Enemy bauer = new Enemy();
     protected int s_nLevel;
     protected String s_sname;
     protected String s_sdescription;
@@ -26,11 +25,8 @@ public class Location {
     ArrayList<Enemy> rareEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> epicEnemies = new ArrayList<Enemy>();
     
-    public Location(int nLevel, Enemy commonEnemy, Enemy rareEnemy, Enemy epicEnemy){
+    public Location(int nLevel){
         nLevel = s_nLevel;
-        commonEnemies.add(commonEnemy);
-        rareEnemies.add(rareEnemy);
-        epicEnemies.add(epicEnemy);
     }
     public void addCommonEnemy(Enemy commonEnemy){
         commonEnemies.add(commonEnemy);

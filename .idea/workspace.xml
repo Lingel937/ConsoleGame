@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.7&#10; //generate Item rarity function implemented">
-      <change afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Minigame/Location/Locations.java" afterDir="false" />
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.9&#10;&#10;&#10;für jamal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/Friendly_Npcs/Friends.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Location/Forest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Location/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Location/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Locations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670938324243</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="WIP_0.1.1.9&#10;&#10;&#10;für jamal">
+      <created>1671044971219</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671044971219</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +226,8 @@
     <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished" />
     <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented" />
     <MESSAGE value="WIP_0.1.1.7&#10; //generate Item rarity function implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.7&#10; //generate Item rarity function implemented" />
+    <MESSAGE value="WIP_0.1.1.9&#10;&#10;&#10;für jamal" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.9&#10;&#10;&#10;für jamal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
