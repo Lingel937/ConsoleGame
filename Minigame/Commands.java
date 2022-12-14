@@ -1,5 +1,9 @@
 import java.nio.charset.CharacterCodingException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.text.AbstractDocument.Content;
+import Characters.*;
+
 import java.util.Random;
 class Commands{
 
@@ -43,14 +47,15 @@ class Commands{
       System.out.println("Your Name: "+Game.s_mPlayerCharacter.getName());
       System.out.println("Your Class: "+Game.s_mPlayerCharacter.getCharacterType());
       System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel());
-  }
+    }
 
-  public static void levelUp(){
+    public static void levelUp(){
         //increases your level by 1 @Lingel937
         Game.s_mPlayerCharacter.changeLevel(1);
         System.out.println("You leveled up! You are now level "+Game.s_mPlayerCharacter.getLevel());
     }
-  public static void travel() {
+    
+    public static void travel() {
       //travels to a location @Lingel937
       Scanner s = new Scanner(System.in);
       System.out.println("Where do you want to travel to?");
@@ -246,12 +251,16 @@ class Commands{
                       System.out.println("You traveled to The Beginning of Nothing");
                       break;
                   default:
-                      System.out.println("You didn't travel anywhere");
-                      break;
-              }
-          }
-      }else{
-          System.out.println("You didn't travel anywhere, please enter the number of desired location");
-      }
-  }
+                        System.out.println("You didn't travel anywhere");
+                        break;
+                }
+            }
+        }else{
+            System.out.println("You didn't travel anywhere, please enter the number of desired location");
+        }
+    
+    }
+    public static void showInventory(){
+        Game.s_mPlayerCharacter.m_inventoryObject.showInventoryContent();
+    }
 }

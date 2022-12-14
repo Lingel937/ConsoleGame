@@ -12,16 +12,17 @@ import Items.*;
  /*Character class to store important values related to the character*/
 import Items.Item;
 
-public class PlayerCharacter {
+public class PlayerCharacter extends Inventory{
     private String m_sPlayerName;       //name of the Character. @Lingel937
     private int m_nMaxHealth;           //maximum of hp your character can reach. @Lingel937
     private int m_nLevel;               //level of the character @Lingel937
     private String m_sCharacterType;    //type of the Character(e.g. Elve, Dwarf ect..) @Lingel
     private int m_nHealth;              //Current health of the character @Lingel937
-    private ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
+    public  Inventory m_inventoryObject; //object array of the class item to store your inventory @maulie5
     private int m_nInventorySize; //variable to store the size of the inventory @maulie5
     private int  m_nExperiencePoints;
     private int m_nMoney;
+    public ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
   
     public void checkLevelUp(){
         if(m_nExperiencePoints >= m_nLevel*10){
@@ -40,8 +41,8 @@ public class PlayerCharacter {
         m_nInventorySize = 21;
         m_sCharacterType = nType;
         m_nHealth = m_nMaxHealth;
-        m_itemObjectArray_Inventory = Inventory.m_itemObjectArray_Inventory; //set membervariable to store the inventoy an imported value @maulie5
-         
+        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy an imported value @maulie5
+        m_itemObjectArray_Inventory = m_inventoryObject.m_itemObjectArray_Inventory; //set the inventory to the imported value @maulie5
         
 
         System.out.println("Your Name: " + m_sPlayerName);
@@ -54,7 +55,7 @@ public class PlayerCharacter {
 
         m_nHealth = m_nHealth-nHealthdifference;
         System.out.println("You just lost "+nHealthdifference+" HP");
-        System.out.println("you have "+m_nHealth+" remaining");
+        System.out.println("You have "+m_nHealth+" remaining");
 
 
     }
@@ -89,8 +90,13 @@ public class PlayerCharacter {
     public String getCharacterType() {
         return m_sCharacterType;
     }
+    
     public int getLevel() {
         return m_nLevel;
+    }
+
+    public int getMoney(){
+        return m_nMoney;
     }
 }
 
