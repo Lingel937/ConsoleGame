@@ -8,15 +8,15 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
 import Items.*;
-import Lib.*;
-import ItemRead;
+import lib.*;
 
 public class Game {
     private static String  s_sCharakterName;
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
-    public ArrayList<Item> itemArr_listOfAllItems;
-	
+    public static ArrayList<Item> itemArr_listOfAllItems;
+    public static Scanner s;
+	public static PlayerCharacter s_player;
 	
 	//function to create an object arry of all items 
 	//to store all values of an item
@@ -24,31 +24,31 @@ public class Game {
         itemArr_listOfAllItems = new ArrayList<>();
 		String[] strArr_propertiesOfItem;
         for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
-            strArr_propertiesOfItem = ItemRead.getItemProperties(k)
-            itemArr_listOfAllItems.add(new Item(
+            strArr_propertiesOfItem = ItemRead.getItemProperties(k-1);
+            Item item_item = new Item(
                 Lib.convertStrToInt(strArr_propertiesOfItem[0]),
                 strArr_propertiesOfItem[1],
                 strArr_propertiesOfItem[2],
                 strArr_propertiesOfItem[3],
                 Lib.convertStrToInt(strArr_propertiesOfItem[4]),
-                Lib.convertStrToInt(strArr_propertiesOfItem[5]),
+                strArr_propertiesOfItem[5],
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
                 Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[9]), 
-                Lib.convertStrToInt(strArr_propertiesOfItem[10])
-                ));
+                Lib.convertStrToInt(strArr_propertiesOfItem[10]),
+                Lib.convertStrToInt(strArr_propertiesOfItem[11])
+                );
+            itemArr_listOfAllItems.add(item_item);
         }
-
     }
 	//function to create the character object 
     public static void  createCharakter() {
 
 
+        s = new Scanner(System.in);
 
-        Scanner s = new Scanner(System.in);
-
-        System.out.println("Enter your Name");
+        System.out.println("Enter your Name:");
         String s_sCharakterName = s.nextLine();
 
         boolean bIsCharakterTypeValid = false;
@@ -92,7 +92,7 @@ public class Game {
                     break;
             }
         }
-    }
+   }
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
@@ -143,6 +143,9 @@ public class Game {
                 case "levelup":
                     Commands.levelUp();
                     break;
+                case "exit":
+                    Game.end();
+                    break;
             }
 
             bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
@@ -158,11 +161,11 @@ public class Game {
 
     }
 
-public static void end(){
-        System.out.println("game has ended lol");
-
-
-
+    public static void end(){
+            System.out.println("game has ended lol");
+            itemArr_listOfAllItems.clear();
+            s.close();
+            System.exit(0);
     }
 
 }
