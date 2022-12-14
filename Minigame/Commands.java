@@ -3,7 +3,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.text.AbstractDocument.Content;
 import Characters.*;
+
+import java.util.Random;
 class Commands{
+
 
   public static void hunt(){
     //you will hunt a random monster and get loot, loose health and get coins. @Lingel
