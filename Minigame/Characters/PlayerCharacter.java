@@ -54,7 +54,7 @@ public class PlayerCharacter {
 
         m_nHealth = m_nHealth-nHealthdifference;
         System.out.println("You just lost "+nHealthdifference+" HP");
-        System.out.println("you have "+m_nHealth+" remaining");
+        System.out.println("You have "+m_nHealth+" remaining");
 
 
     }
@@ -89,9 +89,19 @@ public class PlayerCharacter {
     public String getCharacterType() {
         return m_sCharacterType;
     }
+    
     public int getLevel() {
         return m_nLevel;
     }
+
+    public int getMoney(){
+        return m_nMoney;
+    }
+
+    
+
+
+
 }
 
 

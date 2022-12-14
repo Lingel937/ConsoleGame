@@ -101,6 +101,17 @@ public class Item {
         return m_dRangeFactor;
     }
 
+    public int getNumberOfItems(){
+        return m_nNumberOfItems;
+    }
+
+    public double getNutritonalValue(){
+        return m_nNutritionalValue;
+    }
+
+    public String getRarity(){
+        return m_sRarity;
+    }
 
     //list of setters for item objects
     public void setName(String sName){
@@ -115,7 +126,24 @@ public class Item {
         m_dDamage = dDamage;
     }
     
-    public void setDamage(double dDamageFactor){
+    public void setDamageFactor(double dDamageFactor){
         m_dDamageFactor = dDamageFactor;
     }
+
+    public void setRange(double dRange){
+        m_dRange = dRange;
+    }    
+
+    public void setRangFactor(double dRangeFactor){
+        m_dRangeFactor = dRangeFactor;
+    }
+    
+    public void setRarity(String sRarity) {
+        m_sRarity = sRarity;
+    }
+
+    public void setNumberOfItems(int nNumberOfItems){
+        m_nNumberOfItems = nNumberOfItems;
+    }
+
 }
