@@ -14,6 +14,7 @@
 package Location;
 
 import Characters.enemies.Enemy;
+import Items.Item;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,9 @@ public class Location {
     ArrayList<Enemy> commonEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> rareEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> epicEnemies = new ArrayList<Enemy>();
-    
+    ArrayList<Item> commonItems =new ArrayList<>();
+    ArrayList<Item> rareItems =new ArrayList<>();
+    ArrayList<Item> EpicItems =new ArrayList<>();
     public Location(int nLevel){
         nLevel = s_nLevel;
     }
@@ -38,22 +41,13 @@ public class Location {
         epicEnemies.add(epicEnemy);
     }
 
-    public void setCommonEnemies(int index, Enemy commonEnemy){
-        commonEnemies.set(index, commonEnemy);
+    public void addCommonItem(){
+
     }
-    public void setRareEnemies(int index, Enemy rareEnemy){
-        rareEnemies.set(index, rareEnemy);
+    public void addRareItem(){
+
     }
-    public void setEpicEnemies(int index, Enemy epicEnemy){
-        epicEnemies.set(index, epicEnemy);
-    }
-    public void removeCommonEnemy(int index){
-        commonEnemies.remove(index);
-    }
-    public void removeRareEnemy(int index){
-        rareEnemies.remove(index);
-    }
-    public void removeEpicEnemy(int index){
-        epicEnemies.remove(index);
+    public void addEpicItem(){
+
     }
 }

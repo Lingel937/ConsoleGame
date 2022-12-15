@@ -4,11 +4,12 @@
     Version added:           WIP_0.1
     Last Update in Version:  WIP_0.1
 */
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
+import Characters.enemies.Enemies;
 import Items.*;
+import Location.*;
 import lib.*;
 
 public class Game {
@@ -18,13 +19,37 @@ public class Game {
     public static ArrayList<Item> itemArr_listOfAllItems;
     public static Scanner s;
 	public static PlayerCharacter s_player;
-	
+	public static void createAllLocations(){
+        //function to initialize all Locations @lingel937
+        Locations.forest();
+        Locations.mountain();
+        Locations.castle();
+        Locations.city();
+        Locations.desert();
+        Locations.plains();
+    }
 
+    public static void createAllItems(){
+        Items.itemslol();
+    }
+    public static void createAllEnemies(){
+        Enemies.farmer();
+        Enemies.goblin();
+        Enemies.warrior();
+        Enemies.wolf();
+        Enemies.bandit();
+        Enemies.hunter();
+        Enemies.goat();
+        Enemies.ork();
+        Enemies.guard();
+        Enemies.skeleton();
+        Enemies.zombie();
+        Enemies.troll();
+    }
 
-
-	//function to create an object arry of all items 
-	//to store all values of an item
     public static void createListOfAllitems(){
+        //function to create an object arry of all items
+        //to store all values of an item    @maulie5
         itemArr_listOfAllItems = new ArrayList<>();
 		String[] strArr_propertiesOfItem;
         for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
@@ -35,17 +60,16 @@ public class Game {
                 strArr_propertiesOfItem[2],
                 strArr_propertiesOfItem[3],
                 Lib.convertStrToInt(strArr_propertiesOfItem[4]),
-                strArr_propertiesOfItem[5],
+             //   strArr_propertiesOfItem[5],
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
-                Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
-                Lib.convertStrToDoub(strArr_propertiesOfItem[9]), 
+               // Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
+                    // Lib.convertStrToDoub(strArr_propertiesOfItem[9]),
                 Lib.convertStrToInt(strArr_propertiesOfItem[10]),
                 Lib.convertStrToInt(strArr_propertiesOfItem[11])
                 );
             itemArr_listOfAllItems.add(item_item);
         }
-        
     }
 	//function to create the character object 
     public static void  createCharakter() {
@@ -96,20 +120,22 @@ public class Game {
                     System.out.println("Choose valid charactertype!!!");
                     break;
             }
-            Game.s_mPlayerCharacter.m_itemObjectArray_Inventory.add(itemArr_listOfAllItems.get(0));
         }
    }
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
-	public static void start(){
-		createListOfAllitems();
+	public static void initialize(){
+		createAllLocations();
+        createListOfAllitems();
 		createCharakter();
+        createAllEnemies();
+
 	}
 	
 	//function which is running the hole time 
 	//and waits for player input                           
-    public static void go(){
+    public static void run(){
 
         Scanner s = new Scanner(System.in);
         boolean bIsGameRunning = true;
