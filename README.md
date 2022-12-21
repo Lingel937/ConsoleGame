@@ -1,4 +1,12 @@
-# The ConsoleGame
+
+#  before reading the following nonsense please visit our wiki for a good documention
+***
+
+
+
+## The ConsoleGame minigame
+
+
 this is a small game witch i know nothing about and am very qualifed to talk about.
 
 -lo118
