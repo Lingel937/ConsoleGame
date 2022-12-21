@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.9&#10;&#10;&#10;für jamal">
-      <change afterPath="$PROJECT_DIR$/Minigame/Items/Items.java" afterDir="false" />
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="WIP_0.1.1.10&#10;&#10;&#10;eee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Basic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/ItemRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/ItemRead.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Location/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Location/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Locations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Testing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,9 @@
       <workItem from="1671091943216" duration="3763000" />
       <workItem from="1671098477629" duration="18000" />
       <workItem from="1671116964503" duration="2221000" />
-      <workItem from="1671128976697" duration="418000" />
+      <workItem from="1671128976697" duration="569000" />
+      <workItem from="1671546746312" duration="2874000" />
+      <workItem from="1671608514497" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="lol changes">
       <created>1669123402748</created>
@@ -200,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671044971219</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="WIP_0.1.1.10&#10;&#10;&#10;eee">
+      <created>1671129499410</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671129499410</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +248,8 @@
     <MESSAGE value="WIP_0.1.1.4&#10;&#10;&#10;//Travel command finished&#10;//Level check implemented" />
     <MESSAGE value="WIP_0.1.1.7&#10; //generate Item rarity function implemented" />
     <MESSAGE value="WIP_0.1.1.9&#10;&#10;&#10;für jamal" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.9&#10;&#10;&#10;für jamal" />
+    <MESSAGE value="WIP_0.1.1.10&#10;&#10;&#10;eee" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP_0.1.1.10&#10;&#10;&#10;eee" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,11 +258,6 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Minigame/Commands.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

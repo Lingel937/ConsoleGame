@@ -11,6 +11,7 @@ import Items.*;
 */
  /*Character class to store important values related to the character*/
 import Items.Item;
+import Location.Location;
 
 public class PlayerCharacter extends Inventory{
     private String m_sPlayerName;       //name of the Character. @Lingel937
@@ -21,6 +22,7 @@ public class PlayerCharacter extends Inventory{
     public  Inventory m_inventoryObject; //object array of the class item to store your inventory @maulie5
     private int m_nInventorySize; //variable to store the size of the inventory @maulie5
     private int  m_nExperiencePoints;
+    private Location m_oCurrentLocation;
     private int m_nMoney;
     public ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
   
@@ -97,6 +99,13 @@ public class PlayerCharacter extends Inventory{
 
     public int getMoney(){
         return m_nMoney;
+    }
+
+    public void setCurrentLocation(Location oCurrentLocation){
+        m_oCurrentLocation = oCurrentLocation;
+    }
+    public Location getCurrentLocation(){
+        return m_oCurrentLocation;
     }
 }
 

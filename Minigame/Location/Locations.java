@@ -2,13 +2,13 @@ package Location;
 import Characters.enemies.Enemies;
 
 public class Locations {
-    static Location forest;
-    static Location mountain;
-    static Location desert;
-    static Location swamp;
-    static Location plains;
-    static Location city;
-    static Location Castle;
+    public static Location forest;
+    public static Location mountain;
+    public static Location desert;
+    public static Location swamp;
+    public static Location plains;
+    public static Location city;
+    public static Location Castle;
     public static void forest(){
         forest = new Location(1);
         forest.addCommonEnemy(Enemies.farmer);

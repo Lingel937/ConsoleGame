@@ -17,6 +17,10 @@ import Characters.enemies.Enemy;
 import Items.Item;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import Characters.enemies.Enemy;
+
 
 public class Location {
     protected int s_nLevel;
@@ -31,8 +35,23 @@ public class Location {
     public Location(int nLevel){
         nLevel = s_nLevel;
     }
-    public void addCommonEnemy(Enemy commonEnemy){
-        commonEnemies.add(commonEnemy);
+
+    public Enemy spawnEnemy(int nRarity) {
+
+        switch (nRarity) {
+            default:
+                return null;
+            case 1:
+                return commonEnemies.get(new Random().nextInt(commonEnemies.size()));
+            case 2:
+                return rareEnemies.get(new Random().nextInt(rareEnemies.size()));
+            case 3:
+                return epicEnemies.get(new Random().nextInt(epicEnemies.size()));
+        }
+    }
+
+    public void addCommonEnemy(Enemy oCommonEnemy){
+        commonEnemies.add(oCommonEnemy);
     }
     public void addRareEnemy(Enemy rareEnemy){
         rareEnemies.add(rareEnemy);

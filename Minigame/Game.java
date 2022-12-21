@@ -13,12 +13,12 @@ import Location.*;
 import lib.*;
 
 public class Game {
-    private static String  s_sCharakterName;
-    private static int     s_nCharakterType;
-    public static PlayerCharacter s_mPlayerCharacter;
-    public static ArrayList<Item> itemArr_listOfAllItems;
-    public static Scanner s;
-	public static PlayerCharacter s_player;
+    private static String           s_sCharakterName;
+    private static int              s_nCharakterType;
+    public static PlayerCharacter   s_mPlayerCharacter;
+    public static ArrayList<Item>   itemArr_listOfAllItems;
+    public static Scanner           s;
+	public static PlayerCharacter   s_player;
 	public static void createAllLocations(){
         //function to initialize all Locations @lingel937
         Locations.forest();
