@@ -1,5 +1,7 @@
 
 #  before reading the following nonsense please visit our wiki for a good documention
+
+[Click here](https://github.com/Lingel937/ConsoleGame/wiki/Home/)
 ***
 
 
