@@ -35,7 +35,7 @@ Here is a list of all features, we want to implement and which we implemented
 |customizable name|Yes|LingLong|
 |customizable class|Yes|LingLong|
 |working inventory|No|maulie5|
-|travelling system|No||
+|travelling system|да|лингел937|
 ||No||
 
 ***
