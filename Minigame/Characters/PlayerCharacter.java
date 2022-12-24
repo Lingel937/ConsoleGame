@@ -1,6 +1,9 @@
 package Characters;
 import java.util.ArrayList;
+<<<<<<< Updated upstream
 import Items.Item;
+=======
+>>>>>>> Stashed changes
 
 
 /*
@@ -31,13 +34,13 @@ public class PlayerCharacter extends Inventory{
         }
 
     }
-    public PlayerCharacter(String sName, int nMaxHealth, String nType) {
+    public PlayerCharacter(String sName, int nMaxHealth, String sType) {
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
         m_nMaxHealth = nMaxHealth;
         m_nLevel = 1;
         m_nInventorySize = 21;
-        m_sCharacterType = nType;
+        m_sCharacterType = sType;
         m_nHealth = m_nMaxHealth;
         m_inventoryObject = new Inventory(); //set membervariable to store the inventoy an imported value @maulie5
         m_itemObjectArray_Inventory = m_inventoryObject.m_itemObjectArray_Inventory; //set the inventory to the imported value @maulie5

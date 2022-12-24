@@ -48,7 +48,7 @@ public class Game {
         
     }
 	//function to create the character object 
-    public static void  createCharakter() {
+    public static void  createNewCharacter() {
 
 
         s = new Scanner(System.in);
@@ -59,52 +59,96 @@ public class Game {
         boolean bIsCharakterTypeValid = false;
         while(!bIsCharakterTypeValid){
 
-            System.out.println("Choose your Class:");
-            System.out.println("1 - Elve ");
-            System.out.println("2 - Human");
-            System.out.println("3 - Wizard");
-            System.out.println("4 - Dwarf");
-            int s_nCharakterType = s.nextInt();
-            switch (s_nCharakterType){
+            System.out.println("\nType in an valid integer to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
 
-                case 1:
-                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
-                    bIsCharakterTypeValid = true;
-                    break;
+            try{
+                int s_nCharakterType = s.nextInt();           
+                switch (s_nCharakterType){
 
-                case 2:
-                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
-                    bIsCharakterTypeValid = true;
-                    break;
+                    case 1:
+                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
+                        bIsCharakterTypeValid = true;
+                        break;
 
-                case 3:
-                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
-                    bIsCharakterTypeValid = true;
-                    break;
+                    case 2:
+                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
+                        bIsCharakterTypeValid = true;
+                        break;
 
-                case 4:
-                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
-                    bIsCharakterTypeValid = true;
-                    break;
+                    case 3:
+                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
+                        bIsCharakterTypeValid = true;
+                        break;
 
-                case 42:
-                    s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
-                    bIsCharakterTypeValid = true;
-                    break;
+                    case 4:
+                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
+                        bIsCharakterTypeValid = true;
+                        break;
 
-                default:
-                    System.out.println("Choose valid charactertype!!!");
-                    break;
+                    case 42:
+                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
+                        bIsCharakterTypeValid = true;
+                        break;
+
+                    default:
+                        System.out.println("Please enter a VALID integer!!!");
+                        break;
+                }
+            }catch(Exception e){
+                System.out.println("Please enter a valid integer!!!");
+                s.nextLine();
+            }
+            
+        }
+    }
+    public static void loadOrCreateCharacter(){
+        System.out.println("Do you want to load a character or create a new one?\n1 - Load\n2 - Create\n3 - Exit the Game \nInput:");
+        int nInput = s.nextInt();
+        System.out.println("Which character do you want to load?\nType in the name of the character:");
+        String sInput = s.nextLine();
+        boolean bIsInputValid = false;
+        while(!bIsInputValid){
+            try{
+                switch(nInput){
+                    case 1:
+                        s_mPlayerCharacter=Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput)
+                        break;
+                    case 2:
+                        createNewCharacter();
+                        bIsInputValid = true;
+                        break;
+                    case 3:
+                        Game.end();
+                        break;
+                    default:
+                        System.out.println("Please enter a valid integer!!!");
+                        break;
+                }
+            }catch(Exception e){
+                System.out.println("Please enter a valid integer!!!");
             }
             Game.s_mPlayerCharacter.m_itemObjectArray_Inventory.add(itemArr_listOfAllItems.get(0));
         }
-   }
+    } 
+
+    public static void loadCharacter(){
+
+    }
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
+<<<<<<< Updated upstream
 	public static void start(){
 		createListOfAllitems();
 		createCharakter();
+=======
+	public static void initialize(){
+		createAllLocations();
+        createListOfAllitems();
+		loadOrCreateCharacter();
+        createAllEnemies();
+
+>>>>>>> Stashed changes
 	}
 	
 	//function which is running the hole time 
@@ -168,7 +212,8 @@ public class Game {
     }
 
     public static void end(){
-            System.out.println("game has ended lol");
+            PlayerCharacterFileIO.savePlayerCharacter(s_mPlayerCharacter);
+            System.out.println("Thanks for playing!");
             itemArr_listOfAllItems.clear();
             s.close();
             System.exit(0);
