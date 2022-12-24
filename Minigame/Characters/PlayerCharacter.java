@@ -1,9 +1,6 @@
 package Characters;
 import java.util.ArrayList;
-<<<<<<< Updated upstream
 import Items.Item;
-=======
->>>>>>> Stashed changes
 
 
 /*
@@ -23,14 +20,12 @@ public class PlayerCharacter extends Inventory{
     private int m_nInventorySize; //variable to store the size of the inventory @maulie5
     private int  m_nExperiencePoints;
     private int m_nMoney;
-    public ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
   
     public void checkLevelUp(){
         if(m_nExperiencePoints >= m_nLevel*10){
             m_nLevel++;
             m_nExperiencePoints = 0;
             
-
         }
 
     }
@@ -42,8 +37,9 @@ public class PlayerCharacter extends Inventory{
         m_nInventorySize = 21;
         m_sCharacterType = sType;
         m_nHealth = m_nMaxHealth;
-        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy an imported value @maulie5
-        m_itemObjectArray_Inventory = m_inventoryObject.m_itemObjectArray_Inventory; //set the inventory to the imported value @maulie5
+        m_nExperiencePoints = 0;
+        m_nMoney = 0;
+        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
         
 
         System.out.println("Your Name: " + m_sPlayerName);
@@ -98,6 +94,18 @@ public class PlayerCharacter extends Inventory{
 
     public int getMoney(){
         return m_nMoney;
+    }
+    public Inventory getPlayerInventory(){
+        return m_inventoryObject;
+    }
+    public int getMaxHealth(){
+        return m_nMaxHealth;
+    }
+    public int getExperiencePoints(){
+        return m_nExperiencePoints;
+    }
+    public int getInventorySize () {
+        return m_nInventorySize;
     }
 }
 

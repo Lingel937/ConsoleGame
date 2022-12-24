@@ -68,4 +68,7 @@ public class Inventory  {
             }
         }
     }
+    public ArrayList<Item> getInventory(){
+        return m_itemObjectArray_Inventory;
+    }
 }

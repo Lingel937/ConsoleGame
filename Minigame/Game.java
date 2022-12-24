@@ -111,7 +111,7 @@ public class Game {
             try{
                 switch(nInput){
                     case 1:
-                        s_mPlayerCharacter=Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput)
+                        s_mPlayerCharacter=Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                         break;
                     case 2:
                         createNewCharacter();
@@ -137,18 +137,18 @@ public class Game {
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
-<<<<<<< Updated upstream
+
 	public static void start(){
 		createListOfAllitems();
 		createCharakter();
-=======
+
 	public static void initialize(){
 		createAllLocations();
         createListOfAllitems();
 		loadOrCreateCharacter();
         createAllEnemies();
 
->>>>>>> Stashed changes
+
 	}
 	
 	//function which is running the hole time 
