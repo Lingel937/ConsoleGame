@@ -1,7 +1,6 @@
 package Characters;
 import java.util.ArrayList;
-import java.math.*;
-import Items.*;
+import Items.Item;
 
 
 /*
@@ -10,7 +9,6 @@ import Items.*;
     Last Update in Version:  WIP_0.1
 */
  /*Character class to store important values related to the character*/
-import Items.Item;
 
 public class PlayerCharacter extends Inventory{
     private String m_sPlayerName;       //name of the Character. @Lingel937

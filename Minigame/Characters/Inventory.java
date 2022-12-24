@@ -41,7 +41,7 @@ public class Inventory  {
                 }
             }
             if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
-                m_itemObjectArray_Inventory.clear();
+                m_itemObjectArray_Inventory.remove(i);
             }
         }
     }
