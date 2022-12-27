@@ -38,8 +38,11 @@ public class ItemRead {
 				singleLine.add(itemRead.nextLine());
 			}
 			itemRead.close();
-			itemProperties = singleLine.get(int_line).split(";");
+			itemProperties = singleLine.get(int_line-1).split(";");
 			singleLine.clear();
+			for (int i = 0; i < itemProperties.length; i++) {
+				itemProperties[i]= itemProperties[i].replace(" ", "");
+			}
 			return itemProperties;
 		}
 		catch(FileNotFoundException e){

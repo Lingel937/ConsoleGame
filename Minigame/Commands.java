@@ -28,25 +28,25 @@ class Commands{
     System.out.println("health: shows your current health");
     System.out.println("heal: heals you");
     System.out.println("profile: shows your profile");
-    System.out.println("travel: travel to a new location");
+    System.out.println("travel: travel to a new location\n");
 
   }
   
   public static void health(){
     //prints out your current health @Lingel937
-    System.out.println("Your current health is: "+Game.s_mPlayerCharacter.getHealth());
+    System.out.println("Your current health is: "+Game.s_mPlayerCharacter.getHealth()+"\n");
   }
   public static void heal (){
     //@Lingel937
     Game.s_mPlayerCharacter.changeHealth(-50);
-    System.out.println("You healed yourself. You now have "+Game.s_mPlayerCharacter.getHealth()+" HP");
+    System.out.println("You healed yourself. You now have "+Game.s_mPlayerCharacter.getHealth()+" HP\n");
 
   }
   public static void profile(){
       //prints out your profile @Lingel937
       System.out.println("Your Name: "+Game.s_mPlayerCharacter.getName());
       System.out.println("Your Class: "+Game.s_mPlayerCharacter.getCharacterType());
-      System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel());
+      System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel()+"\n");
     }
 
     public static void levelUp(){
@@ -154,7 +154,7 @@ class Commands{
       if (s.hasNextInt()) {
           int nTravelTo = s.nextInt();
           if (nTravelTo > Game.s_mPlayerCharacter.getLevel()) {
-              System.out.println("You can't travel to that location yet");
+              System.out.println("You can't travel to that location yet\n");
           } else {
               switch (nTravelTo) {
                   case 1:

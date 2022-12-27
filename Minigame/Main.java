@@ -11,7 +11,7 @@ Date:     21.10.2022
 
 class Main {
   public static void main(String[] args) {
-	Game.start();
+	  Game.start();
     Game.go();
     Game.end();
   }

@@ -21,15 +21,12 @@ public class PlayerCharacter extends Inventory{
     private int  m_nExperiencePoints;
     private int m_nMoney;
   
-    public void checkLevelUp(){
-        if(m_nExperiencePoints >= m_nLevel*10){
-            m_nLevel++;
-            m_nExperiencePoints = 0;
-            
-        }
-
-    }
-    public PlayerCharacter(String sName, int nMaxHealth, String sType) {
+ 
+    public PlayerCharacter(
+        String sName, 
+        int nMaxHealth, 
+        String sType
+        ){
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
         m_nMaxHealth = nMaxHealth;
@@ -40,13 +37,46 @@ public class PlayerCharacter extends Inventory{
         m_nExperiencePoints = 0;
         m_nMoney = 0;
         m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
-        
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);
+    }
+    public PlayerCharacter(
+        String sName, 
+        int nMaxHealth, 
+        int nInventorySize,
+        String sType, 
+        int nLevel, 
+        int nHealth, 
+        int nExperiencePoints, 
+        int nMoney, 
+        Inventory inv_inventory) {
+        //Constructor of Player Charakter @Lingel
+        m_sPlayerName = sName;
+        m_nMaxHealth = nMaxHealth;
+        m_nLevel = nLevel;
+        m_nInventorySize = nInventorySize;
+        m_sCharacterType = sType;
+        m_nHealth = nHealth;
+        m_nExperiencePoints = nExperiencePoints;
+        m_nMoney = nMoney;
+        m_inventoryObject = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
 
+        System.out.println("Your Name: " + m_sPlayerName);
+        System.out.println("Your Class: " + m_sCharacterType);
+        System.out.println("Character was succesfully loaded!!!");
     }
 
+    }
+    
+    public void checkLevelUp(){
+        if(m_nExperiencePoints >= m_nLevel*10){
+            m_nLevel++;
+            m_nExperiencePoints = 0;
+            
+        }
+
+    }
     public void changeHealth(int nHealthdifference) {
         //changes the health of the Player Character by the given nHealthdifference @Lingel
 

@@ -2,4 +2,4 @@
 #Structure of the stored item properties 
 #1.ID 2.name 3.type 4.category 5.level 6.rarity 7.damage 8.range 9.damage factor 10.range factor 11.Nutiritional value 12.number of items 
 1;Soos;Holz;Ressources;1;Rare; 20.0; 3.0; 1.0; 1.0; 0; 1;
-2;Leeel;Stein;Ressources;2;Legendary;0.0 ;0.0 ;0.0 ;0.0 ; 0; 2;
+2;Leeel;Stein;Ressources;2;Legendary;0.0 ;0.0 ;0.0 ;0.0 ;0 ; 1;

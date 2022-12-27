@@ -16,11 +16,7 @@ public class Game {
     private static int     s_nCharakterType;
     public static PlayerCharacter s_mPlayerCharacter;
     public static ArrayList<Item> itemArr_listOfAllItems;
-    public static Scanner s;
-	public static PlayerCharacter s_player;
-	
-
-
+    public static Scanner scanner = new Scanner(System.in);
 
 	//function to create an object arry of all items 
 	//to store all values of an item
@@ -28,7 +24,7 @@ public class Game {
         itemArr_listOfAllItems = new ArrayList<>();
 		String[] strArr_propertiesOfItem;
         for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
-            strArr_propertiesOfItem = ItemRead.getItemProperties(k-1);
+            strArr_propertiesOfItem = ItemRead.getItemProperties(k);
             Item item_item = new Item(
                 Lib.convertStrToInt(strArr_propertiesOfItem[0]),
                 strArr_propertiesOfItem[1],
@@ -45,16 +41,13 @@ public class Game {
                 );
             itemArr_listOfAllItems.add(item_item);
         }
-        
     }
 	//function to create the character object 
     public static void  createNewCharacter() {
 
-
-        s = new Scanner(System.in);
-
+        scanner = new Scanner(System.in);
         System.out.println("Enter your Name:");
-        String s_sCharakterName = s.nextLine();
+        String s_sCharakterName = scanner.nextLine();
 
         boolean bIsCharakterTypeValid = false;
         while(!bIsCharakterTypeValid){
@@ -62,7 +55,7 @@ public class Game {
             System.out.println("\nType in an valid integer to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
 
             try{
-                int s_nCharakterType = s.nextInt();           
+                int s_nCharakterType = scanner.nextInt();           
                 switch (s_nCharakterType){
 
                     case 1:
@@ -96,24 +89,27 @@ public class Game {
                 }
             }catch(Exception e){
                 System.out.println("Please enter a valid integer!!!");
-                s.nextLine();
             }
             
         }
     }
     public static void loadOrCreateCharacter(){
-        System.out.println("Do you want to load a character or create a new one?\n1 - Load\n2 - Create\n3 - Exit the Game \nInput:");
-        int nInput = s.nextInt();
-        System.out.println("Which character do you want to load?\nType in the name of the character:");
-        String sInput = s.nextLine();
         boolean bIsInputValid = false;
         while(!bIsInputValid){
             try{
+                System.out.println("Do you want to load a character or create a new one?\n1 - Create\n2 - Load\n3 - Exit the Game \nInput:");
+                int nInput = scanner.nextInt();
                 switch(nInput){
-                    case 1:
+                    case 2:
+                        String[] strArr_listOfAllCharacters = Characters.PlayerCharacterFileIO.getPlayerCharacterNames();
+                        System.out.println("Which character do you want to load?\nType in the name of the character:");
+                        for(int k = 0 ; k < strArr_listOfAllCharacters.length; k++){
+                            System.out.println((k+1)+"-----"+strArr_listOfAllCharacters[k]+"\nInput:");
+                        }
+                        String sInput = scanner.nextLine();
                         s_mPlayerCharacter=Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                         break;
-                    case 2:
+                    case 1:
                         createNewCharacter();
                         bIsInputValid = true;
                         break;
@@ -127,26 +123,22 @@ public class Game {
             }catch(Exception e){
                 System.out.println("Please enter a valid integer!!!");
             }
-            Game.s_mPlayerCharacter.m_itemObjectArray_Inventory.add(itemArr_listOfAllItems.get(0));
         }
     } 
 
-    public static void loadCharacter(){
-
-    }
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
 
-	public static void start(){
-		createListOfAllitems();
-		createCharakter();
-
-	public static void initialize(){
-		createAllLocations();
+	
+    public static void start(){
+		//createAllLocations();
         createListOfAllitems();
 		loadOrCreateCharacter();
-        createAllEnemies();
+        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(0));
+        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
+        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
+        //createAllEnemies();
 
 
 	}
@@ -155,9 +147,7 @@ public class Game {
 	//and waits for player input                           
     public static void go(){
 
-        Scanner s = new Scanner(System.in);
         boolean bIsGameRunning = true;
-
 
         while(bIsGameRunning) {
             boolean bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
@@ -167,7 +157,7 @@ public class Game {
                 bIsGameRunning = false;
             }
 
-            String input = s.nextLine();
+            String input = scanner.nextLine();
             switch(input){
                 case "hunt":
                     Commands.hunt();
@@ -215,7 +205,8 @@ public class Game {
             PlayerCharacterFileIO.savePlayerCharacter(s_mPlayerCharacter);
             System.out.println("Thanks for playing!");
             itemArr_listOfAllItems.clear();
-            s.close();
+            Game.s_mPlayerCharacter = null;
+            scanner.close();
             System.exit(0);
     }
 

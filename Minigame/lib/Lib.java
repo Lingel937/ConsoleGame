@@ -7,7 +7,6 @@ public class Lib {
         try {
             value = Integer.parseInt(input);
         } catch (NumberFormatException e) {
-            System.out.println("");
         }
         return value;
 
@@ -20,7 +19,6 @@ public class Lib {
         try {
             value = Double.parseDouble(input);
         } catch (NumberFormatException e) {
-            System.out.println("");
         }
         return value;
     }
