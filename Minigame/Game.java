@@ -98,16 +98,35 @@ public class Game {
         while(!bIsInputValid){
             try{
                 System.out.println("Do you want to load a character or create a new one?\n1 - Create\n2 - Load\n3 - Exit the Game \nInput:");
+                scanner = new Scanner(System.in);
                 int nInput = scanner.nextInt();
                 switch(nInput){
                     case 2:
-                        String[] strArr_listOfAllCharacters = Characters.PlayerCharacterFileIO.getPlayerCharacterNames();
-                        System.out.println("Which character do you want to load?\nType in the name of the character:");
-                        for(int k = 0 ; k < strArr_listOfAllCharacters.length; k++){
-                            System.out.println((k+1)+"-----"+strArr_listOfAllCharacters[k]+"\nInput:");
+                        boolean bIsCharacterInputValid = false;
+                        while(!bIsCharacterInputValid){
+                            try{
+                                String[] strArr_listOfAllCharacters = Characters.PlayerCharacterFileIO.getPlayerCharacterNames();
+                                System.out.println("Which character do you want to load?\nType in the name of the character:");
+                                for(int k = 0 ; k < strArr_listOfAllCharacters.length; k++){
+                                    System.out.println((k+1)+"-----"+strArr_listOfAllCharacters[k]+"\nInput:");
+                                }
+                                scanner = new Scanner(System.in);
+                                String sInput = scanner.nextLine();
+                                for (int i = 0; i < strArr_listOfAllCharacters.length; i++) {
+                                    if(sInput.equals(strArr_listOfAllCharacters[i])){
+                                        s_mPlayerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
+                                        bIsInputValid = true;
+                                        bIsCharacterInputValid = true;
+                                    }    
+                                }
+                                if(bIsCharacterInputValid == false ){
+                                    System.out.println("Please enter a valid character to load!!!");
+                                }
+                            }catch(Exception e){
+                                System.out.println("Please enter a valid character to load!!!\n");
+                                e.printStackTrace();
+                            }
                         }
-                        String sInput = scanner.nextLine();
-                        s_mPlayerCharacter=Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                         break;
                     case 1:
                         createNewCharacter();
@@ -202,12 +221,15 @@ public class Game {
     }
 
     public static void end(){
+        try{
             PlayerCharacterFileIO.savePlayerCharacter(s_mPlayerCharacter);
-            System.out.println("Thanks for playing!");
             itemArr_listOfAllItems.clear();
             Game.s_mPlayerCharacter = null;
             scanner.close();
-            System.exit(0);
+        }catch(Exception e){
+        }
+        System.out.println("Thanks for playing!");
+        System.exit(0);
     }
 
 }

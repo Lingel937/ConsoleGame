@@ -60,40 +60,59 @@ public class PlayerCharacterFileIO {
                     );
             }
             inventoryFileWriter.close();
-            inventoryFile=null;
+            inventoryFile = null;
             
             
         } catch (Exception e) {
-            System.out.println("Error saving player character: " + e);
-            e.printStackTrace();
         }
-            
-            System.out.println("Everything saved!\n");
+        System.out.println("Everything saved!\n");
         
     }
     public static PlayerCharacter loadPlayerCharacter(String sCharacterName) {
+        ArrayList<String> sInventoryData = new ArrayList<String>();
+        String[] sCharacterData;
+        Inventory inventory = new Inventory();
+        PlayerCharacter player;
         try {
-            Inventory inventory = new Inventory();
+            
             File inventoryFile = new File("./Minigame/Characters/Players/" + sCharacterName + "/inventory.txt");
-
+            Scanner inventoryFileScanner = new Scanner(inventoryFile);
+            while(inventoryFileScanner.hasNextLine()){
+                sInventoryData.add(inventoryFileScanner.nextLine());
+            }
+            if(inventory.getNumberOfItems() > 0){ 
+                for (int i = 0; i < sInventoryData.size(); i++) {
+                    String[] sItemData = sInventoryData.get(i).split(";");
+                    for(int j = 0; j < sItemData.length; j++){
+                        sItemData[j] = sItemData[j].replace(" ", "");
+                    }
+                    inventory.addItem(new Item(
+                        Integer.valueOf(sItemData[0]),
+                        sItemData[1],
+                        sItemData[2],
+                        sItemData[3],
+                        Integer.valueOf(sItemData[4]),
+                        sItemData[5],
+                        Integer.valueOf(sItemData[6]),
+                        Double.valueOf(sItemData[7]),
+                        Integer.valueOf(sItemData[8]),
+                        Double.valueOf(sItemData[9]),
+                        Integer.valueOf(sItemData[10]),
+                        Integer.valueOf(sItemData[11])
+                    ));
+                }
+                sInventoryData.clear();
+            }
+            inventoryFileScanner.close();
 
             File characterFile = new File("./Minigame/Characters/Players/" + sCharacterName + "/character.txt");
             Scanner characterFileScanner = new Scanner(characterFile);
-            String[] sCharacterData = characterFileScanner.nextLine().split(";");
+            sCharacterData = characterFileScanner.nextLine().split(";");
             characterFileScanner.close();
             for(int k = 0; k < sCharacterData.length; k++){
                 sCharacterData[k] = sCharacterData[k].replace(" ", "");
             }
-
-
-
-
-
-
-
-
-
-            PlayerCharacter player = new PlayerCharacter(
+            player = new PlayerCharacter(
                 sCharacterData[0],
                 Integer.valueOf(sCharacterData[4]),
                 Integer.valueOf(sCharacterData[7]),
@@ -103,10 +122,11 @@ public class PlayerCharacterFileIO {
                 Integer.valueOf(sCharacterData[5]),
                 Integer.valueOf(sCharacterData[6]),
                 inventory
-            );
+                );
             return player;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
     public static String[] getPlayerCharacterNames(){

@@ -67,7 +67,7 @@ public class PlayerCharacter extends Inventory{
         System.out.println("Character was succesfully loaded!!!");
     }
 
-    }
+    
     
     public void checkLevelUp(){
         if(m_nExperiencePoints >= m_nLevel*10){
@@ -97,7 +97,7 @@ public class PlayerCharacter extends Inventory{
 
     //function to check if the inventory is full and displays a message
     public void fullInventory(){
-        if(m_itemObjectArray_Inventory.size()>= m_nInventorySize){
+        if(m_inventoryObject.getNumberOfItems() >= m_nInventorySize){
             System.out.println("Your inventory is full!!!");
             System.out.println("Try to get rid some items or to get a better backpack.");
         }
@@ -105,12 +105,10 @@ public class PlayerCharacter extends Inventory{
 
     //getter methods  @Lingel937
     public int getHealth(){
-        //returns the current health of the Player Character @Lingel
-
+        //returns the current health of the Player Character @Lingel937
         return m_nHealth;
     }
     public String getName() {
-
         return m_sPlayerName;
     }
 
