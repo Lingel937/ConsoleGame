@@ -140,7 +140,7 @@ public class PlayerCharacter extends Inventory{
     }
     public int getInventorySize () {
         return m_nInventorySize;
-
+    }
 
     public void setCurrentLocation(Location oCurrentLocation){
         m_oCurrentLocation = oCurrentLocation;
