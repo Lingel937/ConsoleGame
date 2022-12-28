@@ -1,7 +1,6 @@
 package Characters;
 import java.util.ArrayList;
-import java.math.*;
-import Items.*;
+import Items.Item;
 
 
 /*
@@ -10,8 +9,11 @@ import Items.*;
     Last Update in Version:  WIP_0.1
 */
  /*Character class to store important values related to the character*/
+
+
 import Items.Item;
 import Location.Location;
+
 
 public class PlayerCharacter extends Inventory{
     private String m_sPlayerName;       //name of the Character. @Lingel937
@@ -24,34 +26,63 @@ public class PlayerCharacter extends Inventory{
     private int  m_nExperiencePoints;
     private Location m_oCurrentLocation;
     private int m_nMoney;
-    public ArrayList<Item> m_itemObjectArray_Inventory; //object array of the class item to store your inventory @maulie5
   
-    public void checkLevelUp(){
-        if(m_nExperiencePoints >= m_nLevel*10){
-            m_nLevel++;
-            m_nExperiencePoints = 0;
-            
-
-        }
-
-    }
-    public PlayerCharacter(String sName, int nMaxHealth, String nType) {
+ 
+    public PlayerCharacter(
+        String sName, 
+        int nMaxHealth, 
+        String sType
+        ){
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
         m_nMaxHealth = nMaxHealth;
         m_nLevel = 1;
         m_nInventorySize = 21;
-        m_sCharacterType = nType;
+        m_sCharacterType = sType;
         m_nHealth = m_nMaxHealth;
-        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy an imported value @maulie5
-        m_itemObjectArray_Inventory = m_inventoryObject.m_itemObjectArray_Inventory; //set the inventory to the imported value @maulie5
-        
+        m_nExperiencePoints = 0;
+        m_nMoney = 0;
+        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);
+    }
+    public PlayerCharacter(
+        String sName, 
+        int nMaxHealth, 
+        int nInventorySize,
+        String sType, 
+        int nLevel, 
+        int nHealth, 
+        int nExperiencePoints, 
+        int nMoney, 
+        Inventory inv_inventory) {
+        //Constructor of Player Charakter @Lingel
+        m_sPlayerName = sName;
+        m_nMaxHealth = nMaxHealth;
+        m_nLevel = nLevel;
+        m_nInventorySize = nInventorySize;
+        m_sCharacterType = sType;
+        m_nHealth = nHealth;
+        m_nExperiencePoints = nExperiencePoints;
+        m_nMoney = nMoney;
+        m_inventoryObject = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
 
+        System.out.println("Your Name: " + m_sPlayerName);
+        System.out.println("Your Class: " + m_sCharacterType);
+        System.out.println("Character was succesfully loaded!!!");
     }
 
+    
+    
+    public void checkLevelUp(){
+        if(m_nExperiencePoints >= m_nLevel*10){
+            m_nLevel++;
+            m_nExperiencePoints = 0;
+            
+        }
+
+    }
     public void changeHealth(int nHealthdifference) {
         //changes the health of the Player Character by the given nHealthdifference @Lingel
 
@@ -72,7 +103,7 @@ public class PlayerCharacter extends Inventory{
 
     //function to check if the inventory is full and displays a message
     public void fullInventory(){
-        if(m_itemObjectArray_Inventory.size()>= m_nInventorySize){
+        if(m_inventoryObject.getNumberOfItems() >= m_nInventorySize){
             System.out.println("Your inventory is full!!!");
             System.out.println("Try to get rid some items or to get a better backpack.");
         }
@@ -80,12 +111,10 @@ public class PlayerCharacter extends Inventory{
 
     //getter methods  @Lingel937
     public int getHealth(){
-        //returns the current health of the Player Character @Lingel
-
+        //returns the current health of the Player Character @Lingel937
         return m_nHealth;
     }
     public String getName() {
-
         return m_sPlayerName;
     }
 
@@ -100,12 +129,25 @@ public class PlayerCharacter extends Inventory{
     public int getMoney(){
         return m_nMoney;
     }
+    public Inventory getPlayerInventory(){
+        return m_inventoryObject;
+    }
+    public int getMaxHealth(){
+        return m_nMaxHealth;
+    }
+    public int getExperiencePoints(){
+        return m_nExperiencePoints;
+    }
+    public int getInventorySize () {
+        return m_nInventorySize;
+
 
     public void setCurrentLocation(Location oCurrentLocation){
         m_oCurrentLocation = oCurrentLocation;
     }
     public Location getCurrentLocation(){
         return m_oCurrentLocation;
+
     }
 }
 

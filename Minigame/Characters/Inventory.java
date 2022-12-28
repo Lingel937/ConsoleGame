@@ -3,7 +3,7 @@ import Items.*;
 import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
-    public  ArrayList<Item> m_itemObjectArray_Inventory;
+    private  ArrayList<Item> m_itemObjectArray_Inventory;
 
     public Inventory(){
         //initialize the object array
@@ -11,7 +11,7 @@ public class Inventory  {
     }
 
     //function to return the number of items in the inventory
-    public int numberOfItems(){
+    public int getNumberOfItems(){
         int numOfItems = m_itemObjectArray_Inventory.size();
         return numOfItems;
     }
@@ -36,12 +36,12 @@ public class Inventory  {
                     m_itemObjectArray_Inventory.get(i).getRangeFactor() == m_itemObjectArray_Inventory.get(k).getRangeFactor() &&
                     m_itemObjectArray_Inventory.get(i).getRarity() == m_itemObjectArray_Inventory.get(k).getRarity()
                 ){
-                    m_itemObjectArray_Inventory.get(i).setNumberOfItems(m_itemObjectArray_Inventory.get(k).getNumberOfItems()+1);
+                    m_itemObjectArray_Inventory.get(i).setNumberOfItems(m_itemObjectArray_Inventory.get(k).getNumberOfItems()+m_itemObjectArray_Inventory.get(i).getNumberOfItems());
                     m_itemObjectArray_Inventory.remove(k);
                 }
             }
             if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
-                m_itemObjectArray_Inventory.clear();
+                m_itemObjectArray_Inventory.remove(i);
             }
         }
     }
@@ -54,7 +54,7 @@ public class Inventory  {
             System.out.println("Your inventory is empty!!!");
         }
         else{
-            System.out.println("\nThis is your inventory:\nName | Type | Category | Rarity | Level | Item Count | Damage\n-----------------------------------------------------------------");    
+            System.out.println("\nThis is your inventory:\nName | Type | Category | Rarity | Level | Item Count | Damage | Range\n----------------------------------------------------------------------------");    
             for(int o = 0; o < m_itemObjectArray_Inventory.size(); o++){
                 System.out.println(
                     m_itemObjectArray_Inventory.get(o).getName()+filler+
@@ -63,9 +63,20 @@ public class Inventory  {
                     m_itemObjectArray_Inventory.get(o).getRarity()+filler+
                     m_itemObjectArray_Inventory.get(o).getLvl()+filler+
                     m_itemObjectArray_Inventory.get(o).getNumberOfItems()+filler+
-                    m_itemObjectArray_Inventory.get(o).getDamage()+filler
+                    m_itemObjectArray_Inventory.get(o).getDamage()+filler+
+                    m_itemObjectArray_Inventory.get(o).getRange()+filler
                 );
             }
+            sortInventory();
         }
+    }
+    public ArrayList<Item> getInventory(){
+        return m_itemObjectArray_Inventory;
+    }
+    public void setInventory(ArrayList<Item> inventory){
+        m_itemObjectArray_Inventory = inventory;
+    }
+    public void addItem(Item item){
+        m_itemObjectArray_Inventory.add(item);  
     }
 }

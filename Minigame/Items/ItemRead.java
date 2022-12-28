@@ -6,19 +6,10 @@ import java.util.Scanner;
 
 public class ItemRead {
 
-<<<<<<< Updated upstream
-	public static int getNumberOfLinesOfItemFile(){
-		try{
-		File itemReadFile = new File("C:\\Users\\Valentin\\Documents\\Schule\\E phase\\Praktische Informatik\\Minigame\\Items\\Items.txt");
-		Scanner itemRead = new Scanner(itemReadFile);
-		ArrayList<String> singleLine = new ArrayList<String>();
-		
-		while(itemRead.hasNextLine()){
-			singleLine.add(itemRead.nextLine());
-=======
+
 	public static int getNumberOfLinesOfItemFile() {
 		try {
-			File itemReadFile = new File("./Itemz.txt");
+			File itemReadFile = new File("./Minigame/Items/Itemz.txt");
 			Scanner itemRead = new Scanner(itemReadFile);
 			ArrayList<String> singleLine = new ArrayList<String>();
 
@@ -34,19 +25,15 @@ public class ItemRead {
 			System.out.println("You need an 'Items' file.");
 			e.printStackTrace();
 			return 1;
->>>>>>> Stashed changes
-		}
 
+		}
 	}
+
 
 	public static String[] getItemProperties(int int_line) {
 		try {
 			String[] itemProperties;
-<<<<<<< Updated upstream
-			File itemReadFile = new File("\"C:\\Users\\Valentin\\Documents\\Schule\\E phase\\Praktische Informatik\\Minigame\\Minigame\\Items\\Itemz.txt\"");
-=======
-			File itemReadFile = new File("./Itemz.txt");
->>>>>>> Stashed changes
+			File itemReadFile = new File("./Minigame/Items/Itemz.txt");
 			Scanner itemRead = new Scanner(itemReadFile);
 			ArrayList<String> singleLine = new ArrayList<String>();
 
@@ -54,8 +41,11 @@ public class ItemRead {
 				singleLine.add(itemRead.nextLine());
 			}
 			itemRead.close();
-			itemProperties = singleLine.get(int_line).split(";");
+			itemProperties = singleLine.get(int_line-1).split(";");
 			singleLine.clear();
+			for (int i = 0; i < itemProperties.length; i++) {
+				itemProperties[i]= itemProperties[i].replace(" ", "");
+			}
 			return itemProperties;
 		} catch (FileNotFoundException e) {
 			String[] error = { "Error" };
@@ -63,7 +53,5 @@ public class ItemRead {
 			e.printStackTrace();
 			return error;
 		}
-
 	}
-
 }
