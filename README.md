@@ -1,4 +1,14 @@
-# The ConsoleGame
+
+#  before reading the following nonsense please visit our wiki for a good documention
+
+[Click here](https://github.com/Lingel937/ConsoleGame/wiki/Home/)
+***
+
+
+
+## The ConsoleGame minigame
+
+
 this is a small game witch i know nothing about and am very qualifed to talk about.
 
 -lo118
@@ -24,8 +34,8 @@ Here is a list of all features, we want to implement and which we implemented
 |---|---|---|
 |customizable name|Yes|LingLong|
 |customizable class|Yes|LingLong|
-|working inventory|No|maulie5|
-|travelling system|No||
+|working inventory|Yes|maulie5|
+|travelling system|да|лингел937|
 ||No||
 
 ***

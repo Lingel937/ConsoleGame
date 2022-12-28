@@ -34,12 +34,9 @@ public class Item {
         String sName, 
         String sType, 
         String sCategory, 
-        int nLevel, 
-        String sRarity, 
-        double dDamage, 
-        double dRange, 
-        double dDamageFactor, 
-        double dRangeFactor, 
+        int nLevel,
+        double dDamage,
+        double dDamageFactor,
         int nNutritionalValue,
         int nNumberOfItems
         ){
@@ -51,10 +48,7 @@ public class Item {
         m_sCategory = sCategory;
         m_dDamageFactor = dDamageFactor;
         m_dDamage = dDamage;
-        m_dRangeFactor = dRangeFactor;
-        m_dRange = dRange;
         m_nNutritionalValue = nNutritionalValue;
-        m_sRarity = sRarity;
         m_nNumberOfItems =nNumberOfItems;
 
     }

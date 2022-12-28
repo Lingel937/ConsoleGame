@@ -1,8 +1,11 @@
 package Items;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class ItemRead {
+
 
 	public static int getNumberOfLinesOfItemFile() {
 		try {
@@ -25,16 +28,16 @@ public class ItemRead {
 
 		}
 	}
-	public static String[] getItemProperties(int int_line){
-		try{
+
+
+	public static String[] getItemProperties(int int_line) {
+		try {
 			String[] itemProperties;
-
 			File itemReadFile = new File("./Minigame/Items/Itemz.txt");
-
 			Scanner itemRead = new Scanner(itemReadFile);
 			ArrayList<String> singleLine = new ArrayList<String>();
-			
-			while(itemRead.hasNextLine()){
+
+			while (itemRead.hasNextLine()) {
 				singleLine.add(itemRead.nextLine());
 			}
 			itemRead.close();
@@ -44,9 +47,8 @@ public class ItemRead {
 				itemProperties[i]= itemProperties[i].replace(" ", "");
 			}
 			return itemProperties;
-		}
-		catch(FileNotFoundException e){
-			String[] error = {"Error"};
+		} catch (FileNotFoundException e) {
+			String[] error = { "Error" };
 			System.out.println("You need an 'Items' file.");
 			e.printStackTrace();
 			return error;

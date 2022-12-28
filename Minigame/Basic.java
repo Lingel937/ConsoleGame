@@ -1,6 +1,6 @@
 import java.util.Random;
 public class Basic {
-    static Random rand = new Random();
+   public static Random rand = new Random();
     public static int generateRarity(){
 
         int m_nParameterOne = rand.nextInt(10);
@@ -17,11 +17,11 @@ public class Basic {
         //System.out.println(m_nFinalParameter);
         if(m_nFinalParameter > 35 && m_nFinalParameter < 65){
             //common
-            System.out.println("Common Enemy spawned");
+            //System.out.println("Common Enemy spawned");
             return 1;
         }else if (( m_nFinalParameter < 35 && m_nFinalParameter > 25)  || (m_nFinalParameter > 65 && m_nFinalParameter < 75)) {
             //rare
-            System.out.println("rare enemy spawned");
+            //System.out.println("rare enemy spawned");
             return 2;
         }else if ((m_nFinalParameter < 25 && m_nFinalParameter > 15) || (m_nFinalParameter > 75 && m_nFinalParameter < 85)) {
             //epic

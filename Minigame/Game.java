@@ -4,23 +4,54 @@
     Version added:           WIP_0.1
     Last Update in Version:  WIP_0.1
 */
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
+import Characters.enemies.Enemies;
 import Items.*;
+import Location.*;
 import lib.*;
 
 public class Game {
-    private static String  s_sCharakterName;
-    private static int     s_nCharakterType;
-    public static PlayerCharacter s_mPlayerCharacter;
-    public static ArrayList<Item> itemArr_listOfAllItems;
-    public static Scanner scanner = new Scanner(System.in);
 
-	//function to create an object arry of all items 
-	//to store all values of an item
+  private static String  s_sCharakterName;
+  private static int     s_nCharakterType;
+  public static PlayerCharacter s_mPlayerCharacter;
+  public static ArrayList<Item> itemArr_listOfAllItems;
+  public static Scanner scanner = new Scanner(System.in);
+
+	public static PlayerCharacter   s_player;
+	public static void createAllLocations(){
+        //function to initialize all Locations @lingel937
+        Locations.forest();
+        Locations.mountain();
+        Locations.castle();
+        Locations.city();
+        Locations.desert();
+        Locations.plains();
+    }
+
+    public static void createAllItems(){
+        Items.itemslol();
+    }
+    public static void createAllEnemies(){
+        Enemies.farmer();
+        Enemies.goblin();
+        Enemies.warrior();
+        Enemies.wolf();
+        Enemies.bandit();
+        Enemies.hunter();
+        Enemies.goat();
+        Enemies.ork();
+        Enemies.guard();
+        Enemies.skeleton();
+        Enemies.zombie();
+        Enemies.troll();
+    }
+
     public static void createListOfAllitems(){
+        //function to create an object arry of all items
+        //to store all values of an item    @maulie5
         itemArr_listOfAllItems = new ArrayList<>();
 		String[] strArr_propertiesOfItem;
         for(int k = 4; k<= ItemRead.getNumberOfLinesOfItemFile();k++){
@@ -31,11 +62,11 @@ public class Game {
                 strArr_propertiesOfItem[2],
                 strArr_propertiesOfItem[3],
                 Lib.convertStrToInt(strArr_propertiesOfItem[4]),
-                strArr_propertiesOfItem[5],
+             //   strArr_propertiesOfItem[5],
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
-                Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
-                Lib.convertStrToDoub(strArr_propertiesOfItem[9]), 
+               // Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
+                    // Lib.convertStrToDoub(strArr_propertiesOfItem[9]),
                 Lib.convertStrToInt(strArr_propertiesOfItem[10]),
                 Lib.convertStrToInt(strArr_propertiesOfItem[11])
                 );
@@ -90,7 +121,6 @@ public class Game {
             }catch(Exception e){
                 System.out.println("Please enter a valid integer!!!");
             }
-            
         }
     }
     public static void loadOrCreateCharacter(){
@@ -149,22 +179,28 @@ public class Game {
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
 
+
 	
     public static void start(){
-		//createAllLocations();
+		    //createAllLocations();
+        //createAllEnemies();
         createListOfAllitems();
-		loadOrCreateCharacter();
+		    loadOrCreateCharacter();
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(0));
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
-        //createAllEnemies();
+        
 
+
+	
+	
+        
 
 	}
 	
 	//function which is running the hole time 
 	//and waits for player input                           
-    public static void go(){
+    public static void run(){
 
         boolean bIsGameRunning = true;
 

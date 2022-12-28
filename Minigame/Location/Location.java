@@ -14,8 +14,13 @@
 package Location;
 
 import Characters.enemies.Enemy;
+import Items.Item;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import Characters.enemies.Enemy;
+
 
 public class Location {
     protected int s_nLevel;
@@ -24,12 +29,29 @@ public class Location {
     ArrayList<Enemy> commonEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> rareEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> epicEnemies = new ArrayList<Enemy>();
-    
+    ArrayList<Item> commonItems =new ArrayList<>();
+    ArrayList<Item> rareItems =new ArrayList<>();
+    ArrayList<Item> EpicItems =new ArrayList<>();
     public Location(int nLevel){
         nLevel = s_nLevel;
     }
-    public void addCommonEnemy(Enemy commonEnemy){
-        commonEnemies.add(commonEnemy);
+
+    public Enemy spawnEnemy(int nRarity) {
+
+        switch (nRarity) {
+            default:
+                return null;
+            case 1:
+                return commonEnemies.get(new Random().nextInt(commonEnemies.size()));
+            case 2:
+                return rareEnemies.get(new Random().nextInt(rareEnemies.size()));
+            case 3:
+                return epicEnemies.get(new Random().nextInt(epicEnemies.size()));
+        }
+    }
+
+    public void addCommonEnemy(Enemy oCommonEnemy){
+        commonEnemies.add(oCommonEnemy);
     }
     public void addRareEnemy(Enemy rareEnemy){
         rareEnemies.add(rareEnemy);
@@ -38,22 +60,13 @@ public class Location {
         epicEnemies.add(epicEnemy);
     }
 
-    public void setCommonEnemies(int index, Enemy commonEnemy){
-        commonEnemies.set(index, commonEnemy);
+    public void addCommonItem(){
+
     }
-    public void setRareEnemies(int index, Enemy rareEnemy){
-        rareEnemies.set(index, rareEnemy);
+    public void addRareItem(){
+
     }
-    public void setEpicEnemies(int index, Enemy epicEnemy){
-        epicEnemies.set(index, epicEnemy);
-    }
-    public void removeCommonEnemy(int index){
-        commonEnemies.remove(index);
-    }
-    public void removeRareEnemy(int index){
-        rareEnemies.remove(index);
-    }
-    public void removeEpicEnemy(int index){
-        epicEnemies.remove(index);
+    public void addEpicItem(){
+
     }
 }

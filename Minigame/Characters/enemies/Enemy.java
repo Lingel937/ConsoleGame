@@ -21,6 +21,22 @@ public class Enemy extends NPC {
         m_nLevel = nLevel;
         m_nDamage = nDamage;
     }
+    public Item dropItem(int nRarity){
+        switch (nRarity) {
+
+            default:
+                return null;
+
+            case 1:
+                return commonlyDroppedItems.get(rand.nextInt(commonlyDroppedItems.size()));
+            case 2:
+                return rarelyDroppedItems.get(rand.nextInt(rarelyDroppedItems.size()));
+            case 3:
+                return epicDroppedItems.get(rand.nextInt(epicDroppedItems.size()));
+        }
+
+
+    }
     public void addCommonlyDroppedItem(Item item){
         commonlyDroppedItems.add(item);
     }

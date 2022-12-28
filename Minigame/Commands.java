@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.text.AbstractDocument.Content;
 import Characters.*;
+import Characters.enemies.Enemy;
+import Location.Location;
+import Location.Locations;
 
 import java.util.Random;
 class Commands{
@@ -10,11 +13,12 @@ class Commands{
 
   public static void hunt(){
     //you will hunt a random monster and get loot, loose health and get coins. @Lingel
+    int nRarity = Basic.generateRarity();
     int nHealtChange;
-
-
-    Game.s_mPlayerCharacter.changeHealth(30);
-    System.out.println("Hunt finished");
+    Enemy oCurrentEnemy;
+    Location oCurrentLocation = Game.s_mPlayerCharacter.getCurrentLocation();
+    oCurrentEnemy = oCurrentLocation.spawnEnemy(nRarity);
+    System.out.println("You are hunting a " + oCurrentEnemy + "!");
     
   }
 
@@ -159,27 +163,35 @@ class Commands{
               switch (nTravelTo) {
                   case 1:
                       System.out.println("You traveled to the Forest");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.forest);
                       break;
                   case 2:
                       System.out.println("You traveled to the Mountains");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.mountain);
                       break;
                   case 3:
                       System.out.println("You traveled to the Desert");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.desert);
                       break;
                   case 4:
                       System.out.println("You traveled to the Swamp");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.swamp);
                       break;
                   case 5:
                       System.out.println("You traveled to the Plains");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.plains);
                       break;
                   case 6:
                       System.out.println("You traveled to the City");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.city);
                       break;
                   case 7:
                       System.out.println("You traveled to the Castle");
+                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.Castle);
                       break;
                   case 8:
                       System.out.println("You traveled to the Dungeon");
+
                       break;
                   case 9:
                       System.out.println("You traveled to the Volcano");
