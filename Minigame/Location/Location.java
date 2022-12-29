@@ -13,6 +13,7 @@
 
 package Location;
 
+import Characters.enemies.Enemies;
 import Characters.enemies.Enemy;
 import Items.Item;
 
@@ -40,7 +41,7 @@ public class Location {
 
         switch (nRarity) {
             default:
-                return null;
+                return Enemies.bandit;
             case 1:
                 return commonEnemies.get(new Random().nextInt(commonEnemies.size()));
             case 2:

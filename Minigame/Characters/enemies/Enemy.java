@@ -17,9 +17,10 @@ public class Enemy extends NPC {
     ArrayList<Item> rarelyDroppedItems = new ArrayList<>();
     ArrayList<Item> epicDroppedItems = new ArrayList<>();
 
-    public Enemy(int nLevel, int nDamage){
+    public Enemy(int nLevel, int nDamage, String sName){
         m_nLevel = nLevel;
         m_nDamage = nDamage;
+        m_sName = sName;
     }
     public Item dropItem(int nRarity){
         switch (nRarity) {
@@ -65,6 +66,7 @@ public class Enemy extends NPC {
         epicDroppedItems.remove(index);
     }
 
-
-
+    public int getDamage(){
+        return m_nDamage;
+    }
 }

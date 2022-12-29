@@ -82,31 +82,32 @@ public class Game {
 
             System.out.println("\nType in an valid integer to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
 
-            try{
-                int s_nCharakterType = scanner.nextInt();           
-                switch (s_nCharakterType){
 
-                    case 1:
+                String s_sCharakterType = scanner.nextLine();
+                switch (s_sCharakterType){
+
+                    case "1":
                         s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
                         bIsCharakterTypeValid = true;
+
                         break;
 
-                    case 2:
+                    case "2":
                         s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
                         bIsCharakterTypeValid = true;
                         break;
 
-                    case 3:
+                    case "3":
                         s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
                         bIsCharakterTypeValid = true;
                         break;
 
-                    case 4:
+                    case "4":
                         s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
                         bIsCharakterTypeValid = true;
                         break;
 
-                    case 42:
+                    case "42":
                         s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
                         bIsCharakterTypeValid = true;
                         break;
@@ -115,10 +116,10 @@ public class Game {
                         System.out.println("Please enter a VALID integer!!!");
                         break;
                 }
-            }catch(Exception e){
-                System.out.println("Please enter a valid integer!!!");
-            }
+
+
         }
+        s_mPlayerCharacter.setCurrentLocation(Locations.forest);
     }
     public static void loadOrCreateCharacter(){
         boolean bIsInputValid = false;
@@ -178,20 +179,14 @@ public class Game {
 
 
 	
-    public static void start(){
-		    //createAllLocations();
-        //createAllEnemies();
+    public static void initialize(){
+        createAllEnemies();
+        createAllLocations();
         createListOfAllitems();
-		    loadOrCreateCharacter();
+        loadOrCreateCharacter();
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(0));
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
-        
-
-
-	
-	
-        
 
 	}
 	

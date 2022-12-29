@@ -26,11 +26,9 @@ public class Basic {
         }else if ((m_nFinalParameter < 25 && m_nFinalParameter > 15) || (m_nFinalParameter > 75 && m_nFinalParameter < 85)) {
             //epic
             return 3;
-
-
         }
         else{
-            return 0;
+            return 1;
         }
     }
 }

@@ -16,9 +16,12 @@ class Commands{
     int nRarity = Basic.generateRarity();
     int nHealtChange;
     Enemy oCurrentEnemy;
-    Location oCurrentLocation = Game.s_mPlayerCharacter.getCurrentLocation();
-    oCurrentEnemy = oCurrentLocation.spawnEnemy(nRarity);
-    System.out.println("You are hunting a " + oCurrentEnemy + "!");
+
+    oCurrentEnemy = Game.s_mPlayerCharacter.getCurrentLocation().spawnEnemy(nRarity);
+    Game.s_mPlayerCharacter.changeHealth(oCurrentEnemy.getDamage());
+
+    System.out.println();
+    System.out.println("You are hunting a " + oCurrentEnemy.getName() + "!");
     
   }
 

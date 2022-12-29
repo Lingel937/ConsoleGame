@@ -12,7 +12,7 @@ import Items.Item;
 
 
 import Items.Item;
-import Location.Location;
+import Location.*;
 
 
 public class PlayerCharacter extends Inventory{
@@ -43,7 +43,7 @@ public class PlayerCharacter extends Inventory{
         m_nExperiencePoints = 0;
         m_nMoney = 0;
         m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
-        m_oCurrentLocation = new Location(1);
+        m_oCurrentLocation = Locations.forest;
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);
@@ -70,7 +70,7 @@ public class PlayerCharacter extends Inventory{
         m_nMoney = nMoney;
         m_inventoryObject = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
         m_oCurrentLocation = new Location(nLevel);
-
+        m_oCurrentLocation = Locations.forest;
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);
         System.out.println("Character was succesfully loaded!!!");

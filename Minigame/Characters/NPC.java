@@ -11,4 +11,8 @@ public class NPC {
     
     protected int m_nLevel;
     protected String m_sName;
+
+    public String getName(){
+        return m_sName;
+    }
 }
