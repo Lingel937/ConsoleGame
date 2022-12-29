@@ -29,9 +29,9 @@ public class Location {
     ArrayList<Enemy> commonEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> rareEnemies = new ArrayList<Enemy>();
     ArrayList<Enemy> epicEnemies = new ArrayList<Enemy>();
-    ArrayList<Item> commonItems =new ArrayList<>();
-    ArrayList<Item> rareItems =new ArrayList<>();
-    ArrayList<Item> EpicItems =new ArrayList<>();
+    ArrayList<Item> commonItems = new ArrayList<Item>();
+    ArrayList<Item> rareItems = new ArrayList<Item>();
+    ArrayList<Item> EpicItems = new ArrayList<Item>();
     public Location(int nLevel){
         nLevel = s_nLevel;
     }

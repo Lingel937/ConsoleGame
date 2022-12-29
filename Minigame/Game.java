@@ -62,13 +62,10 @@ public class Game {
                 strArr_propertiesOfItem[2],
                 strArr_propertiesOfItem[3],
                 Lib.convertStrToInt(strArr_propertiesOfItem[4]),
-             //   strArr_propertiesOfItem[5],
+                Lib.convertStrToDoub(strArr_propertiesOfItem[5]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
-                Lib.convertStrToDoub(strArr_propertiesOfItem[7]), 
-               // Lib.convertStrToDoub(strArr_propertiesOfItem[8]),
-                    // Lib.convertStrToDoub(strArr_propertiesOfItem[9]),
-                Lib.convertStrToInt(strArr_propertiesOfItem[10]),
-                Lib.convertStrToInt(strArr_propertiesOfItem[11])
+                Lib.convertStrToInt(strArr_propertiesOfItem[7]),
+                Lib.convertStrToInt(strArr_propertiesOfItem[8])
                 );
             itemArr_listOfAllItems.add(item_item);
         }

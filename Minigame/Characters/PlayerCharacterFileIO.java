@@ -50,11 +50,8 @@ public class PlayerCharacterFileIO {
                     playerCharacter.getPlayerInventory().getInventory().get(i).getType() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getCategory() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getLvl() + ";" +
-                    playerCharacter.getPlayerInventory().getInventory().get(i).getRarity() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getDamage() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getDamageFactor() + ";" +
-                    playerCharacter.getPlayerInventory().getInventory().get(i).getRange() + ";" +
-                    playerCharacter.getPlayerInventory().getInventory().get(i).getRangeFactor() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getNutritonalValue() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getNumberOfItems() + ";" +"\n"
                     );
@@ -92,13 +89,10 @@ public class PlayerCharacterFileIO {
                         sItemData[2],
                         sItemData[3],
                         Integer.valueOf(sItemData[4]),
-                        sItemData[5],
-                        Integer.valueOf(sItemData[6]),
-                        Double.valueOf(sItemData[7]),
-                        Integer.valueOf(sItemData[8]),
-                        Double.valueOf(sItemData[9]),
-                        Integer.valueOf(sItemData[10]),
-                        Integer.valueOf(sItemData[11])
+                        Double.valueOf(sItemData[5]),
+                        Double.valueOf(sItemData[6]),
+                        Integer.valueOf(sItemData[7]),
+                        Integer.valueOf(sItemData[8])
                     ));
                 }
                 sInventoryData.clear();

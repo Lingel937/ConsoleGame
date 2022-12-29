@@ -43,6 +43,7 @@ public class PlayerCharacter extends Inventory{
         m_nExperiencePoints = 0;
         m_nMoney = 0;
         m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
+        m_oCurrentLocation = new Location(1);
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);
@@ -56,7 +57,8 @@ public class PlayerCharacter extends Inventory{
         int nHealth, 
         int nExperiencePoints, 
         int nMoney, 
-        Inventory inv_inventory) {
+        Inventory inv_inventory
+        ) {
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
         m_nMaxHealth = nMaxHealth;
@@ -67,6 +69,7 @@ public class PlayerCharacter extends Inventory{
         m_nExperiencePoints = nExperiencePoints;
         m_nMoney = nMoney;
         m_inventoryObject = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
+        m_oCurrentLocation = new Location(nLevel);
 
         System.out.println("Your Name: " + m_sPlayerName);
         System.out.println("Your Class: " + m_sCharacterType);

@@ -22,8 +22,6 @@ public class Item {
     //membervariables for weapons:
     private double m_dDamageFactor;
     private double m_dDamage;
-    private double m_dRange;
-    private double m_dRangeFactor;
     
     //membervariables for the food
     public int m_nNutritionalValue;
@@ -87,14 +85,6 @@ public class Item {
         return m_dDamageFactor;
     }
 
-    public double getRange() {
-        return m_dRange;
-    }
-
-    public double getRangeFactor() {
-        return m_dRangeFactor;
-    }
-
     public int getNumberOfItems(){
         return m_nNumberOfItems;
     }
@@ -103,9 +93,6 @@ public class Item {
         return m_nNutritionalValue;
     }
 
-    public String getRarity(){
-        return m_sRarity;
-    }
 
     //list of setters for item objects
     public void setName(String sName){
@@ -122,14 +109,6 @@ public class Item {
     
     public void setDamageFactor(double dDamageFactor){
         m_dDamageFactor = dDamageFactor;
-    }
-
-    public void setRange(double dRange){
-        m_dRange = dRange;
-    }    
-
-    public void setRangFactor(double dRangeFactor){
-        m_dRangeFactor = dRangeFactor;
     }
     
     public void setRarity(String sRarity) {

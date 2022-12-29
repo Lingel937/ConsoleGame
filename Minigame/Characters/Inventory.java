@@ -31,10 +31,7 @@ public class Inventory  {
                     m_itemObjectArray_Inventory.get(i).getType() == m_itemObjectArray_Inventory.get(k).getType() &&
                     m_itemObjectArray_Inventory.get(i).getCategory() == m_itemObjectArray_Inventory.get(k).getCategory() &&
                     m_itemObjectArray_Inventory.get(i).getDamage() == m_itemObjectArray_Inventory.get(k).getDamage() &&
-                    m_itemObjectArray_Inventory.get(i).getDamageFactor() == m_itemObjectArray_Inventory.get(k).getDamageFactor() &&
-                    m_itemObjectArray_Inventory.get(i).getRange() == m_itemObjectArray_Inventory.get(k).getRange() &&
-                    m_itemObjectArray_Inventory.get(i).getRangeFactor() == m_itemObjectArray_Inventory.get(k).getRangeFactor() &&
-                    m_itemObjectArray_Inventory.get(i).getRarity() == m_itemObjectArray_Inventory.get(k).getRarity()
+                    m_itemObjectArray_Inventory.get(i).getDamageFactor() == m_itemObjectArray_Inventory.get(k).getDamageFactor()
                 ){
                     m_itemObjectArray_Inventory.get(i).setNumberOfItems(m_itemObjectArray_Inventory.get(k).getNumberOfItems()+m_itemObjectArray_Inventory.get(i).getNumberOfItems());
                     m_itemObjectArray_Inventory.remove(k);
@@ -54,20 +51,19 @@ public class Inventory  {
             System.out.println("Your inventory is empty!!!");
         }
         else{
-            System.out.println("\nThis is your inventory:\nName | Type | Category | Rarity | Level | Item Count | Damage | Range\n----------------------------------------------------------------------------");    
+            //sortInventory();
+            System.out.println("\nThis is your inventory:\nName | Type | Category | Level | Item Count | Damage\n----------------------------------------------------------------------------");    
             for(int o = 0; o < m_itemObjectArray_Inventory.size(); o++){
                 System.out.println(
                     m_itemObjectArray_Inventory.get(o).getName()+filler+
                     m_itemObjectArray_Inventory.get(o).getType()+filler+
                     m_itemObjectArray_Inventory.get(o).getCategory()+filler+
-                    m_itemObjectArray_Inventory.get(o).getRarity()+filler+
                     m_itemObjectArray_Inventory.get(o).getLvl()+filler+
                     m_itemObjectArray_Inventory.get(o).getNumberOfItems()+filler+
-                    m_itemObjectArray_Inventory.get(o).getDamage()+filler+
-                    m_itemObjectArray_Inventory.get(o).getRange()+filler
+                    m_itemObjectArray_Inventory.get(o).getDamage()+filler
                 );
             }
-            sortInventory();
+            
         }
     }
     public ArrayList<Item> getInventory(){
