@@ -4,6 +4,7 @@ import java.util.Scanner;
 import javax.swing.text.AbstractDocument.Content;
 import Characters.*;
 import Characters.enemies.Enemy;
+import Items.Item;
 import Location.Location;
 import Location.Locations;
 
@@ -18,10 +19,22 @@ class Commands{
     Enemy oCurrentEnemy;
 
     oCurrentEnemy = Game.s_mPlayerCharacter.getCurrentLocation().spawnEnemy(nRarity);
-    Game.s_mPlayerCharacter.changeHealth(oCurrentEnemy.getDamage());
-
-    System.out.println();
     System.out.println("You are hunting a " + oCurrentEnemy.getName() + "!");
+      int nLostDamage  = oCurrentEnemy.getDamage();
+    Game.s_mPlayerCharacter.changeHealth(oCurrentEnemy.getDamage());
+    int nGainedMoney = oCurrentEnemy.dropMoney();
+    Game.s_mPlayerCharacter.addMoney(nGainedMoney);
+    int nGainedXP = oCurrentEnemy.dropXP();
+    Game.s_mPlayerCharacter.addXP(nGainedXP);
+    if(Basic.yesNo3070()){
+        Item oDroppedItem = oCurrentEnemy.dropItem(Basic.generateRarity());
+        Game.s_mPlayerCharacter.m_inventoryObject.addItem(oDroppedItem);
+        System.out.println("Hunt finished. You lost "+ nLostDamage+" Hp. You gained "+ nGainedMoney + " Coins, " +nGainedXP + " XP and the "+oCurrentEnemy.getName()+" dropped a "+oDroppedItem.getName());
+    }else{
+        System.out.println("Hunt finished. You lost "+ nLostDamage+" Hp. You gained "+ nGainedMoney + " Coins, " +nGainedXP + " XP and the "+oCurrentEnemy.getName()+" dropped no Item. ");
+    }
+    System.out.println();
+
     
   }
 

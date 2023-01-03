@@ -180,9 +180,10 @@ public class Game {
 
 	
     public static void initialize(){
+        createAllItems();
+        createListOfAllitems();
         createAllEnemies();
         createAllLocations();
-        createListOfAllitems();
         loadOrCreateCharacter();
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(0));
         Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));

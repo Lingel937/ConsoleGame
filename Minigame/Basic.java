@@ -2,7 +2,6 @@ import java.util.Random;
 public class Basic {
    public static Random rand = new Random();
     public static int generateRarity(){
-
         int m_nParameterOne = rand.nextInt(10);
         int m_nParameterTwo = rand.nextInt(10);
         int m_nParameterThree = rand.nextInt(10);
@@ -30,5 +29,11 @@ public class Basic {
         else{
             return 1;
         }
+    }
+    public static boolean yesNo3070(){
+        if( rand.nextInt(3)== 2){
+            return true;
+        }
+        return false;
     }
 }

@@ -61,13 +61,13 @@ public class Location {
         epicEnemies.add(epicEnemy);
     }
 
-    public void addCommonItem(){
-
+    public void addCommonItem(Item nItem){
+        commonItems.add(nItem);
     }
-    public void addRareItem(){
-
+    public void addRareItem(Item nItem){
+        rareItems.add(nItem);
     }
-    public void addEpicItem(){
-
+    public void addEpicItem(Item nItem){
+        EpicItems.add(nItem);
     }
 }

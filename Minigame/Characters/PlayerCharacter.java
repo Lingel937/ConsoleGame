@@ -76,13 +76,15 @@ public class PlayerCharacter extends Inventory{
         System.out.println("Character was succesfully loaded!!!");
     }
 
-    
+    public void addXP(int nXP){
+        m_nExperiencePoints += nXP;
+    }
     
     public void checkLevelUp(){
         if(m_nExperiencePoints >= m_nLevel*10){
             m_nLevel++;
             m_nExperiencePoints = 0;
-            
+            System.out.println("you gained a Level");
         }
 
     }
@@ -90,9 +92,6 @@ public class PlayerCharacter extends Inventory{
         //changes the health of the Player Character by the given nHealthdifference @Lingel
 
         m_nHealth = m_nHealth-nHealthdifference;
-        System.out.println("You just lost "+nHealthdifference+" HP");
-        System.out.println("You have "+m_nHealth+" remaining");
-
 
     }
     public void changeLevel(int nLevelDifference) {
@@ -131,6 +130,9 @@ public class PlayerCharacter extends Inventory{
 
     public int getMoney(){
         return m_nMoney;
+    }
+    public void addMoney(int nMoney){
+        m_nMoney += nMoney;
     }
     public Inventory getPlayerInventory(){
         return m_inventoryObject;

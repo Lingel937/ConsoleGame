@@ -1,4 +1,3 @@
-
 /*
 
 Author:   Valentin Lingelbach

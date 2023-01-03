@@ -10,17 +10,41 @@ import Items.Item;
 import java.util.Random;
 import java.util.ArrayList;
 
+
 public class Enemy extends NPC {
+    Random rand = new Random();
     protected int m_nDamage;
-    static Random rand = new Random();
+    private int m_nMinDroppedMoney;
+    private int m_nMaxDroppedMoney;
+    private int m_nDroppedXP;
     ArrayList<Item> commonlyDroppedItems = new ArrayList<>();
     ArrayList<Item> rarelyDroppedItems = new ArrayList<>();
     ArrayList<Item> epicDroppedItems = new ArrayList<>();
 
-    public Enemy(int nLevel, int nDamage, String sName){
+
+    public Enemy
+            (
+            int nLevel,
+            int nDamage,
+            String sName,
+            int nMinDroppedMoney,
+            int nMaxDroppedMoney,
+            int nDroppedXP
+            )
+    {
+        m_nDroppedXP = nDroppedXP;
         m_nLevel = nLevel;
         m_nDamage = nDamage;
         m_sName = sName;
+        m_nMinDroppedMoney = nMinDroppedMoney;
+        m_nMaxDroppedMoney = nMaxDroppedMoney;
+
+    }
+    public int dropXP(){
+        return m_nDroppedXP;
+    }
+    public int dropMoney(){
+        return rand.nextInt(m_nMinDroppedMoney,m_nMaxDroppedMoney);
     }
     public Item dropItem(int nRarity){
         switch (nRarity) {
@@ -47,24 +71,16 @@ public class Enemy extends NPC {
     public void addEpicDroppedItem(Item item){
         epicDroppedItems.add(item);
     }
-    public void setCommonlyDroppedItems(int index, Item item){
-        commonlyDroppedItems.set(index, item);
+    public int getCommonItemLength(){
+        return commonlyDroppedItems.size();
     }
-    public void setRarelyDroppedItems(int index, Item item){
-        rarelyDroppedItems.set(index, item);
+    public int getRareItemLength(){
+        return rarelyDroppedItems.size();
     }
-    public void setEpicDroppedItems(int index, Item item){
-        epicDroppedItems.set(index, item);
+    public int getEpicItemLength(){
+        return epicDroppedItems.size();
     }
-    public void removeCommonlyDroppedItem(int index){
-        commonlyDroppedItems.remove(index);
-    }
-    public void removeRarelyDroppedItem(int index){
-        rarelyDroppedItems.remove(index);
-    }
-    public void removeEpicDroppedItem(int index){
-        epicDroppedItems.remove(index);
-    }
+
 
     public int getDamage(){
         return m_nDamage;
