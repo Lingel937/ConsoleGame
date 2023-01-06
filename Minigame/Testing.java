@@ -1,6 +1,3 @@
-import Characters.enemies.Enemy;
-import Location.Locations;
-
 public class Testing {
     public static void main(String[] args) {
 

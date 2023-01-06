@@ -7,7 +7,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import Characters.*;
-import Characters.enemies.Enemies;
+import Enemies.Enemies;
 import Items.*;
 import Location.*;
 import lib.*;
@@ -65,7 +65,8 @@ public class Game {
                 Lib.convertStrToDoub(strArr_propertiesOfItem[5]),
                 Lib.convertStrToDoub(strArr_propertiesOfItem[6]),
                 Lib.convertStrToInt(strArr_propertiesOfItem[7]),
-                Lib.convertStrToInt(strArr_propertiesOfItem[8])
+                Lib.convertStrToInt(strArr_propertiesOfItem[8]),
+                Lib.convertStrToInt(strArr_propertiesOfItem[9])
                 );
             itemArr_listOfAllItems.add(item_item);
         }
@@ -80,7 +81,7 @@ public class Game {
         boolean bIsCharakterTypeValid = false;
         while(!bIsCharakterTypeValid){
 
-            System.out.println("\nType in an valid integer to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
+            System.out.println("\nType in the number to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
 
 
                 String s_sCharakterType = scanner.nextLine();
@@ -120,6 +121,11 @@ public class Game {
 
         }
         s_mPlayerCharacter.setCurrentLocation(Locations.forest);
+        s_mPlayerCharacter.setCurrentHelmet(Items.NoHat);
+        s_mPlayerCharacter.setCurrentBodyArmor(Items.NoBodyarmor);
+        s_mPlayerCharacter.setCurrentPants(Items.NoPants);
+        s_mPlayerCharacter.setCurrentBoots(Items.Barefoot);
+
     }
     public static void loadOrCreateCharacter(){
         boolean bIsInputValid = false;

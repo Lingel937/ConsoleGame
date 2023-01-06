@@ -13,14 +13,12 @@
 
 package Location;
 
-import Characters.enemies.Enemies;
-import Characters.enemies.Enemy;
+import Enemies.Enemies;
+import Enemies.Enemy;
 import Items.Item;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import Characters.enemies.Enemy;
 
 
 public class Location {
