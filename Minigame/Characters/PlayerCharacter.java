@@ -1,5 +1,5 @@
 package Characters;
-import java.util.ArrayList;
+
 import Items.Item;
 
 
@@ -11,7 +11,6 @@ import Items.Item;
  /*Character class to store important values related to the character*/
 
 
-import Items.Item;
 import Location.*;
 
 
@@ -26,8 +25,10 @@ public class PlayerCharacter extends Inventory{
     private int  m_nExperiencePoints;
     private Location m_oCurrentLocation;
     private int m_nMoney;
-  
- 
+    private Item m_oCurrentHelmet;
+    private Item m_oCurrentBodyArmor;
+    private Item m_oCurrentPants;
+    private Item m_oCurrentBoots;
     public PlayerCharacter(
         String sName, 
         int nMaxHealth, 
@@ -58,6 +59,7 @@ public class PlayerCharacter extends Inventory{
         int nExperiencePoints, 
         int nMoney, 
         Inventory inv_inventory
+
         ) {
         //Constructor of Player Charakter @Lingel
         m_sPlayerName = sName;
@@ -152,6 +154,35 @@ public class PlayerCharacter extends Inventory{
     }
     public Location getCurrentLocation(){
         return m_oCurrentLocation;
+
+    }
+
+    public Item getCurrentHelmet(){
+        return m_oCurrentHelmet;
+    }
+    public Item getCurrentBodyArmor(){
+        return m_oCurrentBodyArmor;
+    }
+    public Item getCurrentPants(){
+        return m_oCurrentPants;
+    }
+    public Item getCurrentBoots(){
+        return m_oCurrentBoots;
+    }
+    public void setCurrentHelmet(Item nArmor){
+        m_oCurrentHelmet = nArmor;
+
+    }
+    public void setCurrentBodyArmor(Item nArmor){
+        m_oCurrentBodyArmor = nArmor;
+
+    }
+    public void setCurrentPants(Item nArmor){
+        m_oCurrentPants = nArmor;
+
+    }
+    public void setCurrentBoots(Item nArmor){
+        m_oCurrentBoots = nArmor;
 
     }
 }

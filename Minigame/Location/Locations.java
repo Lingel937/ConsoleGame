@@ -1,5 +1,5 @@
 package Location;
-import Characters.enemies.Enemies;
+import Enemies.Enemies;
 
 public class Locations {
     public static Location forest;

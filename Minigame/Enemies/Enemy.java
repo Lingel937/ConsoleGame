@@ -4,15 +4,17 @@
     Last Update in Version:  WIP_0.1
 
 */
-package Characters.enemies;
-import Characters.NPC;
+package Enemies;
+
 import Items.Item;
 import java.util.Random;
 import java.util.ArrayList;
 
 
-public class Enemy extends NPC {
+public class Enemy {
     Random rand = new Random();
+    protected int m_nLevel;
+    protected String m_sName;
     protected int m_nDamage;
     private int m_nMinDroppedMoney;
     private int m_nMaxDroppedMoney;
@@ -80,7 +82,9 @@ public class Enemy extends NPC {
     public int getEpicItemLength(){
         return epicDroppedItems.size();
     }
-
+    public String getName(){
+        return m_sName;
+    }
 
     public int getDamage(){
         return m_nDamage;

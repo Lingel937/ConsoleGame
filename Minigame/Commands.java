@@ -1,14 +1,9 @@
-import java.nio.charset.CharacterCodingException;
-import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.text.AbstractDocument.Content;
-import Characters.*;
-import Characters.enemies.Enemy;
+
+import Enemies.Enemy;
 import Items.Item;
-import Location.Location;
 import Location.Locations;
 
-import java.util.Random;
 class Commands{
 
 
@@ -17,10 +12,10 @@ class Commands{
     int nRarity = Basic.generateRarity();
     int nHealtChange;
     Enemy oCurrentEnemy;
-
+    int SumProtectionValues = Game.s_mPlayerCharacter.getCurrentHelmet().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentBodyArmor().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentPants().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentBoots().getProtectionValue();
     oCurrentEnemy = Game.s_mPlayerCharacter.getCurrentLocation().spawnEnemy(nRarity);
     System.out.println("You are hunting a " + oCurrentEnemy.getName() + "!");
-      int nLostDamage  = oCurrentEnemy.getDamage();
+      int nLostDamage  = oCurrentEnemy.getDamage()*((100-SumProtectionValues)/100);
     Game.s_mPlayerCharacter.changeHealth(oCurrentEnemy.getDamage());
     int nGainedMoney = oCurrentEnemy.dropMoney();
     Game.s_mPlayerCharacter.addMoney(nGainedMoney);

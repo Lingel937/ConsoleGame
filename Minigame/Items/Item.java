@@ -26,6 +26,10 @@ public class Item {
     //membervariables for the food
     public int m_nNutritionalValue;
 
+    //membervariables for Armor
+    int m_nProtectionValue;
+    int m_nHaltbarkeit;
+
     //constructor to get all
     public Item(
         int nID ,
@@ -36,7 +40,8 @@ public class Item {
         double dDamage,
         double dDamageFactor,
         int nNutritionalValue,
-        int nNumberOfItems
+        int nNumberOfItems,
+        int nProtectionValue
         ){
         //initialize variables
         m_nItemID = nID;
@@ -48,6 +53,7 @@ public class Item {
         m_dDamage = dDamage;
         m_nNutritionalValue = nNutritionalValue;
         m_nNumberOfItems =nNumberOfItems;
+        nProtectionValue = m_nProtectionValue;
 
     }
     
@@ -117,6 +123,9 @@ public class Item {
 
     public void setNumberOfItems(int nNumberOfItems){
         m_nNumberOfItems = nNumberOfItems;
+    }
+    public int getProtectionValue(){
+        return m_nProtectionValue;
     }
 
 }

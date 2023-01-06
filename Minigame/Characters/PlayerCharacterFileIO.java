@@ -92,7 +92,8 @@ public class PlayerCharacterFileIO {
                         Double.valueOf(sItemData[5]),
                         Double.valueOf(sItemData[6]),
                         Integer.valueOf(sItemData[7]),
-                        Integer.valueOf(sItemData[8])
+                        Integer.valueOf(sItemData[8]),
+                        Integer.valueOf(sItemData[9])
                     ));
                 }
                 sInventoryData.clear();

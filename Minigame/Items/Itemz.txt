@@ -1,5 +1,5 @@
 #This file stores the values of the items of this game
 #Structure of the stored item properties 
 #1.ID 2.name 3.type 4.category 5.level  6.damage  7.damage factor  8.Nutiritional value  9.number of items 
-1;Soos;Holz;Ressources;1; 20.0; 1.0; 0; 1;
-2;Leeel;Stein;Ressources;2; 0.0 ; 0.0; 0; 1;
+1;Soos;Holz;Ressources;1; 20.0; 1.0; 0; 1; 0;
+2;Leeel;Stein;Ressources;2; 0.0 ; 0.0; 0; 1;0;

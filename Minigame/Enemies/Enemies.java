@@ -1,4 +1,4 @@
-package Characters.enemies;
+package Enemies;
 
 import Items.Items;
 
