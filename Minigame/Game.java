@@ -14,9 +14,7 @@ import lib.*;
 
 public class Game {
 
-  private static String  s_sCharakterName;
-  private static int     s_nCharakterType;
-  public static PlayerCharacter s_mPlayerCharacter;
+  public static PlayerCharacter playerCharacter;
   public static ArrayList<Item> itemArr_listOfAllItems;
   public static Scanner scanner = new Scanner(System.in);
 
@@ -78,39 +76,39 @@ public class Game {
         System.out.println("Enter your Name:");
         String s_sCharakterName = scanner.nextLine();
 
-        boolean bIsCharakterTypeValid = false;
-        while(!bIsCharakterTypeValid){
+        boolean isCharakterTypeValid = false;
+        while(!isCharakterTypeValid){
 
             System.out.println("\nType in the number to choose your Class:\n1 - Elve\n2 - Human\n3 - Wizard\n4 - Dwarf\nInput:");
 
 
-                String s_sCharakterType = scanner.nextLine();
-                switch (s_sCharakterType){
+                String charakterType = scanner.nextLine();
+                switch (charakterType){
 
                     case "1":
-                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
-                        bIsCharakterTypeValid = true;
+                        playerCharacter = new PlayerCharacter(s_sCharakterName, 80, "Elve");
+                        isCharakterTypeValid = true;
 
                         break;
 
                     case "2":
-                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
-                        bIsCharakterTypeValid = true;
+                        playerCharacter = new PlayerCharacter(s_sCharakterName, 100, "Human");
+                        isCharakterTypeValid = true;
                         break;
 
                     case "3":
-                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
-                        bIsCharakterTypeValid = true;
+                        playerCharacter = new PlayerCharacter(s_sCharakterName, 90, "Wizard");
+                        isCharakterTypeValid = true;
                         break;
 
                     case "4":
-                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
-                        bIsCharakterTypeValid = true;
+                        playerCharacter = new PlayerCharacter(s_sCharakterName, 150, "Dwarf");
+                        isCharakterTypeValid = true;
                         break;
 
                     case "42":
-                        s_mPlayerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
-                        bIsCharakterTypeValid = true;
+                        playerCharacter = new PlayerCharacter(s_sCharakterName, 9999999, "Superuser");
+                        isCharakterTypeValid = true;
                         break;
 
                     default:
@@ -120,11 +118,11 @@ public class Game {
 
 
         }
-        s_mPlayerCharacter.setCurrentLocation(Locations.forest);
-        s_mPlayerCharacter.setCurrentHelmet(Items.NoHat);
-        s_mPlayerCharacter.setCurrentBodyArmor(Items.NoBodyarmor);
-        s_mPlayerCharacter.setCurrentPants(Items.NoPants);
-        s_mPlayerCharacter.setCurrentBoots(Items.Barefoot);
+        playerCharacter.setCurrentLocation(Locations.forest);
+        playerCharacter.setCurrentHelmet(Items.NoHat);
+        playerCharacter.setCurrentBodyArmor(Items.NoBodyarmor);
+        playerCharacter.setCurrentPants(Items.NoPants);
+        playerCharacter.setCurrentBoots(Items.Barefoot);
 
     }
     public static void loadOrCreateCharacter(){
@@ -148,7 +146,7 @@ public class Game {
                                 String sInput = scanner.nextLine();
                                 for (int i = 0; i < strArr_listOfAllCharacters.length; i++) {
                                     if(sInput.equals(strArr_listOfAllCharacters[i])){
-                                        s_mPlayerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
+                                        playerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                                         bIsInputValid = true;
                                         bIsCharacterInputValid = true;
                                     }    
@@ -191,9 +189,9 @@ public class Game {
         createAllEnemies();
         createAllLocations();
         loadOrCreateCharacter();
-        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(0));
-        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
-        Game.s_mPlayerCharacter.m_inventoryObject.addItem(itemArr_listOfAllItems.get(1));
+        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(0));
+        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
+        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
 
 	}
 	
@@ -201,14 +199,14 @@ public class Game {
 	//and waits for player input                           
     public static void run(){
 
-        boolean bIsGameRunning = true;
+        boolean isGameRunning = true;
 
-        while(bIsGameRunning) {
-            boolean bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
+        while(isGameRunning) {
+            boolean gameCheck = Game.playerCharacter.getHealth() > 0;
 
 
-            if (!bGameCheck) {
-                bIsGameRunning = false;
+            if (!gameCheck) {
+                isGameRunning = false;
             }
 
             String input = scanner.nextLine();
@@ -242,13 +240,13 @@ public class Game {
                     break;
             }
 
-            bGameCheck = Game.s_mPlayerCharacter.getHealth() > 0;
+            gameCheck = Game.playerCharacter.getHealth() > 0;
 
 
-            if (!bGameCheck) {
-                bIsGameRunning = false;
+            if (!gameCheck) {
+                isGameRunning = false;
             }
-            Game.s_mPlayerCharacter.checkLevelUp();
+            Game.playerCharacter.checkLevelUp();
         }
 
 
@@ -257,9 +255,9 @@ public class Game {
 
     public static void end(){
         try{
-            PlayerCharacterFileIO.savePlayerCharacter(s_mPlayerCharacter);
+            PlayerCharacterFileIO.savePlayerCharacter(playerCharacter);
             itemArr_listOfAllItems.clear();
-            Game.s_mPlayerCharacter = null;
+            Game.playerCharacter = null;
             scanner.close();
         }catch(Exception e){
         }

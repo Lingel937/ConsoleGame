@@ -20,7 +20,7 @@ public class PlayerCharacter extends Inventory{
     private int m_nLevel;               //level of the character @Lingel937
     private String m_sCharacterType;    //type of the Character(e.g. Elve, Dwarf ect..) @Lingel
     private int m_nHealth;              //Current health of the character @Lingel937
-    public  Inventory m_inventoryObject; //object array of the class item to store your inventory @maulie5
+    public  Inventory inventory; //object array of the class item to store your inventory @maulie5
     private int m_nInventorySize; //variable to store the size of the inventory @maulie5
     private int  m_nExperiencePoints;
     private Location m_oCurrentLocation;
@@ -43,7 +43,7 @@ public class PlayerCharacter extends Inventory{
         m_nHealth = m_nMaxHealth;
         m_nExperiencePoints = 0;
         m_nMoney = 0;
-        m_inventoryObject = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
+        inventory = new Inventory(); //set membervariable to store the inventoy of the character @maulie5
         m_oCurrentLocation = Locations.forest;
 
         System.out.println("Your Name: " + m_sPlayerName);
@@ -70,7 +70,7 @@ public class PlayerCharacter extends Inventory{
         m_nHealth = nHealth;
         m_nExperiencePoints = nExperiencePoints;
         m_nMoney = nMoney;
-        m_inventoryObject = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
+        inventory = inv_inventory; //set membervariable to store the inventoy of the character @maulie5
         m_oCurrentLocation = new Location(nLevel);
         m_oCurrentLocation = Locations.forest;
         System.out.println("Your Name: " + m_sPlayerName);
@@ -107,7 +107,7 @@ public class PlayerCharacter extends Inventory{
 
     //function to check if the inventory is full and displays a message
     public void fullInventory(){
-        if(m_inventoryObject.getNumberOfItems() >= m_nInventorySize){
+        if(inventory.getNumberOfItems() >= m_nInventorySize){
             System.out.println("Your inventory is full!!!");
             System.out.println("Try to get rid some items or to get a better backpack.");
         }
@@ -137,7 +137,7 @@ public class PlayerCharacter extends Inventory{
         m_nMoney += nMoney;
     }
     public Inventory getPlayerInventory(){
-        return m_inventoryObject;
+        return inventory;
     }
     public int getMaxHealth(){
         return m_nMaxHealth;

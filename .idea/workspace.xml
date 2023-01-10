@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="Hunting system almost done lololololololololololololololololololololololololololololololololololo">
+    <list default="true" id="261224de-53d4-4cc8-8fed-db26ea3005ab" name="Changes" comment="Did something. (not sure what, no clue what it does, but some changes for sure)">
+      <change afterPath="$PROJECT_DIR$/Minigame/Characters/Players/валущка/character.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Minigame/Characters/Players/валущка/inventory.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/NPC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Characters/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacterFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/PlayerCharacterFileIO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/Players/ewwe/character.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Characters/Players/ewwe/character.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Enemies/Enemies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Characters/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minigame/Enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Enemies/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minigame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/ItemRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/ItemRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Items/Itemz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Items/Itemz.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Location/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Location/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Location/Locations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minigame/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Minigame/Testing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,34 +41,36 @@
   <component name="ProjectId" id="2HGYM1f62Ham8qLpiy5PLfuDiJu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Valentin/Desktop/Projekt&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Valentin/Desktop/Projekt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\Documents\Schule\E phase\Praktische Informatik\Minigame\Minigame" />
@@ -140,7 +134,7 @@
       <workItem from="1671128976697" duration="569000" />
       <workItem from="1671546746312" duration="2874000" />
       <workItem from="1671608514497" duration="1390000" />
-      <workItem from="1672870755061" duration="7592000" />
+      <workItem from="1672870755061" duration="11061000" />
     </task>
     <task id="LOCAL-00001" summary="lol changes">
       <created>1669123402748</created>
@@ -226,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672332802013</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Did somethig. (not shure what, no clue what it does, but some changes for sure)">
+      <created>1673045309873</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673045309874</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +257,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="lol changes" />
     <MESSAGE value="WIP_0.1.1.2&#10;now we have more working funktions" />
     <MESSAGE value="WIP_0.1.1 //added commenting" />
@@ -266,7 +268,8 @@
     <MESSAGE value="WIP_0.1.1.9&#10;&#10;&#10;für jamal" />
     <MESSAGE value="WIP_0.1.1.10&#10;&#10;&#10;eee" />
     <MESSAGE value="Hunting system almost done lololololololololololololololololololololololololololololololololololo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hunting system almost done lololololololololololololololololololololololololololololololololololo" />
+    <MESSAGE value="Did something. (not sure what, no clue what it does, but some changes for sure)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did something. (not sure what, no clue what it does, but some changes for sure)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,25 +10,25 @@ class Commands{
   public static void hunt(){
     //you will hunt a random monster and get loot, loose health and get coins. @Lingel
     int nRarity = Basic.generateRarity();
-    int nHealtChange;
-    Enemy oCurrentEnemy;
-    int SumProtectionValues = Game.s_mPlayerCharacter.getCurrentHelmet().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentBodyArmor().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentPants().getProtectionValue() + Game.s_mPlayerCharacter.getCurrentBoots().getProtectionValue();
-    oCurrentEnemy = Game.s_mPlayerCharacter.getCurrentLocation().spawnEnemy(nRarity);
-    System.out.println("You are hunting a " + oCurrentEnemy.getName() + "!");
-      int nLostDamage  = oCurrentEnemy.getDamage()*((100-SumProtectionValues)/100);
-    Game.s_mPlayerCharacter.changeHealth(oCurrentEnemy.getDamage());
-    int nGainedMoney = oCurrentEnemy.dropMoney();
-    Game.s_mPlayerCharacter.addMoney(nGainedMoney);
-    int nGainedXP = oCurrentEnemy.dropXP();
-    Game.s_mPlayerCharacter.addXP(nGainedXP);
+    Enemy currentEnemy;
+    int SumProtectionValues = Game.playerCharacter.getCurrentHelmet().getProtectionValue() + Game.playerCharacter.getCurrentBodyArmor().getProtectionValue() + Game.playerCharacter.getCurrentPants().getProtectionValue() + Game.playerCharacter.getCurrentBoots().getProtectionValue();
+    currentEnemy = Game.playerCharacter.getCurrentLocation().spawnEnemy(nRarity);
+    System.out.println("You are hunting a " + currentEnemy.getName() + "!");
+      int lostDamage  = currentEnemy.getDamage()*((100-SumProtectionValues)/100);
+    Game.playerCharacter.changeHealth(currentEnemy.getDamage());
+    int gainedMoney = currentEnemy.dropMoney();
+    Game.playerCharacter.addMoney(gainedMoney);
+    int gainedXp = currentEnemy.dropXP();
+    Game.playerCharacter.addXP(gainedXp);
     if(Basic.yesNo3070()){
-        Item oDroppedItem = oCurrentEnemy.dropItem(Basic.generateRarity());
-        Game.s_mPlayerCharacter.m_inventoryObject.addItem(oDroppedItem);
-        System.out.println("Hunt finished. You lost "+ nLostDamage+" Hp. You gained "+ nGainedMoney + " Coins, " +nGainedXP + " XP and the "+oCurrentEnemy.getName()+" dropped a "+oDroppedItem.getName());
+        Item droppedItem = currentEnemy.dropItem(Basic.generateRarity());
+        Game.playerCharacter.inventory.addItem(droppedItem);
+        System.out.println("Hunt finished. You lost "+ lostDamage+" Hp. You gained "+ gainedMoney + " Coins, " +gainedXp + " XP and the "+currentEnemy.getName()+" dropped a "+droppedItem.getName());
     }else{
-        System.out.println("Hunt finished. You lost "+ nLostDamage+" Hp. You gained "+ nGainedMoney + " Coins, " +nGainedXP + " XP and the "+oCurrentEnemy.getName()+" dropped no Item. ");
+        System.out.println("Hunt finished. You lost "+ lostDamage+" Hp. You gained "+ gainedMoney + " Coins, " +gainedXp + " XP and the "+currentEnemy.getName()+" dropped no Item. ");
     }
     System.out.println();
+    Game.playerCharacter.inventory.sortInventory();
 
     
   }
@@ -49,25 +49,25 @@ class Commands{
   
   public static void health(){
     //prints out your current health @Lingel937
-    System.out.println("Your current health is: "+Game.s_mPlayerCharacter.getHealth()+"\n");
+    System.out.println("Your current health is: "+Game.playerCharacter.getHealth()+"\n");
   }
   public static void heal (){
     //@Lingel937
-    Game.s_mPlayerCharacter.changeHealth(-50);
-    System.out.println("You healed yourself. You now have "+Game.s_mPlayerCharacter.getHealth()+" HP\n");
+    Game.playerCharacter.changeHealth(-50);
+    System.out.println("You healed yourself. You now have "+Game.playerCharacter.getHealth()+" HP\n");
 
   }
   public static void profile(){
       //prints out your profile @Lingel937
-      System.out.println("Your Name: "+Game.s_mPlayerCharacter.getName());
-      System.out.println("Your Class: "+Game.s_mPlayerCharacter.getCharacterType());
-      System.out.println("Your Level: "+Game.s_mPlayerCharacter.getLevel()+"\n");
+      System.out.println("Your Name: "+Game.playerCharacter.getName());
+      System.out.println("Your Class: "+Game.playerCharacter.getCharacterType());
+      System.out.println("Your Level: "+Game.playerCharacter.getLevel()+"\n");
     }
 
     public static void levelUp(){
         //increases your level by 1 @Lingel937
-        Game.s_mPlayerCharacter.changeLevel(1);
-        System.out.println("You leveled up! You are now level "+Game.s_mPlayerCharacter.getLevel());
+        Game.playerCharacter.changeLevel(1);
+        System.out.println("You leveled up! You are now level "+Game.playerCharacter.getLevel());
     }
     
     public static void travel() {
@@ -75,130 +75,130 @@ class Commands{
       Scanner s = new Scanner(System.in);
       System.out.println("Where do you want to travel to?");
       System.out.println("1. Forest");
-      if (Game.s_mPlayerCharacter.getLevel() >= 2) {
+      if (Game.playerCharacter.getLevel() >= 2) {
           System.out.println("2. Mountains");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 3) {
+      if (Game.playerCharacter.getLevel() >= 3) {
           System.out.println("3. Desert");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 4) {
+      if (Game.playerCharacter.getLevel() >= 4) {
           System.out.println("4. Swamp");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 5) {
+      if (Game.playerCharacter.getLevel() >= 5) {
           System.out.println("5. Plains");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 6) {
+      if (Game.playerCharacter.getLevel() >= 6) {
           System.out.println("6. City");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 7) {
+      if (Game.playerCharacter.getLevel() >= 7) {
           System.out.println("7. Castle");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 8) {
+      if (Game.playerCharacter.getLevel() >= 8) {
           System.out.println("8. the Dungeon");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 9) {
+      if (Game.playerCharacter.getLevel() >= 9) {
           System.out.println("9. the Volcano");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 10) {
+      if (Game.playerCharacter.getLevel() >= 10) {
           System.out.println("10. the Ocean");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 11) {
+      if (Game.playerCharacter.getLevel() >= 11) {
           System.out.println("11. Space");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 12) {
+      if (Game.playerCharacter.getLevel() >= 12) {
           System.out.println("12. Hell");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 13) {
+      if (Game.playerCharacter.getLevel() >= 13) {
           System.out.println("Heaven");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 14) {
+      if (Game.playerCharacter.getLevel() >= 14) {
           System.out.println("Underworld");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 15) {
+      if (Game.playerCharacter.getLevel() >= 15) {
           System.out.println("Nether");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 16) {
+      if (Game.playerCharacter.getLevel() >= 16) {
           System.out.println("the End");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 17) {
+      if (Game.playerCharacter.getLevel() >= 17) {
           System.out.println("the Void");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 18) {
+      if (Game.playerCharacter.getLevel() >= 18) {
           System.out.println("the Abyss");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 19) {
+      if (Game.playerCharacter.getLevel() >= 19) {
           System.out.println("The Final Stand");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 20) {
+      if (Game.playerCharacter.getLevel() >= 20) {
           System.out.println("The end of the world");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 21) {
+      if (Game.playerCharacter.getLevel() >= 21) {
           System.out.println("the beginning of the world");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 22) {
+      if (Game.playerCharacter.getLevel() >= 22) {
           System.out.println("the End of Time");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 23) {
+      if (Game.playerCharacter.getLevel() >= 23) {
           System.out.println("The Beginning of Time");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 24) {
+      if (Game.playerCharacter.getLevel() >= 24) {
           System.out.println("The End of Space ");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 25) {
+      if (Game.playerCharacter.getLevel() >= 25) {
           System.out.println("The Beginning of Space");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 26) {
+      if (Game.playerCharacter.getLevel() >= 26) {
           System.out.println("The End of the Universe");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 27) {
+      if (Game.playerCharacter.getLevel() >= 27) {
           System.out.println("The Beginning of the Universe");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 28) {
+      if (Game.playerCharacter.getLevel() >= 28) {
           System.out.println("The End of Everything");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 29) {
+      if (Game.playerCharacter.getLevel() >= 29) {
           System.out.println("The Beginning of Everything");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 30) {
+      if (Game.playerCharacter.getLevel() >= 30) {
           System.out.println("The End of Nothing");
       }
-      if (Game.s_mPlayerCharacter.getLevel() >= 31) {
+      if (Game.playerCharacter.getLevel() >= 31) {
           System.out.println("The Beginning of Nothing");
       }
 
       if (s.hasNextInt()) {
-          int nTravelTo = s.nextInt();
-          if (nTravelTo > Game.s_mPlayerCharacter.getLevel()) {
+          int travelTo = s.nextInt();
+          if (travelTo > Game.playerCharacter.getLevel()) {
               System.out.println("You can't travel to that location yet\n");
           } else {
-              switch (nTravelTo) {
+              switch (travelTo) {
                   case 1:
                       System.out.println("You traveled to the Forest");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.forest);
+                      Game.playerCharacter.setCurrentLocation(Locations.forest);
                       break;
                   case 2:
                       System.out.println("You traveled to the Mountains");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.mountain);
+                      Game.playerCharacter.setCurrentLocation(Locations.mountain);
                       break;
                   case 3:
                       System.out.println("You traveled to the Desert");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.desert);
+                      Game.playerCharacter.setCurrentLocation(Locations.desert);
                       break;
                   case 4:
                       System.out.println("You traveled to the Swamp");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.swamp);
+                      Game.playerCharacter.setCurrentLocation(Locations.swamp);
                       break;
                   case 5:
                       System.out.println("You traveled to the Plains");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.plains);
+                      Game.playerCharacter.setCurrentLocation(Locations.plains);
                       break;
                   case 6:
                       System.out.println("You traveled to the City");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.city);
+                      Game.playerCharacter.setCurrentLocation(Locations.city);
                       break;
                   case 7:
                       System.out.println("You traveled to the Castle");
-                      Game.s_mPlayerCharacter.setCurrentLocation(Locations.Castle);
+                      Game.playerCharacter.setCurrentLocation(Locations.Castle);
                       break;
                   case 8:
                       System.out.println("You traveled to the Dungeon");
@@ -284,6 +284,6 @@ class Commands{
     
     }
     public static void showInventory(){
-        Game.s_mPlayerCharacter.m_inventoryObject.showInventoryContent();
+        Game.playerCharacter.inventory.showInventoryContent();
     }
 }

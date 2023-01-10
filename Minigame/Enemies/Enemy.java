@@ -13,12 +13,12 @@ import java.util.ArrayList;
 
 public class Enemy {
     Random rand = new Random();
-    protected int m_nLevel;
-    protected String m_sName;
-    protected int m_nDamage;
-    private int m_nMinDroppedMoney;
-    private int m_nMaxDroppedMoney;
-    private int m_nDroppedXP;
+    protected int level;
+    protected String name;
+    protected int damage;
+    private int minDroppedMoney;
+    private int maxDroppedMoney;
+    private int droppedXP;
     ArrayList<Item> commonlyDroppedItems = new ArrayList<>();
     ArrayList<Item> rarelyDroppedItems = new ArrayList<>();
     ArrayList<Item> epicDroppedItems = new ArrayList<>();
@@ -26,30 +26,30 @@ public class Enemy {
 
     public Enemy
             (
-            int nLevel,
-            int nDamage,
-            String sName,
-            int nMinDroppedMoney,
-            int nMaxDroppedMoney,
-            int nDroppedXP
+            int level,
+            int damage,
+            String name,
+            int minDroppedMoney,
+            int maxDroppedMoney,
+            int droppedXP
             )
     {
-        m_nDroppedXP = nDroppedXP;
-        m_nLevel = nLevel;
-        m_nDamage = nDamage;
-        m_sName = sName;
-        m_nMinDroppedMoney = nMinDroppedMoney;
-        m_nMaxDroppedMoney = nMaxDroppedMoney;
+        this.droppedXP = droppedXP;
+        this.level = level;
+        this.damage = damage;
+        this.name = name;
+        this.minDroppedMoney = minDroppedMoney;
+        this.maxDroppedMoney = maxDroppedMoney;
 
     }
     public int dropXP(){
-        return m_nDroppedXP;
+        return droppedXP;
     }
     public int dropMoney(){
-        return rand.nextInt(m_nMinDroppedMoney,m_nMaxDroppedMoney);
+        return rand.nextInt(minDroppedMoney, maxDroppedMoney);
     }
-    public Item dropItem(int nRarity){
-        switch (nRarity) {
+    public Item dropItem(int rarity){
+        switch (rarity) {
 
             default:
                 return null;
@@ -83,10 +83,10 @@ public class Enemy {
         return epicDroppedItems.size();
     }
     public String getName(){
-        return m_sName;
+        return name;
     }
 
     public int getDamage(){
-        return m_nDamage;
+        return damage;
     }
 }
