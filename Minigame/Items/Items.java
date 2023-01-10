@@ -11,6 +11,19 @@ public class Items {
     public static Item club;
     public static Item baton;
     public static Item prisonshank;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
+    public static Item ;
 
     public static Item LeatherHelmet;
     public static Item LeatherBoots;
