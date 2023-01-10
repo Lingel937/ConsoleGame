@@ -5,7 +5,7 @@ public class Items {
     public static Item sword;
     public static Item raspberry;
     public static Item hay;
-    public static Item Heugabel;
+    public static Item pitchfok;
     public static Item bread;
     public static Item Jamal;
     public static Item club;
@@ -25,19 +25,19 @@ public class Items {
     public static Item ;
     public static Item ;
 
-    public static Item LeatherHelmet;
-    public static Item LeatherBoots;
-    public static Item WoodenBoots;
-    public static Item IronChestplate;
-    public static Item ClothTunik;
-    public static Item BulletproofVest;
-    public static Item SleepingPants;
-    public static Item LeatherPants;
-    public static Item CargoPants;
-    public static Item NoHat;
-    public static Item NoBodyarmor;
-    public static Item NoPants;
-    public static Item Barefoot;
+    public static Item leatherhelmet;
+    public static Item leatherboots;
+    public static Item woodenboots;
+    public static Item ironchestplate;
+    public static Item clothtunik;
+    public static Item bulletproofvest;
+    public static Item sleepingpants;
+    public static Item leatherpants;
+    public static Item cargopants;
+    public static Item nohat;
+    public static Item nobodyarmor;
+    public static Item nopants;
+    public static Item barefoot;
     public static void itemslol(){
 
 
@@ -71,6 +71,7 @@ public class Items {
             //Pants
             leatherpants = new Item(1, "leather pants","Armor","Pants",0,0,0,0,1,13);
             cargopants = new Item(1, "cargo pants","Armor","Pants",0,0,0,0,1,10);
+            sleepingpants = new Item(118,"sleeping pants","Armor","Pants",0,0,0,0,1,7);
 
             //boots
 
