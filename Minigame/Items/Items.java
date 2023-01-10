@@ -18,13 +18,12 @@ public class Items {
     public static Item mace;
     public static Item brassknuckles;
     public static Item sythe;
-    
     public static Item book;
     public static Item chainwhip;
     public static Item ropewhip;
     public static Item humanleg;
     public static Item humanarm;
-    public static Item humanskullmace;
+    public static Item humanskull;
 
     public static Item leatherhelmet;
     public static Item leatherboots;
@@ -64,9 +63,14 @@ public class Items {
         axe = new Item(118,"axe","Weapon","",1,27,0.25,0,1,0);
         mace = new Item(118,"mace","Weapon","",1,14,0.1,0,1,0);
         brassknuckles = new Item(118,"brass knuckles","Weapon","",1,6,0.05,0,1,0);
-        sythe= new Item(118,"sythe","Weapon","",1,20,0.2,0,1,0);
+        sythe = new Item(118,"sythe","Weapon","",1,20,0.2,0,1,0);
+        book = new Item(118,"book","Weapon","",1,3,0.1,0,1,0);
+        chainwhip = new Item(118,"chain whip","Weapon","",1,17,0.2,0,1,0);
+        ropewhip = new Item(118,"rope whip","Weapon","",1,14,0.15,0,1,0);
+        humanleg = new Item(118,"human leg","Weapon","",1,8,0.1,0,1,0);
+        humanarm = new Item(118,"human arm","Weapon","",1,8,0.1,0,1,0);
+        humanskull = new Item(118,"human skull","Weapon","",1,7,0.1,0,1,0);
         
-
         //armor
 
             //helmets
