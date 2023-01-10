@@ -15,10 +15,10 @@ public class Items {
     public static Item stone;
     public static Item arrow;
     public static Item axe;
-    
     public static Item mace;
     public static Item brassknuckels;
     public static Item sythe;
+    
     public static Item book;
     public static Item chainwhip;
     public static Item ropewhip;
@@ -62,6 +62,9 @@ public class Items {
         largestick = new Item(118,"large stick","Weapon","",1,5,0.1,0,1,0);
         arrow = new Item(118,"arrow","Weapon","",1,7,0.05,0,1,0);
         axe = new Item(118,"axe","Weapon","",1,27,0.25,0,1,0);
+        mace = new Item(118,"mace","Weapon","",1,14,0.1,0,1,0);
+        brassknuckles = new Item(118,"brass knuckles","Weapon","",1,6,0.05,0,1,0);
+        sythe= new Item(118,"sythe","Weapon","",1,20,0.2,0,1,0);
         
 
         //armor
