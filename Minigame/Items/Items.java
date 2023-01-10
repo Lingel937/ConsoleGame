@@ -6,6 +6,11 @@ public class Items {
     public static Item raspberry;
     public static Item hay;
     public static Item Heugabel;
+    public static Item bread;
+    public static Item Jamal;
+    public static Item club;
+    public static Item baton;
+    public static Item prisonshank;
 
     public static Item LeatherHelmet;
     public static Item LeatherBoots;
@@ -38,31 +43,31 @@ public class Items {
         sword = new Item(1, "sword","Weapon", "",1,25,0.25,0,1,0);
         club = new Item(118, "club","Weapon","",1,8,0.1,0,1,0);
         baton = new Item(118,"baton","Weapon","",1,12,0.2,0,1,0);
-        prisonShank = new Item(118,"prison shank","Weapon","",1,15,0.05,0,1,0);
+        prisonshank = new Item(118,"prison shank","Weapon","",1,15,0.05,0,1,0);
 
         //armor
 
             //helmets
-            leatherHelmet = new Item(1, "leather helmet","Armor","Helmet",0,0,0,0,1,3);
+            leatherhelmet = new Item(1, "leather helmet","Armor","Helmet",0,0,0,0,1,3);
 
             //BodyArmor
-            ironChestplate =new Item(1, "iron chestplate","Armor","Boots",0,0,0,0,1,30);
-            clothTunik = new Item(1, "cloth tunik","Armor","BodyArmor",0,0,0,0,1,6);
-            bulletproofVest = new Item(1, "bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
+            ironchestplate =new Item(1, "iron chestplate","Armor","Boots",0,0,0,0,1,30);
+            clothtunik = new Item(1, "cloth tunik","Armor","BodyArmor",0,0,0,0,1,6);
+            bulletproofvest = new Item(1, "bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
 
             //Pants
-            leatherPants = new Item(1, "leather pants","Armor","Pants",0,0,0,0,1,13);
-            cargoPants = new Item(1, "cargo pants","Armor","Pants",0,0,0,0,1,10);
+            leatherpants = new Item(1, "leather pants","Armor","Pants",0,0,0,0,1,13);
+            cargopants = new Item(1, "cargo pants","Armor","Pants",0,0,0,0,1,10);
 
             //boots
 
-            woodenBoots = new Item(1, "wooden boots","Armor","Boots",0,0,0,0,1,3);
-            leatherBoots = new Item(1, "leather boots","Armor","Boots",0,0,0,0,1,5);
+            woodenboots = new Item(1, "wooden boots","Armor","Boots",0,0,0,0,1,3);
+            leatherboots = new Item(1, "leather boots","Armor","Boots",0,0,0,0,1,5);
 
             //
             barefoot = new Item(1,"none","Armor","Boots",0,0,0,0,1,4);
-            NoBodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,20);
-            NoHat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,6);
-            NoPants = new Item(1,"none","Armor","Pants",0,0,0,0,1,10);
+            nobodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,20);
+            nohat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,6);
+            nopants = new Item(1,"none","Armor","Pants",0,0,0,0,1,10);
     }
 }
