@@ -16,7 +16,7 @@ public class Items {
     public static Item arrow;
     public static Item axe;
     public static Item mace;
-    public static Item brassknuckels;
+    public static Item brassknuckles;
     public static Item sythe;
     
     public static Item book;

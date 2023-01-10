@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
     private  ArrayList<Item> m_itemObjectArray_Inventory;
+    private Item NULLITEM = new Item(0,null,null,null,0,0.0,0.0,0,0,0);
 
     public Inventory(){
         //initialize the object array
@@ -38,7 +39,7 @@ public class Inventory  {
                 }
             }
             if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
-                m_itemObjectArray_Inventory.remove(i);
+                m_itemObjectArray_Inventory.set(k,NULLITEM);
             }
         }
     }
