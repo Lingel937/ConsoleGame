@@ -32,19 +32,26 @@ public class Items {
     public static Item humanskull;
 
     //Armor
-    public static Item leatherhelmet;
-    public static Item leatherboots;
-    public static Item woodenboots;
-    public static Item ironchestplate;
-    public static Item clothtunik;
-    public static Item bulletproofvest;
-    public static Item sleepingpants;
-    public static Item leatherpants;
-    public static Item cargopants;
-    public static Item nohat;
-    public static Item nobodyarmor;
-    public static Item nopants;
-    public static Item barefoot;
+        //helmet
+        public static Item nohat;
+        public static Item leatherhelmet;
+        
+        //bodyarmor
+        public static Item nobodyarmor;
+        public static Item ironchestplate;
+        public static Item clothtunik;
+        public static Item bulletproofvest;
+    
+        //pants
+        public static Item nopants;
+        public static Item sleepingpants;
+        public static Item leatherpants;
+        public static Item cargopants;
+    
+        //boots
+        public static Item barefoot;
+        public static Item leatherboots;
+        public static Item woodenboots;
     
     //void
     public static void itemslol(){
