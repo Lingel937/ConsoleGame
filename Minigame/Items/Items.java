@@ -10,7 +10,8 @@ public class Items {
     //food
     public static Item raspberry;
     public static Item bread;
-    public static Item jamal;
+        //GodItem
+        public static Item jamal;
     
     //weapons
     
@@ -43,6 +44,9 @@ public class Items {
         public static Item sword;
         public static Item axe;
         
+        //GodItem
+        public static Item levin;
+    
     //Armor
     
         //helmet
@@ -97,6 +101,9 @@ public class Items {
             
             //40prot
             
+            //GodItem
+            public static Item valentin;
+        
         //boots
     
             //none
@@ -119,16 +126,18 @@ public class Items {
     public static void itemslol(){
 
 
-        // (1)(Name)(Type)(category)(Armorplacement)(level)(damage)(damagefactor)(nutrition)(Count)(Protection)
+        // (ID,"Name","Type","Armorplacement",level,damage,damagefactor,nutrition,Count,Protection)
         //resources
-        wood = new Item(1,"wood","Resource","",0, 0,0,0,1, 0);
+        wood = new Item(1,"wood","Resource","",0,0,0,0,1,0);
         hay = new Item(1,"hay","Resource","",0,0,0,0,1,0);
         stone = new Item(118,"stone","Rescource","",0,0,0,0,1,0);
 
         //food
-        raspberry = new Item(1, "raspberry", "Food","",1,0,0,10,1,0);
+        raspberry = new Item(1,"raspberry","Food","",1,0,0,10,1,0);
         bread = new Item(118,"bread","Food","",1,0,0,50,1,0);
-        jamal = new Item(118,"Jamal","Food","",1,0,0,1000,1,0);
+        
+            //GodItem
+            jamal = new Item(118,"Jamal","Food","",1,0,0,10000,1,0);
 
         //weapons
         
@@ -145,9 +154,9 @@ public class Items {
             humanskull = new Item(118,"human skull","Weapon","",1,7,0.1,0,1,0);
             
             //>15dmg
-            pitchfork = new Item(1, "pitchfork","Weapon", "",1,10,0.10,0,1,0);
+            pitchfork = new Item(118,"pitchfork","Weapon","",1,10,0.10,0,1,0);
             baton = new Item(118,"baton","Weapon","",1,12,0.2,0,1,0);
-            mace = new Item(118,"mace","Weapon","",1,14,0.1,0,1,0);
+             mace = new Item(118,"mace","Weapon","",1,14,0.1,0,1,0);
             ropewhip = new Item(118,"rope whip","Weapon","",1,14,0.15,0,1,0);
             
             //>20dmg
@@ -158,8 +167,11 @@ public class Items {
             sythe = new Item(118,"sythe","Weapon","",1,20,0.2,0,1,0);
             
             //>30dmg
-            sword = new Item(1, "sword","Weapon", "",1,25,0.25,0,1,0);
+            sword = new Item(1,"sword","Weapon","",1,25,0.25,0,1,0);
             axe = new Item(118,"axe","Weapon","",1,27,0.25,0,1,0);
+            
+            //GodItem
+            levin = new Item(118,"Levin","Weapon","",1,10000,0,0,1,0);
             
         //armor
 
@@ -171,7 +183,7 @@ public class Items {
                 //5prot
                 
                 //10prot
-                leatherhelmet = new Item(1, "leather helmet","Armor","Helmet",0,0,0,0,1,10);
+                leatherhelmet = new Item(1,"leather helmet","Armor","Helmet",0,0,0,0,1,10);
                 
                 //20prot
                 
@@ -185,17 +197,17 @@ public class Items {
                 nobodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,1);
                 
                 //5prot
-                clothtunik = new Item(1, "cloth tunik","Armor","BodyArmor",0,0,0,0,1,5);
+                clothtunik = new Item(1,"cloth tunik","Armor","BodyArmor",0,0,0,0,1,5);
                 
                 //10prot
                 
                 //20prot
                 
                 //30prot
-                ironchestplate =new Item(1, "iron chestplate","Armor","BodyArmor",0,0,0,0,1,30);
+                ironchestplate =new Item(1,"iron chestplate","Armor","BodyArmor",0,0,0,0,1,30);
                 
                 //40prot
-                bulletproofvest = new Item(1, "bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
+                bulletproofvest = new Item(1,"bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
                 
             //Pants
         
@@ -203,11 +215,11 @@ public class Items {
                 nopants = new Item(1,"none","Armor","Pants",0,0,0,0,1,1);
                 
                 //5prot
-                cargopants = new Item(1, "cargo pants","Armor","Pants",0,0,0,0,1,5);
+                cargopants = new Item(1,"cargo pants","Armor","Pants",0,0,0,0,1,5);
                 sleepingpants = new Item(118,"sleeping pants","Armor","Pants",0,0,0,0,1,5);
                 
                 //10prot
-                leatherpants = new Item(1, "leather pants","Armor","Pants",0,0,0,0,1,10);
+                leatherpants = new Item(1,"leather pants","Armor","Pants",0,0,0,0,1,10);
                 
                 //20prot
                 
@@ -215,6 +227,9 @@ public class Items {
                 
                 //40prot
                 
+                //GodItem
+                valentin = new Item(118,"valentin","Armor","Pants",0,0,0,0,1,10000);
+        
             //boots
         
                 //none
@@ -223,10 +238,10 @@ public class Items {
                 //5prot
                 
                 //10prot
-                leatherboots = new Item(1, "leather boots","Armor","Boots",0,0,0,0,1,10);
+                leatherboots = new Item(1,"leather boots","Armor","Boots",0,0,0,0,1,10);
                 
                 //20prot
-                woodenboots = new Item(1, "wooden boots","Armor","Boots",0,0,0,0,1,20);
+                woodenboots = new Item(1,"wooden boots","Armor","Boots",0,0,0,0,1,20);
                 
                 //30prot
                 
