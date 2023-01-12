@@ -13,24 +13,33 @@ public class Items {
     public static Item jamal;
     
     //weapons
-    public static Item sword;
-    public static Item pitchfork;
-    public static Item club;
-    public static Item baton;
-    public static Item prisonshank;
-    public static Item largestick;
-    public static Item arrow;
-    public static Item axe;
-    public static Item mace;
-    public static Item brassknuckles;
-    public static Item sythe;
-    public static Item book;
-    public static Item chainwhip;
-    public static Item ropewhip;
-    public static Item humanleg;
-    public static Item humanarm;
-    public static Item humanskull;
-
+        //>10dmg
+        public static Item club;
+        public static Item largestick;
+        public static Item arrow;
+        public static Item brassknuckles;
+        public static Item book;
+        public static Item humanleg;
+        public static Item humanarm;
+        public static Item humanskull;
+        
+        //>15dmg
+        public static Item pitchfork;
+        public static Item baton;
+        public static Item mace;
+        public static Item ropewhip;
+        
+        //>20dmg
+        public static Item prisonshank;
+        public static Item chainwhip;
+        
+        //>25dmg
+        public static Item sythe;
+        
+        //>30dmg
+        public static Item sword;
+        public static Item axe;
+        
     //Armor
         //helmet
         public static Item nohat;
