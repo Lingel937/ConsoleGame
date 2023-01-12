@@ -99,27 +99,25 @@ public class Items {
         //armor
 
             //helmets
+            nohat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,6);
             leatherhelmet = new Item(1, "leather helmet","Armor","Helmet",0,0,0,0,1,3);
 
             //BodyArmor
+            nobodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,20);
             ironchestplate =new Item(1, "iron chestplate","Armor","Boots",0,0,0,0,1,30);
             clothtunik = new Item(1, "cloth tunik","Armor","BodyArmor",0,0,0,0,1,6);
             bulletproofvest = new Item(1, "bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
 
             //Pants
+            nopants = new Item(1,"none","Armor","Pants",0,0,0,0,1,10);
             leatherpants = new Item(1, "leather pants","Armor","Pants",0,0,0,0,1,13);
             cargopants = new Item(1, "cargo pants","Armor","Pants",0,0,0,0,1,10);
             sleepingpants = new Item(118,"sleeping pants","Armor","Pants",0,0,0,0,1,7);
 
             //boots
-
+            barefoot = new Item(1,"none","Armor","Boots",0,0,0,0,1,4);
             woodenboots = new Item(1, "wooden boots","Armor","Boots",0,0,0,0,1,3);
             leatherboots = new Item(1, "leather boots","Armor","Boots",0,0,0,0,1,5);
-
-            //
-            barefoot = new Item(1,"none","Armor","Boots",0,0,0,0,1,4);
-            nobodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,20);
-            nohat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,6);
-            nopants = new Item(1,"none","Armor","Pants",0,0,0,0,1,10);
+            
     }
 }
