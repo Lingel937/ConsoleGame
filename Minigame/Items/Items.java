@@ -1,18 +1,24 @@
 package Items;
 
 public class Items {
+    
+    //Resources
     public static Item wood;
-    public static Item sword;
-    public static Item raspberry;
     public static Item hay;
-    public static Item pitchfork;
+    public static Item stone;
+    
+    //food
+    public static Item raspberry;
     public static Item bread;
     public static Item jamal;
+    
+    //weapons
+    public static Item sword;
+    public static Item pitchfork;
     public static Item club;
     public static Item baton;
     public static Item prisonshank;
     public static Item largestick;
-    public static Item stone;
     public static Item arrow;
     public static Item axe;
     public static Item mace;
@@ -25,6 +31,7 @@ public class Items {
     public static Item humanarm;
     public static Item humanskull;
 
+    //Armor
     public static Item leatherhelmet;
     public static Item leatherboots;
     public static Item woodenboots;
@@ -38,6 +45,8 @@ public class Items {
     public static Item nobodyarmor;
     public static Item nopants;
     public static Item barefoot;
+    
+    //void
     public static void itemslol(){
 
 
