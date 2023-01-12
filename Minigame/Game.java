@@ -119,10 +119,10 @@ public class Game {
 
         }
         playerCharacter.setCurrentLocation(Locations.forest);
-        playerCharacter.setCurrentHelmet(Items.NoHat);
-        playerCharacter.setCurrentBodyArmor(Items.NoBodyarmor);
-        playerCharacter.setCurrentPants(Items.NoPants);
-        playerCharacter.setCurrentBoots(Items.Barefoot);
+        playerCharacter.setCurrentHelmet(Items.nohat);
+        playerCharacter.setCurrentBodyArmor(Items.nobodyarmor);
+        playerCharacter.setCurrentPants(Items.nopants);
+        playerCharacter.setCurrentBoots(Items.barefoot);
 
     }
     public static void loadOrCreateCharacter(){
