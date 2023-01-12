@@ -70,7 +70,7 @@ public class Items {
     public static void itemslol(){
 
 
-        // (1)(Name)(Type)(category)(level)(damage)(damagefactor)(nutrition)(Count)(Protection)
+        // (1)(Name)(Type)(category)(Armorplacement)(level)(damage)(damagefactor)(nutrition)(Count)(Protection)
         //resources
         wood = new Item(1,"wood","Resource","",0, 0,0,0,1, 0);
         hay = new Item(1,"hay","Resource","",0,0,0,0,1,0);
@@ -120,7 +120,7 @@ public class Items {
 
             //BodyArmor
             nobodyarmor = new Item(1,"none","Armor","BodyArmor",0,0,0,0,1,20);
-            ironchestplate =new Item(1, "iron chestplate","Armor","Boots",0,0,0,0,1,30);
+            ironchestplate =new Item(1, "iron chestplate","Armor","BodyArmor",0,0,0,0,1,30);
             clothtunik = new Item(1, "cloth tunik","Armor","BodyArmor",0,0,0,0,1,6);
             bulletproofvest = new Item(1, "bullet proof vest","Armor","BodyArmor",0,0,0,0,1,40);
 
