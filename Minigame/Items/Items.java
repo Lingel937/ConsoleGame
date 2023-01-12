@@ -13,6 +13,7 @@ public class Items {
     public static Item jamal;
     
     //weapons
+    
         //>10dmg
         public static Item club;
         public static Item largestick;
@@ -41,6 +42,7 @@ public class Items {
         public static Item axe;
         
     //Armor
+    
         //helmet
         public static Item nohat;
         public static Item leatherhelmet;
