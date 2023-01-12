@@ -55,6 +55,7 @@ public class Items {
             public static Item nohat;
             
             //5prot
+            public static Item balaclava;
             
             //10prot
             public static Item leatherhelmet;
@@ -181,6 +182,7 @@ public class Items {
                 nohat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,1);
                 
                 //5prot
+                balaclava = new Item(1,"balaclava","Armor","Helmet",0,0,0,0,1,5);
                 
                 //10prot
                 leatherhelmet = new Item(1,"leather helmet","Armor","Helmet",0,0,0,0,1,10);
