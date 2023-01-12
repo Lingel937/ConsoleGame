@@ -35,13 +35,19 @@ public class Inventory  {
                     m_itemObjectArray_Inventory.get(i).getDamageFactor() == m_itemObjectArray_Inventory.get(k).getDamageFactor()
                 ){
                     m_itemObjectArray_Inventory.get(i).setNumberOfItems(m_itemObjectArray_Inventory.get(k).getNumberOfItems()+m_itemObjectArray_Inventory.get(i).getNumberOfItems());
-                    m_itemObjectArray_Inventory.remove(k);
+                    m_itemObjectArray_Inventory.set(k,NULLITEM);
                 }
             }
             if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
-                m_itemObjectArray_Inventory.set(k,NULLITEM);
+                m_itemObjectArray_Inventory.set(i,NULLITEM);
             }
         }
+        for(Item item:m_itemObjectArray_Inventory){
+            if(item == NULLITEM){
+                m_itemObjectArray_Inventory.remove(item);
+            }
+        }
+
     }
 
     //function to show your inventory
