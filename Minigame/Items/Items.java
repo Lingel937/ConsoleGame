@@ -46,26 +46,74 @@ public class Items {
     //Armor
     
         //helmet
-        public static Item nohat;
-        public static Item leatherhelmet;
-        
+            
+            //none
+            public static Item nohat;
+            
+            //5prot
+            
+            //10prot
+            public static Item leatherhelmet;
+            
+            //20prot
+            
+            //30prot
+            
+            //40prot
+            
         //bodyarmor
-        public static Item nobodyarmor;
-        public static Item ironchestplate;
-        public static Item clothtunik;
-        public static Item bulletproofvest;
     
+            //none
+            public static Item nobodyarmor;
+            
+            //5prot
+            public static Item clothtunik;
+            
+            //10prot
+            
+            //20prot
+            
+            //30prot
+            public static Item ironchestplate;
+            
+            //40prot
+            public static Item bulletproofvest;
+            
         //pants
-        public static Item nopants;
-        public static Item sleepingpants;
-        public static Item leatherpants;
-        public static Item cargopants;
-    
+            
+            //none
+            public static Item nopants;
+            
+            //5prot
+            public static Item sleepingpants;
+            public static Item cargopants;
+            
+            //10prot
+            public static Item leatherpants;
+            
+            //20prot
+            
+            //30prot
+            
+            //40prot
+            
         //boots
-        public static Item barefoot;
-        public static Item leatherboots;
-        public static Item woodenboots;
     
+            //none
+            public static Item barefoot;
+            
+            //5prot
+            
+            //10prot
+            public static Item leatherboots;
+            
+            //20prot
+            public static Item woodenboots;
+            
+            //30prot
+            
+            //40prot
+            
     //void
     public static Item nullitem;
     public static void itemslol(){
