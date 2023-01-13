@@ -61,11 +61,13 @@ public class Items {
             public static Item leatherhelmet;
             
             //20prot
-            
+            public static Item woodenbuckethelmet;
+    
             //30prot
-            
+            public static Item ironhelmet;
+    
             //40prot
-            
+            public static Item riothelmet;
         //bodyarmor
     
             //none
@@ -75,9 +77,11 @@ public class Items {
             public static Item clothtunik;
             
             //10prot
-            
+            public static Item leatherjacket;
+    
             //20prot
-            
+            public static woodenbarrel;
+    
             //30prot
             public static Item ironchestplate;
             
@@ -97,11 +101,15 @@ public class Items {
             public static Item leatherpants;
             
             //20prot
-            
+            public static Item leafpantys;
+    
             //30prot
-            
+            public static Item chainmailtrousers;
+    
             //40prot
-            
+            public static Item juggernautpants;
+            public static Item riotpants;
+    
             //GodItem
             public static Item valentin;
         
@@ -111,7 +119,8 @@ public class Items {
             public static Item barefoot;
             
             //5prot
-            
+            public static Item sneakers;
+    
             //10prot
             public static Item leatherboots;
             
@@ -119,9 +128,11 @@ public class Items {
             public static Item woodenboots;
             
             //30prot
-            
+            public static Item ironboots;
+    
             //40prot
-            
+            public static Item riotboots;
+    
     //void
     public static Item nullitem;
     public static void itemslol(){
@@ -182,16 +193,19 @@ public class Items {
                 nohat = new Item(1,"none","Armor","Helmet",0,0,0,0,1,1);
                 
                 //5prot
-                balaclava = new Item(1,"balaclava","Armor","Helmet",0,0,0,0,1,5);
+                balaclava = new Item(118,"balaclava","Armor","Helmet",0,0,0,0,1,5);
                 
                 //10prot
                 leatherhelmet = new Item(1,"leather helmet","Armor","Helmet",0,0,0,0,1,10);
                 
                 //20prot
+                woodenbuckethelmet = new Item(118,"wooden bucket helmet","Armor","Helmet",0,0,0,0,1,20);
                 
                 //30prot
+                ironhelmet = new Item(118,"iron helmet","Armor","Helmet",0,0,0,0,1,30);        
                 
                 //40prot
+                riothemet = new Item(118,"riot helmet","Armor","Helmet",0,0,0,0,1,40);
                 
             //BodyArmor
         
@@ -202,9 +216,11 @@ public class Items {
                 clothtunik = new Item(1,"cloth tunik","Armor","BodyArmor",0,0,0,0,1,5);
                 
                 //10prot
-                
+                leatherjacket = new Item(118,"leather jacket","Armor","BodyArmor",0,0,0,0,1,10);
+        
                 //20prot
-                
+                woodenbarrel = new Item(118,"wooden barrel","Armor","BodyArmor",0,0,0,0,1,20);
+        
                 //30prot
                 ironchestplate =new Item(1,"iron chestplate","Armor","BodyArmor",0,0,0,0,1,30);
                 
@@ -224,11 +240,15 @@ public class Items {
                 leatherpants = new Item(1,"leather pants","Armor","Pants",0,0,0,0,1,10);
                 
                 //20prot
-                
+                leafpantys = new Item(118,"leaf pantys","Armor","Pants",0,0,0,0,1,20);
+        
                 //30prot
-                
+                chainmailtrousers = new Item(118,"chainmail trousers","Armor","Pants",0,0,0,0,1,30);
+        
                 //40prot
-                
+                juggernautpants = new Item(118,"juggernaut pants","Armor","Pants",0,0,0,0,1,40);
+                riotpants =new Item(118,"riot pants","Armor","Pants",0,0,0,0,1,40);
+        
                 //GodItem
                 valentin = new Item(118,"valentin","Armor","Pants",0,0,0,0,1,10000);
         
@@ -238,7 +258,8 @@ public class Items {
                 barefoot = new Item(1,"none","Armor","Boots",0,0,0,0,1,1);
                 
                 //5prot
-                
+                sneakers = new Item(118,"sneakers","Armor","Boots",0,0,0,0,1,5);
+        
                 //10prot
                 leatherboots = new Item(1,"leather boots","Armor","Boots",0,0,0,0,1,10);
                 
@@ -246,9 +267,11 @@ public class Items {
                 woodenboots = new Item(1,"wooden boots","Armor","Boots",0,0,0,0,1,20);
                 
                 //30prot
-                
+                ironboots = new Item(118,"iron boots","Armor","Boots",0,0,0,0,1,30);
+        
                 //40prot
-                
+                riotboots = new Item(118,"riot boots","Armor","Boots",0,0,0,0,1,40);
+        
         //null
         nullitem = new Item(118,"","","",0,0,0,0,0,0);
     }
