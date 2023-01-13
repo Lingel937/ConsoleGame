@@ -3,9 +3,14 @@ import Items.*;
 import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
+<<<<<<< Updated upstream
     private  ArrayList<Item> m_itemObjectArray_Inventory;
     private Item NULLITEM = new Item(0,null,null,null,0,0.0,0.0,0,0,0);
 
+=======
+    private  ArrayList<Item> inventory;
+    private  Item NULLITEM = new Item(0,null,null,null,0,0.0,0.0,0,0,0);
+>>>>>>> Stashed changes
     public Inventory(){
         //initialize the object array
         m_itemObjectArray_Inventory = new ArrayList<Item>();
@@ -23,6 +28,7 @@ public class Inventory  {
 
     //function to sort your inventory
     public void sortInventory(){
+<<<<<<< Updated upstream
         for(int i = 0; i < m_itemObjectArray_Inventory.size();i++){
             for(int k = i; k < m_itemObjectArray_Inventory.size();k++){
                 if(
@@ -40,7 +46,36 @@ public class Inventory  {
             }
             if (m_itemObjectArray_Inventory.get(i).getNumberOfItems() == 0){
                 m_itemObjectArray_Inventory.set(i,NULLITEM);
+=======
+        boolean b_status = true;
+        int n_item = 0;
+        for(int i = 0; i < inventory.size(); i++){
+            for(int k = i+1; k < inventory.size(); k++){
+                if(
+                    inventory.get(i).getID() == inventory.get(k).getID() &&
+                    inventory.get(i).getLvl() == inventory.get(k).getLvl() &&
+                    inventory.get(i).getType() == inventory.get(k).getType() &&
+                    inventory.get(i).getCategory() == inventory.get(k).getCategory() &&
+                    inventory.get(i).getDamage() == inventory.get(k).getDamage() &&
+                    inventory.get(i).getDamageFactor() == inventory.get(k).getDamageFactor()
+                ){
+                    inventory.get(i).setNumberOfItems(inventory.get(k).getNumberOfItems()+ inventory.get(i).getNumberOfItems());
+                    inventory.set(k,NULLITEM);
+                }
             }
+            if (inventory.get(i).getNumberOfItems() == 0){
+                inventory.set(i,NULLITEM);
+            }
+        }
+        while(b_status){
+            if(n_item == inventory.size()-1){
+                b_status = false;
+            }
+            if(inventory.get(n_item) == NULLITEM){
+                inventory.remove(n_item);
+>>>>>>> Stashed changes
+            }
+            n_item++;
         }
         for(Item item:m_itemObjectArray_Inventory){
             if(item == NULLITEM){

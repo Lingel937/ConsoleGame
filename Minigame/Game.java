@@ -142,8 +142,9 @@ public class Game {
                                 String[] strArr_listOfAllCharacters = Characters.PlayerCharacterFileIO.getPlayerCharacterNames();
                                 System.out.println("Which character do you want to load?\nType in the name of the character:");
                                 for(int k = 0 ; k < strArr_listOfAllCharacters.length; k++){
-                                    System.out.println((k+1)+"-----"+strArr_listOfAllCharacters[k]+"\nInput:");
+                                    System.out.println((k+1)+"-----"+strArr_listOfAllCharacters[k]);
                                 }
+                                System.out.println("Input:");
                                 scanner = new Scanner(System.in);
                                 String sInput = scanner.nextLine();
                                 for (int i = 0; i < strArr_listOfAllCharacters.length; i++) {
@@ -151,7 +152,9 @@ public class Game {
                                         s_mPlayerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                                         bIsInputValid = true;
                                         bIsCharacterInputValid = true;
-                                    }    
+                                    }/*else if(sInput.to){
+
+                                    }  */  
                                 }
                                 if(bIsCharacterInputValid == false ){
                                     System.out.println("Please enter a valid character to load!!!");
