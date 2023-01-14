@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Inventory  {
     //declare an Array
     private  ArrayList<Item> inventory;
-
+    private  Item NULLITEM = new Item(0,null,null,null,0,0.0,0.0,0,0,0);
     public Inventory(){
         //initialize the object array
         inventory = new ArrayList<Item>();
@@ -23,7 +23,8 @@ public class Inventory  {
     //function to sort your inventory
     public void sortInventory(){
         for(int i = 0; i < inventory.size(); i++){
-            for(int k = i; k < inventory.size(); k++){
+            for(int k = i+1; k < inventory.size(); k++){
+
                 if(
                     inventory.get(i).getName() == inventory.get(k).getName() &&
                     inventory.get(i).getID() == inventory.get(k).getID() &&
@@ -34,12 +35,21 @@ public class Inventory  {
                     inventory.get(i).getDamageFactor() == inventory.get(k).getDamageFactor()
                 ){
                     inventory.get(i).setNumberOfItems(inventory.get(k).getNumberOfItems()+ inventory.get(i).getNumberOfItems());
-                    inventory.remove(k);
+                    inventory.set(k,NULLITEM);
                 }
             }
             if (inventory.get(i).getNumberOfItems() == 0){
-                inventory.remove(i);
+                inventory.set(i,NULLITEM);
+        boolean b_status = true;
+        int n_item = 0;
+        while(b_status){
+            if(n_item == inventory.size()-1){
+                b_status = false;
             }
+            if(inventory.get(n_item) == NULLITEM){
+                inventory.remove(n_item);
+            }
+            n_item++;
         }
     }
 
