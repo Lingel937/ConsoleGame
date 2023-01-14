@@ -80,7 +80,7 @@ public class Items {
             public static Item leatherjacket;
     
             //20prot
-            public static woodenbarrel;
+            public static Item woodenbarrel;
     
             //30prot
             public static Item ironchestplate;
