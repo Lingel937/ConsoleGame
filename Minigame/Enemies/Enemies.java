@@ -21,7 +21,7 @@ public class Enemies {
         farmer = new Enemy(1,15,"Farmer", 1, 15, 5);
         farmer.addRarelyDroppedItem(Items.wood);
         farmer.addCommonlyDroppedItem(Items.hay);
-        farmer.addCommonlyDroppedItem(Items.Heugabel);
+        farmer.addCommonlyDroppedItem(Items.pitchfork);
 
         
     }
@@ -29,67 +29,67 @@ public class Enemies {
         bandit = new Enemy(2,10, "Bandit", 3,14, 7);
         bandit.addRarelyDroppedItem(Items.wood);
         bandit.addCommonlyDroppedItem(Items.hay);
-        bandit.addCommonlyDroppedItem(Items.Heugabel);
+        bandit.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void hunter(){
         hunter = new Enemy(2,35, "Hunter",6,20,20);
         hunter.addRarelyDroppedItem(Items.wood);
         hunter.addCommonlyDroppedItem(Items.hay);
-        hunter.addCommonlyDroppedItem(Items.Heugabel);
+        hunter.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void warrior(){
         warrior = new Enemy(5,45, "Warrior",20,50,30);
         warrior.addRarelyDroppedItem(Items.wood);
         warrior.addCommonlyDroppedItem(Items.hay);
-        warrior.addCommonlyDroppedItem(Items.Heugabel);
+        warrior.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void goblin(){
         goblin = new Enemy(4,30, "Goblin",0,50,15);
         goblin.addRarelyDroppedItem(Items.wood);
         goblin.addCommonlyDroppedItem(Items.hay);
-        goblin.addCommonlyDroppedItem(Items.Heugabel);
+        goblin.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void ork(){
         ork = new Enemy(7,50, "Ork",0,10,20);
         ork.addRarelyDroppedItem(Items.wood);
         ork.addCommonlyDroppedItem(Items.hay);
-        ork.addCommonlyDroppedItem(Items.Heugabel);
+        ork.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void troll(){
         troll = new Enemy(4, 56, "Troll",0,5,25);
         troll.addRarelyDroppedItem(Items.wood);
         troll.addCommonlyDroppedItem(Items.hay);
-        troll.addCommonlyDroppedItem(Items.Heugabel);
+        troll.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void zombie(){
         zombie = new Enemy(8, 45, "Zombie",0,2,10);
         zombie.addRarelyDroppedItem(Items.wood);
         zombie.addCommonlyDroppedItem(Items.hay);
-        zombie.addCommonlyDroppedItem(Items.Heugabel);
+        zombie.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void skeleton(){
         skeleton = new Enemy(2, 32, "Skeleton",0,25,15);
         skeleton.addRarelyDroppedItem(Items.wood);
         skeleton.addCommonlyDroppedItem(Items.hay);
-        skeleton.addCommonlyDroppedItem(Items.Heugabel);
+        skeleton.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void guard(){
         guard = new Enemy(20, 100, "Guard",25,60,50);
         guard.addRarelyDroppedItem(Items.wood);
         guard.addCommonlyDroppedItem(Items.hay);
-        guard.addCommonlyDroppedItem(Items.Heugabel);
+        guard.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void goat(){
         goat = new Enemy(4, 1, "Goat",0,2,1);
         goat.addRarelyDroppedItem(Items.wood);
         goat.addCommonlyDroppedItem(Items.hay);
-        goat.addCommonlyDroppedItem(Items.Heugabel);
+        goat.addCommonlyDroppedItem(Items.pitchfork);
     }
     public static void wolf(){
         wolf = new Enemy(5, 10, "Wolf",0,1,5);
         wolf.addRarelyDroppedItem(Items.wood);
         wolf.addCommonlyDroppedItem(Items.hay);
-        wolf.addCommonlyDroppedItem(Items.Heugabel);
+        wolf.addCommonlyDroppedItem(Items.pitchfork);
     }
 
 
