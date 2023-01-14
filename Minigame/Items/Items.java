@@ -205,7 +205,7 @@ public class Items {
                 ironhelmet = new Item(118,"iron helmet","Armor","Helmet",0,0,0,0,1,30);        
                 
                 //40prot
-                riothemet = new Item(118,"riot helmet","Armor","Helmet",0,0,0,0,1,40);
+                riothelmet = new Item(118,"riot helmet","Armor","Helmet",0,0,0,0,1,40);
                 
             //BodyArmor
         

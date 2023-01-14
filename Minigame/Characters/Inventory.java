@@ -21,7 +21,11 @@ public class Inventory  {
     }
 
     //function to sort your inventory
+    private int upperLimit(){
+        return inventory.size();
+    }
     public void sortInventory(){
+
         for(int i = 0; i < inventory.size(); i++){
             for(int k = i+1; k < inventory.size(); k++){
 
@@ -40,16 +44,19 @@ public class Inventory  {
             }
             if (inventory.get(i).getNumberOfItems() == 0){
                 inventory.set(i,NULLITEM);
+            }
+        }
         boolean b_status = true;
         int n_item = 0;
         while(b_status){
-            if(n_item == inventory.size()-1){
+            if(n_item >= upperLimit()){
                 b_status = false;
+            }else{
+                if(inventory.get(n_item) == NULLITEM){
+                    inventory.remove(n_item);
+                }
+                n_item++;
             }
-            if(inventory.get(n_item) == NULLITEM){
-                inventory.remove(n_item);
-            }
-            n_item++;
         }
     }
 

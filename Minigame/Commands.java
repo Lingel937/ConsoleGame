@@ -284,6 +284,7 @@ class Commands{
     
     }
     public static void showInventory(){
+        Game.playerCharacter.inventory.sortInventory();
         Game.playerCharacter.inventory.showInventoryContent();
     }
 }
