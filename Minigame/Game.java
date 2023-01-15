@@ -70,7 +70,7 @@ public class Game {
         }
     }
 	//function to create the character object 
-    public static void  createNewCharacter() {
+    public static void createNewCharacter() {
 
         scanner = new Scanner(System.in);
         System.out.println("Enter your Name:");
@@ -132,6 +132,7 @@ public class Game {
                 System.out.println("Do you want to load a character or create a new one?\n1 - Create\n2 - Load\n3 - Exit the Game \nInput:");
                 scanner = new Scanner(System.in);
                 int nInput = scanner.nextInt();
+                System.out.println("\n");
                 switch(nInput){
                     case 2:
                         boolean bIsCharacterInputValid = false;
@@ -145,17 +146,20 @@ public class Game {
                                 System.out.println("Input:");
                                 scanner = new Scanner(System.in);
                                 String sInput = scanner.nextLine();
+                                System.out.println("\n");
                                 for (int i = 0; i < strArr_listOfAllCharacters.length; i++) {
                                     if(sInput.equals(strArr_listOfAllCharacters[i])){
                                         playerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(sInput);
                                         bIsInputValid = true;
                                         bIsCharacterInputValid = true;
-                                    }/*else if(sInput.to){
-
-                                    }  */  
+                                    }else if(Lib.convertStrToInt(sInput) == i){
+                                        playerCharacter = Characters.PlayerCharacterFileIO.loadPlayerCharacter(strArr_listOfAllCharacters[i-1]);
+                                        bIsInputValid = true;
+                                        bIsCharacterInputValid = true;
+                                    }    
                                 }
                                 if(bIsCharacterInputValid == false ){
-                                    System.out.println("Please enter a valid character to load!!!");
+                                    System.out.println("Please enter a valid character to load!!!\n");
                                 }
                             }catch(Exception e){
                                 System.out.println("Please enter a valid character to load!!!\n");
@@ -180,26 +184,31 @@ public class Game {
         }
     } 
 
+    public static void createTestInventory(){
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.axe);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.cargopants);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.axe);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.jamal);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.humanskull);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.axe);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.leatherhelmet);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(itemArr_listOfAllItems.get(1));
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.sword);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.hay);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.humanleg);
+        Game.playerCharacter.getPlayerInventory().getInventory().add(itemArr_listOfAllItems.get(0));
+        Game.playerCharacter.getPlayerInventory().getInventory().add(Items.axe);
+        System.out.println("Test items added to your inventory succesfully!!!");
+    }
 	
 	//function which is called once on a gamestart to execute 
 	//all necessary functions
-
-
-	
     public static void initialize(){
         createAllItems();
         createListOfAllitems();
         createAllEnemies();
         createAllLocations();
         loadOrCreateCharacter();
-        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(0));
-        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
-        Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
-        Game.playerCharacter.inventory.addItem(Items.arrow);
-        Game.playerCharacter.inventory.addItem(Items.arrow);
-        Game.playerCharacter.inventory.addItem(Items.arrow);
-        Game.playerCharacter.inventory.sortInventory();
-
 	}
 	
 	//function which is running the hole time 
@@ -242,6 +251,9 @@ public class Game {
                 case "levelup":
                     Commands.levelUp();
                     break;
+                case "test":
+                    Game.createTestInventory();
+                    break;
                 case "exit":
                     Game.end();
                     break;
@@ -268,6 +280,7 @@ public class Game {
             Game.playerCharacter = null;
             scanner.close();
         }catch(Exception e){
+            e.printStackTrace();
         }
         System.out.println("Thanks for playing!");
         System.exit(0);

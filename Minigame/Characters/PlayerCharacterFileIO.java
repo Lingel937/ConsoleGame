@@ -5,6 +5,8 @@ import Characters.Inventory;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.print.PrintException;
 public class PlayerCharacterFileIO {
     public static void savePlayerCharacter(PlayerCharacter playerCharacter) {
         try {
@@ -42,8 +44,7 @@ public class PlayerCharacterFileIO {
             characterFileWriter.close();
             File inventoryFile = new File("./Minigame/Characters/Players/" + playerCharacter.getName() + "/inventory.txt");
             FileWriter inventoryFileWriter = new FileWriter(inventoryFile);
-            for (int i = 0; i < playerCharacter.getInventory().size(); i++) {
-                    System.out.println("YAya"+i);
+            for (int i = 0; i < playerCharacter.getPlayerInventory().getInventory().size(); i++) {
                     inventoryFileWriter.write(
                     playerCharacter.getPlayerInventory().getInventory().get(i).getID() + ";" +
                     playerCharacter.getPlayerInventory().getInventory().get(i).getName() + ";" +
@@ -61,6 +62,7 @@ public class PlayerCharacterFileIO {
             
             
         } catch (Exception e) {
+            e.printStackTrace();
         }
         System.out.println("Everything saved!\n");
         
@@ -127,7 +129,10 @@ public class PlayerCharacterFileIO {
     public static String[] getPlayerCharacterNames(){
         File path = new File("./Minigame/Characters/Players/");
         String[] sFileNames = path.list();
-        path=null;
+        path = null;
         return sFileNames;
+    }
+    public static void removePlayerCharacterSave(String sPlayerName){
+
     }
 }
