@@ -196,6 +196,8 @@ public class Game {
         Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
         Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
         Game.playerCharacter.inventory.addItem(Items.arrow);
+        Game.playerCharacter.inventory.addItem(Items.arrow);
+        Game.playerCharacter.inventory.addItem(Items.arrow);
         Game.playerCharacter.inventory.sortInventory();
 
 	}
