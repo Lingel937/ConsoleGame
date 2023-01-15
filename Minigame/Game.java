@@ -195,6 +195,10 @@ public class Game {
         Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(0));
         Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
         Game.playerCharacter.inventory.addItem(itemArr_listOfAllItems.get(1));
+        Game.playerCharacter.inventory.addItem(Items.arrow);
+        Game.playerCharacter.inventory.addItem(Items.arrow);
+        Game.playerCharacter.inventory.addItem(Items.arrow);
+        Game.playerCharacter.inventory.sortInventory();
 
 	}
 	
@@ -258,6 +262,7 @@ public class Game {
 
     public static void end(){
         try{
+            Game.playerCharacter.inventory.sortInventory();
             PlayerCharacterFileIO.savePlayerCharacter(playerCharacter);
             itemArr_listOfAllItems.clear();
             Game.playerCharacter = null;
