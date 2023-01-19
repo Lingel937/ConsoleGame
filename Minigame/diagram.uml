@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-380.07281486485516" y="1088.854133650705">Commands</node>
+    <node x="1884.9497642590732" y="937.1243011754284">Items.Items</node>
+    <node x="-576.7320697766177" y="1088.854133650705">Main</node>
+    <node x="-681.7320697766177" y="1212.544724382275">Game</node>
+    <node x="-142.4135599530926" y="1088.854133650705">Basic</node>
+    <node x="1010.622095435428" y="1615.0407924440033">Location.Locations</node>
+    <node x="-1052.7037864131632" y="1693.2265274528506">Characters.PlayerCharacter</node>
+    <node x="137.98563292537096" y="1516.4265190951555">Items.Item</node>
+    <node x="1432.4362789872753" y="1695.0584321295935">Location.Location</node>
+    <node x="137.98563292537096" y="1354.044724382275">Characters.PlayerCharacterFileIO</node>
+    <node x="-1505.1256487992628" y="2252.3923820416476">Characters.Inventory</node>
+    <node x="2172.147871970069" y="1400.2107478103883">Enemies.Enemy</node>
+    <node x="-1630.5514799423277" y="1462.232662375377">Enemies.Enemies</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Characters.PlayerCharacter" target="Characters.Inventory" relationship="GENERALIZATION">
+      <point x="-161.5" y="0.0" />
+      <point x="121.3364400469074" y="2285.226527452851" />
+      <point x="121.3364400469074" y="2423.3923820416476" />
+      <point x="117.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.4698700716845882" showDependencies="false" x="-91.96932157330252" y="1951.6021479284846" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
