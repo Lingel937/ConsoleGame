@@ -280,7 +280,6 @@ public class Game {
             Game.playerCharacter = null;
             scanner.close();
         }catch(Exception e){
-            e.printStackTrace();
         }
         System.out.println("Thanks for playing!");
         System.exit(0);

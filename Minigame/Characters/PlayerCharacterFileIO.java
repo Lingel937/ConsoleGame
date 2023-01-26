@@ -5,8 +5,6 @@ import Characters.Inventory;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import javax.print.PrintException;
 public class PlayerCharacterFileIO {
     public static void savePlayerCharacter(PlayerCharacter playerCharacter) {
         try {
@@ -133,6 +131,15 @@ public class PlayerCharacterFileIO {
         return sFileNames;
     }
     public static void removePlayerCharacterSave(String sPlayerName){
+        String listOfFiles[] = getPlayerCharacterNames();
+        System.out.println("\nType in the name of the folder to remove it:");
+        Scanner scannerInput = new Scanner(System.in);
+        String input = scannerInput.nextLine();
+        
+        if(){
 
+        }else{
+
+        }
     }
 }
